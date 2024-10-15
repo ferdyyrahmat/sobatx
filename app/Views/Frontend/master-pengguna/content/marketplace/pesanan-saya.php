@@ -55,8 +55,8 @@
                      <div class="row">
                         <?php foreach ($dataPesanan as $data) { ?>
                         <div class="col-md-12 col-sm-12 col-xs-12" style="padding-bottom: 10px;">
-                           <button class="btn btn-default" style="text-align: left;">
-                              <div class="row" style="padding: 0 5px;">
+                           <div class="" style="text-align: left;">
+                              <div class="row" style="padding: 0 5px; border: 1px solid grey; border-radius: 10px;">
                                  <div class="col-md-12 col-sm-12 col-xs-12" style="padding-bottom: 5px;">
                                     <div class="row">
                                        <div class="col-md-6 col-sm-6 col-xs-6">
@@ -72,49 +72,57 @@
                                     </div>
                                  </div>
                                  <hr style="border: 1px solid #adadad; margin:0;">
-                                 <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="row">
-                                       <div class="col-md-4 col-xs-2" style="padding: 5px 0 5px 10px;">
-                                          <img src="<?= base_url() ?>Assets/img/toko/produk/<?= $data['nm_foto'] ?>"
-                                             alt="" class="img-responsive"
-                                             style="width: -webkit-fill-available; border: 1px solid grey; border-radius: 10px;">
-                                       </div>
-                                       <div class="col-md-8 col-xs-10">
-                                          <div class="row">
-                                             <div class="col-md-12 col-sm-12 col-xs-12" style="padding-top: 5px;">
-                                                <span>
-                                                   <b><?= $data['nama_produk'] ?> </b>
-                                                </span>
+                                 <a href="/marketplace/detail-pesanan/<?= $data['id_pesanan'] ?>" style="padding-bottom:10px;">
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                       <div class="row">
+                                          <div class="col-md-4 col-xs-2" style="padding: 5px 0 5px 10px;">
+                                             <img src="<?= base_url() ?>Assets/img/toko/produk/<?= $data['nm_foto'] ?>"
+                                                alt="" class="img-responsive"
+                                                style="width: -webkit-fill-available; border: 1px solid grey; border-radius: 10px;">
+                                          </div>
+                                          <div class="col-md-8 col-xs-10">
+                                             <div class="row">
+                                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding-top: 5px;">
+                                                   <span>
+                                                      <b><?= $data['nama_produk'] ?> </b>
+                                                   </span>
+                                                </div>
                                              </div>
                                           </div>
                                        </div>
                                     </div>
-                                 </div>
-                                 <hr>
-                                 <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0;">
-                                    <div class="row">
-                                       <div class="col-md-6 col-sm-6 col-xs-6">
-                                          <div style="margin: 0 15px; text-align: left;">
-                                             <small>
-                                                Total <?= $data['jumlah'] ?> item
-                                             </small>
+                                    <hr>
+                                    <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0;">
+                                       <div class="row">
+                                          <div class="col-md-6 col-sm-6 col-xs-6">
+                                             <div style="margin: 0 15px; text-align: left;">
+                                                <small>
+                                                   Total <?= $data['jumlah'] ?> item
+                                                </small>
+                                             </div>
                                           </div>
-                                       </div>
-                                       <div class="col-md-6 col-sm-6 col-xs-6">
-                                          <div style="margin: 0 15px; text-align: right;">
-                                             <small>
-                                                <b style="color: grey;">
-                                                   Harga:
-                                                   Rp<?= number_format($data['total_bayar'], 0, ",", ".") ?>
-                                                </b>
-                                             </small>
+                                          <div class="col-md-6 col-sm-6 col-xs-6">
+                                             <div style="margin: 0 15px; text-align: right;">
+                                                <small>
+                                                   <b style="color: grey;">
+                                                      Harga:
+                                                      Rp<?= number_format($data['total_bayar'], 0, ",", ".") ?>
+                                                   </b>
+                                                </small>
+                                             </div>
                                           </div>
                                        </div>
                                     </div>
-
+                                 </a>
+                                 <?php 
+                                 if($data['status'] == '2'){
+                                 ?>
+                                 <div class="col-md-12" style="text-align: right; align-item: end;">
+                                    <div class="btn btn-success btn-sm" style="margin: 10px 0">pesanan diterima</div>
                                  </div>
+                                 <?php } ?>
                               </div>
-                           </button>
+                           </div>
                         </div>
                         <?php } ?>
                      </div>

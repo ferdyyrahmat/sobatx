@@ -44,6 +44,12 @@
             <span class="menu-nav__text">Pesanan Saya</span>
          </div>
          <div class="menu-nav__container">
+            <a href="/marketplace/pesanan-saya/<?= sha1($profile['id_user'])?>" class="menu-nav__link">
+               <i class="fa-solid fa-truck-fast menu-nav__icon"></i>
+            </a>
+            <span class="menu-nav__text">Kelola Pesanan</span>
+         </div>
+         <div class="menu-nav__container">
             <a href="/peternak/m/mulai-usaha" class="menu-nav__link">
                <i class="fa-solid fa-warehouse menu-nav__icon"></i>
             </a>
