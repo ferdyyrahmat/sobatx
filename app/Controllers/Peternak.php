@@ -242,7 +242,7 @@ class Peternak extends BaseController
       }
       // dd($this->googleClient->fetchAccessTokenWithAuthCode($this->request->getVar('code')));
       $token = $this->googleClient->fetchAccessTokenWithAuthCode($this->request->getVar('code'));
-      if (!isset($token['error'])) {
+      if(!isset($token['error'])) {
          $this->googleClient->setAccessToken($token['access_token']);
          $googleService = new Google_Service_Oauth2($this->googleClient);
          $data = $googleService->userinfo->get();
@@ -251,7 +251,7 @@ class Peternak extends BaseController
          $sqlcek = $modelUser->getDataUser(['email_user' => $emailUser]);
          $ada = $sqlcek->getRowArray();
 
-         if (!$ada) {
+         if(!$ada) {
             $hasil = $modelUser->autoNumber(['substr(id_user,4,4)' => date("ymd")])->getRowArray();
             if(!$hasil){
                 $id = "USR".date("ymd")."0001";
@@ -283,6 +283,7 @@ class Peternak extends BaseController
                'nama' => $data['name'],
                'profile' => $data['picture']
             ];
+            session()->set($dataSes);
 
             $sqlcek = $modelUser->getDataUser(['email_user' => $emailUser]);
             $ada = $sqlcek->getRowArray();
@@ -293,14 +294,15 @@ class Peternak extends BaseController
 
             if($ada['akses_level'] != '1')
             {
-               session()->set($dataSes);
                return redirect()->to(base_url('/user/dashboard'));
             }else{
-               session()->set($dataSes);
                return redirect()->to(base_url('/peternak/dashboard'));  
             }
          }
          else{
+            $emailUser = $data['email'];
+            $sqlcek = $modelUser->getDataUser(['email_user' => $emailUser]);
+            $ada = $sqlcek->getRowArray();
             $dataPeternak = [
                'id_user' => $ada['id_user'],
                'id_google' => $data['id'],
@@ -315,7 +317,8 @@ class Peternak extends BaseController
                'email' => $data['email'],
                'nama' => $data['name'],
             ];
-
+            session()->set($dataSes);
+            
             if($ada['no_hp']=='-'){
                $notif = [
                   'id_user' => $ada['id_user'],
@@ -323,10 +326,9 @@ class Peternak extends BaseController
                   'msg' => "Lengkapi Alamat dan No. Telpon Anda!"
                ];
                $modelUser->saveNotif($notif);
-               session()->setFlashdata('info', "Lengkapi Alamat dan No. Telpon Anda!");
+               // session()->setFlashdata('info', "Lengkapi Alamat dan No. Telpon Anda!");
             }
-
-            session()->set($dataSes);
+            
             return redirect()->to(base_url('/peternak/dashboard'));
          }
 

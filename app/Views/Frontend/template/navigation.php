@@ -1,5 +1,5 @@
 <?php 
-   if ($profile['akses_level'] == '1') {
+   if($profile['akses_level'] == '1') {
       $user = '/peternak/';
    }
    elseif($profile['akses_level'] == '2'){
