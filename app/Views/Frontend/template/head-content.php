@@ -34,10 +34,6 @@
                      style="width: auto; max-height: 57px; height: 100%; margin: 10px 0 10px 10px; border-radius: 100%;"
                      id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenu1">
-                     <li><a href="#">Action</a></li>
-                     <li><a href="#">Another action</a></li>
-                     <li><a href="#">Something else here</a></li>
-                     <li role="separator" class="divider"></li>
                      <li>
                         <a href="/peternak/logout"><b>Logout</b><i class="fa-solid fa-right-from-bracket pull-right"></i></a>
                      </li>
