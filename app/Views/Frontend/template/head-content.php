@@ -14,10 +14,9 @@
             <div class="col-md-2 col-xs-3" style="text-align: -webkit-right; padding: 0;">
                <div class="dropdown">
                   <?php 
-                  if(isset($profile['foto_user'])){
                      $checkFoto = file_exists('Assets/img/profile/'.$profile['foto_user']);
                      if($checkFoto){
-                        if ($profile['foto_user'] == '' or $profile['foto_user'] == '-') {
+                        if($profile['foto_user'] == '' or $profile['foto_user'] == '-') {
                            $user_profile = base_url().'Assets/img/user.png';
                         }else{
                         $user_profile = base_url().'Assets/img/profile/'.$profile['foto_user'];
@@ -26,9 +25,6 @@
                      elseif(!$checkFoto){
                         $user_profile = base_url() . 'Assets/img/user.png';
                      }
-                  }else{
-                     $user_profile = base_url() . 'Assets/img/user.png';
-                  }
                   ?>
                   <img src="<?= $user_profile ?>"
                      style="width: auto; max-height: 57px; height: 100%; margin: 10px 0 10px 10px; border-radius: 100%;"
