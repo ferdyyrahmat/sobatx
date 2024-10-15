@@ -174,7 +174,7 @@ class User extends BaseController
                session()->setFlashdata('info', "Lengkapi Alamat dan No. Telpon Anda!");
             }
 
-            if ($ada['akses_level'] != '2') {
+            if ($ada['akses_level'] == '1') {
                session()->set($dataSes);
                return redirect()->to(base_url('/peternak/dashboard'));
             } else {
@@ -198,6 +198,7 @@ class User extends BaseController
                'email' => $data['email'],
                'nama' => $data['name'],
             ];
+            session()->set($dataSes);
 
             if ($ada['no_hp'] == '-') {
                $notif = [
@@ -209,7 +210,6 @@ class User extends BaseController
                session()->setFlashdata('info', "Lengkapi Alamat dan No. Telpon Anda!");
             }
 
-            session()->set($dataSes);
             return redirect()->to(base_url('/user/dashboard'));
          }
 

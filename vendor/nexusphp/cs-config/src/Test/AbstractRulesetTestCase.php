@@ -19,6 +19,7 @@ use PhpCsFixer\Fixer\FixerInterface;
 use PhpCsFixer\FixerConfiguration\DeprecatedFixerOptionInterface;
 use PhpCsFixer\FixerConfiguration\FixerOptionInterface;
 use PhpCsFixer\Preg;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
 /**
@@ -37,7 +38,7 @@ abstract class AbstractRulesetTestCase extends TestCase
     private static array $configuredFixers = [];
 
     /**
-     * @var array<string, array<string, bool|string|string[]>|bool>
+     * @var array<string, array<string, bool|list<string>|string>|bool>
      */
     private static array $enabledFixers = [];
 
@@ -75,7 +76,7 @@ abstract class AbstractRulesetTestCase extends TestCase
             ARRAY_FILTER_USE_KEY,
         );
 
-        self::assertEmpty($fixersThatArePresets, sprintf(
+        self::assertEmpty($fixersThatArePresets, \sprintf(
             '[%s] Ruleset should not be using rule sets (presets) as fixers. Found: "%s".',
             static::createRuleset()->getName(),
             implode('", "', array_keys($fixersThatArePresets)),
@@ -89,7 +90,7 @@ abstract class AbstractRulesetTestCase extends TestCase
         sort($fixersNotConfigured);
         $c = \count($fixersNotConfigured);
 
-        self::assertEmpty($fixersNotConfigured, sprintf(
+        self::assertEmpty($fixersNotConfigured, \sprintf(
             '[%s] Non-deprecated built-in %s "%s" %s not configured in the ruleset.',
             static::createRuleset()->getName(),
             $c > 1 ? 'fixers' : 'fixer',
@@ -105,7 +106,7 @@ abstract class AbstractRulesetTestCase extends TestCase
         sort($fixersNotBuiltIn);
         $c = \count($fixersNotBuiltIn);
 
-        self::assertEmpty($fixersNotBuiltIn, sprintf(
+        self::assertEmpty($fixersNotBuiltIn, \sprintf(
             '[%s] Ruleset used %s "%s" which %s unknown and/or deprecated in PhpCsFixer.',
             static::createRuleset()->getName(),
             $c > 1 ? 'fixers' : 'fixer',
@@ -120,7 +121,7 @@ abstract class AbstractRulesetTestCase extends TestCase
         $sorted = $fixers;
         sort($sorted);
 
-        self::assertSame($sorted, $fixers, sprintf(
+        self::assertSame($sorted, $fixers, \sprintf(
             '[%s] Fixers are not sorted by name.',
             static::createRuleset()->getName(),
         ));
@@ -133,18 +134,17 @@ abstract class AbstractRulesetTestCase extends TestCase
     }
 
     /**
-     * @dataProvider provideEnabledConfigurableFixerUsesAllAvailableOptionsNotDeprecatedCases
-     *
-     * @param string[] $goodOptions
-     * @param string[] $deprecatedOptions
+     * @param list<string> $goodOptions
+     * @param list<string> $deprecatedOptions
      */
+    #[DataProvider('provideEnabledConfigurableFixerUsesAllAvailableOptionsNotDeprecatedCases')]
     final public function testEnabledConfigurableFixerUsesAllAvailableOptionsNotDeprecated(string $name, array $goodOptions, array $deprecatedOptions): void
     {
-        /** @var null|array<string, bool|string|string[]>|bool $ruleConfiguration */
+        /** @var null|array<string, bool|list<string>|string>|bool $ruleConfiguration */
         $ruleConfiguration = self::$enabledFixers[$name] ?? null;
 
         if (null === $ruleConfiguration) {
-            self::markTestSkipped(sprintf('`%s` is not yet defined in this ruleset.', $name)); // @codeCoverageIgnore
+            self::markTestSkipped(\sprintf('`%s` is not yet defined in this ruleset.', $name)); // @codeCoverageIgnore
         }
 
         if (false === $ruleConfiguration) {
@@ -161,7 +161,7 @@ abstract class AbstractRulesetTestCase extends TestCase
         $usedDeprecatedOptions = array_intersect($deprecatedOptions, $ruleConfiguration);
         $extraUsedOptions = array_diff($ruleConfiguration, $goodOptions);
 
-        self::assertEmpty($missingOptions, sprintf(
+        self::assertEmpty($missingOptions, \sprintf(
             'Enabled configurable fixer "%s" does not use its available array %s "%s". Missing %s: "%s".',
             $name,
             \count($goodOptions) > 1 ? 'options' : 'option',
@@ -169,13 +169,13 @@ abstract class AbstractRulesetTestCase extends TestCase
             \count($missingOptions) > 1 ? 'options' : 'option',
             implode('", "', $missingOptions),
         ));
-        self::assertEmpty($usedDeprecatedOptions, sprintf(
+        self::assertEmpty($usedDeprecatedOptions, \sprintf(
             'Enabled configurable fixer "%s" uses deprecated %s: "%s".',
             $name,
             \count($usedDeprecatedOptions) > 1 ? 'options' : 'option',
             implode('", "', $usedDeprecatedOptions),
         ));
-        self::assertEmpty($extraUsedOptions, sprintf(
+        self::assertEmpty($extraUsedOptions, \sprintf(
             '%s "%s" for enabled configurable fixer "%s" %s not defined by PhpCsFixer.',
             \count($extraUsedOptions) > 1 ? 'Options' : 'Option',
             implode('", "', $extraUsedOptions),
@@ -187,7 +187,7 @@ abstract class AbstractRulesetTestCase extends TestCase
     /**
      * @codeCoverageIgnore
      *
-     * @return iterable<string, array{0: string, 1: string[], 2: string[]}>
+     * @return iterable<string, array{0: string, 1: list<string>, 2: list<string>}>
      */
     public static function provideEnabledConfigurableFixerUsesAllAvailableOptionsNotDeprecatedCases(): iterable
     {
@@ -198,21 +198,21 @@ abstract class AbstractRulesetTestCase extends TestCase
             if ($fixer instanceof ConfigurableFixerInterface) {
                 $options = $fixer->getConfigurationDefinition()->getOptions();
 
-                $goodOptions = array_map(
+                $goodOptions = array_values(array_map(
                     static fn(FixerOptionInterface $option): string => $option->getName(),
                     array_filter(
                         $options,
                         static fn(FixerOptionInterface $option): bool => ! $option instanceof DeprecatedFixerOptionInterface,
                     ),
-                );
+                ));
 
-                $deprecatedOptions = array_map(
+                $deprecatedOptions = array_values(array_map(
                     static fn(FixerOptionInterface $option): string => $option->getName(),
                     array_filter(
                         $options,
                         static fn(FixerOptionInterface $option): bool => $option instanceof DeprecatedFixerOptionInterface,
                     ),
-                );
+                ));
 
                 yield $name => [$name, $goodOptions, $deprecatedOptions];
             }

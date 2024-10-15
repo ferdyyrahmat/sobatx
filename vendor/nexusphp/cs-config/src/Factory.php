@@ -17,6 +17,7 @@ use Nexus\CsConfig\Ruleset\RulesetInterface;
 use PhpCsFixer\Config;
 use PhpCsFixer\ConfigInterface;
 use PhpCsFixer\Finder;
+use PhpCsFixer\Runner\Parallel\ParallelConfigFactory;
 
 /**
  * The Factory class is invoked on each project's `.php-cs-fixer.dist.php` to create
@@ -63,7 +64,7 @@ final class Factory
     public static function create(RulesetInterface $ruleset, array $overrides = [], array $options = []): self
     {
         if (\PHP_VERSION_ID < $ruleset->getRequiredPHPVersion()) {
-            throw new \RuntimeException(sprintf(
+            throw new \RuntimeException(\sprintf(
                 'The "%s" ruleset requires a minimum PHP_VERSION_ID of "%d" but current PHP_VERSION_ID is "%d".',
                 $ruleset->getName(),
                 $ruleset->getRequiredPHPVersion(),
@@ -114,7 +115,7 @@ final class Factory
             $email = ' <'.$email.'>';
         }
 
-        $header = sprintf(
+        $header = \sprintf(
             <<<'HEADER'
                 This file is part of %s.
 
@@ -159,6 +160,7 @@ final class Factory
         $rules = array_merge($this->options['rules'], $overrides);
 
         return (new Config($this->ruleset->getName()))
+            ->setParallelConfig(ParallelConfigFactory::detect())
             ->registerCustomFixers($this->options['customFixers'])
             ->setCacheFile($this->options['cacheFile'])
             ->setFinder($this->options['finder'])

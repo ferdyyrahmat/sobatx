@@ -27,7 +27,7 @@ use Google\Client;
  *
  * <p>
  * For more information about this service, see the API
- * <a href="https://cloud.google.com/discovery-engine/docs" target="_blank">Documentation</a>
+ * <a href="https://cloud.google.com/generative-ai-app-builder/docs/" target="_blank">Documentation</a>
  * </p>
  *
  * @author Google, Inc.
@@ -41,10 +41,13 @@ class DiscoveryEngine extends \Google\Service
   public $projects;
   public $projects_locations_collections_dataConnector_operations;
   public $projects_locations_collections_dataStores;
+  public $projects_locations_collections_dataStores_branches;
   public $projects_locations_collections_dataStores_branches_documents;
   public $projects_locations_collections_dataStores_branches_operations;
+  public $projects_locations_collections_dataStores_completionSuggestions;
   public $projects_locations_collections_dataStores_controls;
   public $projects_locations_collections_dataStores_conversations;
+  public $projects_locations_collections_dataStores_customModels;
   public $projects_locations_collections_dataStores_models_operations;
   public $projects_locations_collections_dataStores_operations;
   public $projects_locations_collections_dataStores_schemas;
@@ -67,8 +70,10 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_collections_engines_sessions_answers;
   public $projects_locations_collections_operations;
   public $projects_locations_dataStores;
+  public $projects_locations_dataStores_branches;
   public $projects_locations_dataStores_branches_documents;
   public $projects_locations_dataStores_branches_operations;
+  public $projects_locations_dataStores_completionSuggestions;
   public $projects_locations_dataStores_controls;
   public $projects_locations_dataStores_conversations;
   public $projects_locations_dataStores_models_operations;
@@ -82,6 +87,7 @@ class DiscoveryEngine extends \Google\Service
   public $projects_locations_dataStores_suggestionDenyListEntries;
   public $projects_locations_dataStores_userEvents;
   public $projects_locations_groundingConfigs;
+  public $projects_locations_identityMappingStores_operations;
   public $projects_locations_operations;
   public $projects_locations_rankingConfigs;
   public $projects_locations_userEvents;
@@ -216,6 +222,10 @@ class DiscoveryEngine extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'skipDefaultSchemaCreation' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'delete' => [
               'path' => 'v1/{+name}',
@@ -281,6 +291,46 @@ class DiscoveryEngine extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],'trainCustomModel' => [
+              'path' => 'v1/{+dataStore}:trainCustomModel',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'dataStore' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_collections_dataStores_branches = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsDataStoresBranches(
+        $this,
+        $this->serviceName,
+        'branches',
+        [
+          'methods' => [
+            'batchGetDocumentsMetadata' => [
+              'path' => 'v1/{+parent}/batchGetDocumentsMetadata',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'matcher.fhirMatcher.fhirResources' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+                'matcher.urisMatcher.uris' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
               ],
             ],
@@ -433,6 +483,36 @@ class DiscoveryEngine extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_collections_dataStores_completionSuggestions = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsDataStoresCompletionSuggestions(
+        $this,
+        $this->serviceName,
+        'completionSuggestions',
+        [
+          'methods' => [
+            'import' => [
+              'path' => 'v1/{+parent}/completionSuggestions:import',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'purge' => [
+              'path' => 'v1/{+parent}/completionSuggestions:purge',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -603,6 +683,26 @@ class DiscoveryEngine extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_collections_dataStores_customModels = new DiscoveryEngine\Resource\ProjectsLocationsCollectionsDataStoresCustomModels(
+        $this,
+        $this->serviceName,
+        'customModels',
+        [
+          'methods' => [
+            'list' => [
+              'path' => 'v1/{+dataStore}/customModels',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'dataStore' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -1249,6 +1349,16 @@ class DiscoveryEngine extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'purge' => [
+              'path' => 'v1/{+parent}/userEvents:purge',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'write' => [
               'path' => 'v1/{+parent}/userEvents:write',
               'httpMethod' => 'POST',
@@ -1790,6 +1900,10 @@ class DiscoveryEngine extends \Google\Service
                   'location' => 'query',
                   'type' => 'string',
                 ],
+                'skipDefaultSchemaCreation' => [
+                  'location' => 'query',
+                  'type' => 'boolean',
+                ],
               ],
             ],'delete' => [
               'path' => 'v1/{+name}',
@@ -1855,6 +1969,36 @@ class DiscoveryEngine extends \Google\Service
                 'updateMask' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_dataStores_branches = new DiscoveryEngine\Resource\ProjectsLocationsDataStoresBranches(
+        $this,
+        $this->serviceName,
+        'branches',
+        [
+          'methods' => [
+            'batchGetDocumentsMetadata' => [
+              'path' => 'v1/{+parent}/batchGetDocumentsMetadata',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'matcher.fhirMatcher.fhirResources' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
+                ],
+                'matcher.urisMatcher.uris' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                  'repeated' => true,
                 ],
               ],
             ],
@@ -2007,6 +2151,36 @@ class DiscoveryEngine extends \Google\Service
                 'pageToken' => [
                   'location' => 'query',
                   'type' => 'string',
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_dataStores_completionSuggestions = new DiscoveryEngine\Resource\ProjectsLocationsDataStoresCompletionSuggestions(
+        $this,
+        $this->serviceName,
+        'completionSuggestions',
+        [
+          'methods' => [
+            'import' => [
+              'path' => 'v1/{+parent}/completionSuggestions:import',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'purge' => [
+              'path' => 'v1/{+parent}/completionSuggestions:purge',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
                 ],
               ],
             ],
@@ -2669,6 +2843,16 @@ class DiscoveryEngine extends \Google\Service
                   'required' => true,
                 ],
               ],
+            ],'purge' => [
+              'path' => 'v1/{+parent}/userEvents:purge',
+              'httpMethod' => 'POST',
+              'parameters' => [
+                'parent' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
             ],'write' => [
               'path' => 'v1/{+parent}/userEvents:write',
               'httpMethod' => 'POST',
@@ -2701,6 +2885,48 @@ class DiscoveryEngine extends \Google\Service
                   'location' => 'path',
                   'type' => 'string',
                   'required' => true,
+                ],
+              ],
+            ],
+          ]
+        ]
+    );
+    $this->projects_locations_identityMappingStores_operations = new DiscoveryEngine\Resource\ProjectsLocationsIdentityMappingStoresOperations(
+        $this,
+        $this->serviceName,
+        'operations',
+        [
+          'methods' => [
+            'get' => [
+              'path' => 'v1/{+name}',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+              ],
+            ],'list' => [
+              'path' => 'v1/{+name}/operations',
+              'httpMethod' => 'GET',
+              'parameters' => [
+                'name' => [
+                  'location' => 'path',
+                  'type' => 'string',
+                  'required' => true,
+                ],
+                'filter' => [
+                  'location' => 'query',
+                  'type' => 'string',
+                ],
+                'pageSize' => [
+                  'location' => 'query',
+                  'type' => 'integer',
+                ],
+                'pageToken' => [
+                  'location' => 'query',
+                  'type' => 'string',
                 ],
               ],
             ],
