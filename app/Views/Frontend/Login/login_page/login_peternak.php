@@ -83,7 +83,7 @@
                      <button type="submit" class="btn btn-primary" id="login">Login</button>
                   </div>
                   <div class="form-group" style="padding-top: 15px; margin-bottom: 0;">
-                     <a href="<?= $link ?>" class="btn btn-danger"><i class="fa-brands fa-google"></i> Google</a>
+                     <a href="<?= $link ?>" class="btn btn-danger"><i class="fa-brands fa-google"></i> Googlea</a>
                   </div>
                   <div class="form-group" style="padding-top: 15px; margin-bottom: 0;">
                      <a href="/register" style="font-size: 10px;">
