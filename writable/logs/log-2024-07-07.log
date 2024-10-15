@@ -1,0 +1,210 @@
+CRITICAL - 2024-07-07 13:38:42 --> ErrorException: Undefined variable $dataPaket
+in APPPATH\Views\Frontend\master-peternak\content\menu\status-pengajuan.php on line 16.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\status-pengajuan.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataPaket', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\status-pengajuan.php', 16)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\status-pengajuan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/status-pengajuan', [], true)
+ 5 APPPATH\Controllers\Peternak.php(414): view('Frontend/master-peternak/content/menu/status-pengajuan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->status_pengajuan_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-07 13:40:16 --> mysqli_sql_exception: Unknown column 'tbl_paket_usaha.id_user' in 'where clause' in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Peternak.php(405): App\Models\M_PUsaha->getBeliPaketJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->status_pengajuan_peternak()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-07 13:40:16 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_paket_usaha.id_user' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_user) = :sha1(tbl_paket_usaha.id_user):
+ORDER BY `tbl_beli_paket`.`id_paket` ASC', [...], false)
+ 2 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Peternak.php(405): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->status_pengajuan_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-07 13:40:16 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'tbl_paket_usaha.id_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_user) = \'USR2406199001\'
+ORDER BY `tbl_beli_paket`.`id_paket` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_user) = \'USR2406199001\'
+ORDER BY `tbl_beli_paket`.`id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_user) = :sha1(tbl_paket_usaha.id_user):
+ORDER BY `tbl_beli_paket`.`id_paket` ASC', [...], false)
+ 4 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Peternak.php(405): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->status_pengajuan_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-07 13:40:16 --> [Caused by] mysqli_sql_exception: Unknown column 'tbl_paket_usaha.id_user' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_user) = \'USR2406199001\'
+ORDER BY `tbl_beli_paket`.`id_paket` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_user) = \'USR2406199001\'
+ORDER BY `tbl_beli_paket`.`id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_user) = \'USR2406199001\'
+ORDER BY `tbl_beli_paket`.`id_paket` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_user) = :sha1(tbl_paket_usaha.id_user):
+ORDER BY `tbl_beli_paket`.`id_paket` ASC', [...], false)
+ 5 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Peternak.php(405): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->status_pengajuan_peternak()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-07 13:57:44 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Frontend\master-peternak\content\menu\status-pengajuan.php on line 20.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\status-pengajuan.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\status-pengajuan.php', 20)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\status-pengajuan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/status-pengajuan', [], true)
+ 5 APPPATH\Controllers\Peternak.php(414): view('Frontend/master-peternak/content/menu/status-pengajuan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->status_pengajuan_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-07 13:58:08 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Frontend\master-peternak\content\menu\status-pengajuan.php on line 23.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\status-pengajuan.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\status-pengajuan.php', 23)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\status-pengajuan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/status-pengajuan', [], true)
+ 5 APPPATH\Controllers\Peternak.php(414): view('Frontend/master-peternak/content/menu/status-pengajuan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->status_pengajuan_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-07 14:08:09 --> mysqli_sql_exception: Unknown column 'status' in 'field list' in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_PUsaha.php(90): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Peternak.php(377): App\Models\M_PUsaha->saveDataBeliPaket(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->beli_paket_peternak('2ea2c9a08fc87f1...')
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-07 14:08:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_beli_paket` (`id_paket`, `id_user`, `tgl_pembelian`, `status`) VALUES (:id_paket:, :id_user:, :tgl_pembelian:, :status:)', [...], false)
+ 2 APPPATH\Models\M_PUsaha.php(90): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Peternak.php(377): App\Models\M_PUsaha->saveDataBeliPaket([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->beli_paket_peternak('2ea2c9a08fc87f197c67e4dfa6f9329490e67f8f')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-07 14:08:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_beli_paket` (`id_paket`, `id_user`, `tgl_pembelian`, `status`) VALUES (\'2ea2c9a08fc87f197c67e4dfa6f9329490e67f8f\', \'USR2406199001\', \'2024-07-07 14:08:09\', \'1\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_beli_paket` (`id_paket`, `id_user`, `tgl_pembelian`, `status`) VALUES (\'2ea2c9a08fc87f197c67e4dfa6f9329490e67f8f\', \'USR2406199001\', \'2024-07-07 14:08:09\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_beli_paket` (`id_paket`, `id_user`, `tgl_pembelian`, `status`) VALUES (:id_paket:, :id_user:, :tgl_pembelian:, :status:)', [...], false)
+ 4 APPPATH\Models\M_PUsaha.php(90): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\Peternak.php(377): App\Models\M_PUsaha->saveDataBeliPaket([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->beli_paket_peternak('2ea2c9a08fc87f197c67e4dfa6f9329490e67f8f')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-07 14:08:09 --> [Caused by] mysqli_sql_exception: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tbl_beli_paket` (`id_paket`, `id_user`, `tgl_pembelian`, `status`) VALUES (\'2ea2c9a08fc87f197c67e4dfa6f9329490e67f8f\', \'USR2406199001\', \'2024-07-07 14:08:09\', \'1\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_beli_paket` (`id_paket`, `id_user`, `tgl_pembelian`, `status`) VALUES (\'2ea2c9a08fc87f197c67e4dfa6f9329490e67f8f\', \'USR2406199001\', \'2024-07-07 14:08:09\', \'1\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_beli_paket` (`id_paket`, `id_user`, `tgl_pembelian`, `status`) VALUES (\'2ea2c9a08fc87f197c67e4dfa6f9329490e67f8f\', \'USR2406199001\', \'2024-07-07 14:08:09\', \'1\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_beli_paket` (`id_paket`, `id_user`, `tgl_pembelian`, `status`) VALUES (:id_paket:, :id_user:, :tgl_pembelian:, :status:)', [...], false)
+ 5 APPPATH\Models\M_PUsaha.php(90): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Peternak.php(377): App\Models\M_PUsaha->saveDataBeliPaket([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->beli_paket_peternak('2ea2c9a08fc87f197c67e4dfa6f9329490e67f8f')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-07 14:25:47 --> ErrorException: Undefined variable $jumlahNotif
+in APPPATH\Views\Frontend\template\navigation.php on line 20.
+ 1 APPPATH\Views\Frontend\template\navigation.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jumlahNotif', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\navigation.php', 20)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\navigation.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/navigation', [], true)
+ 5 APPPATH\Controllers\User.php(252): view('Frontend/template/navigation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->pemberitahuan_pengguna()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-07 14:27:10 --> ErrorException: Undefined variable $jumlahNotif
+in APPPATH\Views\Frontend\template\navigation.php on line 20.
+ 1 APPPATH\Views\Frontend\template\navigation.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jumlahNotif', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\navigation.php', 20)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\navigation.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/navigation', [], true)
+ 5 APPPATH\Controllers\User.php(256): view('Frontend/template/navigation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->pemberitahuan_pengguna()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-07 16:36:40 --> ErrorException: Undefined variable $jumlahNotif
+in APPPATH\Views\Frontend\template\navigation.php on line 20.
+ 1 APPPATH\Views\Frontend\template\navigation.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jumlahNotif', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\navigation.php', 20)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\navigation.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/navigation', [], true)
+ 5 APPPATH\Controllers\User.php(323): view('Frontend/template/navigation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->marketplace_user()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')

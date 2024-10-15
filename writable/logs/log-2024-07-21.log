@@ -1,0 +1,881 @@
+ERROR - 2024-07-21 00:25:17 --> mysqli_sql_exception: Column 'id_user' in where clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_User.php(97): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Peternak.php(479): App\Models\M_User->getDataPeternak(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->tambah_produk_saya_usaha_peternak()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-21 00:25:17 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_user' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_user`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_user` = `tbl_user`.`id_user`
+WHERE `id_user` = :id_user:
+ORDER BY `tbl_user`.`id_user` ASC', [...], false)
+ 2 APPPATH\Models\M_User.php(97): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Peternak.php(479): App\Models\M_User->getDataPeternak([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->tambah_produk_saya_usaha_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 00:25:17 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_user' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_user`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_user` = `tbl_user`.`id_user`
+WHERE `id_user` = \'USR2406199001\'
+ORDER BY `tbl_user`.`id_user` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_user`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_user` = `tbl_user`.`id_user`
+WHERE `id_user` = \'USR2406199001\'
+ORDER BY `tbl_user`.`id_user` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_user`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_user` = `tbl_user`.`id_user`
+WHERE `id_user` = :id_user:
+ORDER BY `tbl_user`.`id_user` ASC', [...], false)
+ 4 APPPATH\Models\M_User.php(97): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Peternak.php(479): App\Models\M_User->getDataPeternak([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->tambah_produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 00:25:17 --> [Caused by] mysqli_sql_exception: Column 'id_user' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_user`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_user` = `tbl_user`.`id_user`
+WHERE `id_user` = \'USR2406199001\'
+ORDER BY `tbl_user`.`id_user` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_user`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_user` = `tbl_user`.`id_user`
+WHERE `id_user` = \'USR2406199001\'
+ORDER BY `tbl_user`.`id_user` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_user`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_user` = `tbl_user`.`id_user`
+WHERE `id_user` = \'USR2406199001\'
+ORDER BY `tbl_user`.`id_user` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_user`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_user` = `tbl_user`.`id_user`
+WHERE `id_user` = :id_user:
+ORDER BY `tbl_user`.`id_user` ASC', [...], false)
+ 5 APPPATH\Models\M_User.php(97): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Peternak.php(479): App\Models\M_User->getDataPeternak([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->tambah_produk_saya_usaha_peternak()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 00:25:45 --> ErrorException: Array to string conversion
+in APPPATH\Views\Frontend\master-peternak\content\menu\tambah-produk-saya-usaha.php on line 169.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\tambah-produk-saya-usaha.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\tambah-produk-saya-usaha.php', 169)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\tambah-produk-saya-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/tambah-produk-saya-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(503): view('Frontend/master-peternak/content/menu/tambah-produk-saya-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->tambah_produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 00:26:20 --> ErrorException: Array to string conversion
+in APPPATH\Views\Frontend\master-peternak\content\menu\tambah-produk-saya-usaha.php on line 169.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\tambah-produk-saya-usaha.php(169): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\tambah-produk-saya-usaha.php', 169)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\tambah-produk-saya-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/tambah-produk-saya-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(503): view('Frontend/master-peternak/content/menu/tambah-produk-saya-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->tambah_produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-21 01:03:19 --> mysqli_sql_exception: Column 'id_kategori' cannot be null in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_Produk.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Peternak.php(573): App\Models\M_Produk->saveDataProduk(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-21 01:03:19 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_kategori' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (:id_produk:, :nama_produk:, :id_toko:, :id_kategori:, :stok:, :deskripsi_produk:, :is_delete_produk:, :created_at:, :updated_at:)', [...], false)
+ 2 APPPATH\Models\M_Produk.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Peternak.php(573): App\Models\M_Produk->saveDataProduk([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 01:03:19 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_kategori' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (\'PRD2024072100001\', \'test\', \'TKO0001\', NULL, \'100\', \'test\', \'0\', \'2024-07-21 01:03:19\', \'2024-07-21 01:03:19\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (\'PRD2024072100001\', \'test\', \'TKO0001\', NULL, \'100\', \'test\', \'0\', \'2024-07-21 01:03:19\', \'2024-07-21 01:03:19\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (:id_produk:, :nama_produk:, :id_toko:, :id_kategori:, :stok:, :deskripsi_produk:, :is_delete_produk:, :created_at:, :updated_at:)', [...], false)
+ 4 APPPATH\Models\M_Produk.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\Peternak.php(573): App\Models\M_Produk->saveDataProduk([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 01:03:19 --> [Caused by] mysqli_sql_exception: Column 'id_kategori' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (\'PRD2024072100001\', \'test\', \'TKO0001\', NULL, \'100\', \'test\', \'0\', \'2024-07-21 01:03:19\', \'2024-07-21 01:03:19\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (\'PRD2024072100001\', \'test\', \'TKO0001\', NULL, \'100\', \'test\', \'0\', \'2024-07-21 01:03:19\', \'2024-07-21 01:03:19\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (\'PRD2024072100001\', \'test\', \'TKO0001\', NULL, \'100\', \'test\', \'0\', \'2024-07-21 01:03:19\', \'2024-07-21 01:03:19\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (:id_produk:, :nama_produk:, :id_toko:, :id_kategori:, :stok:, :deskripsi_produk:, :is_delete_produk:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH\Models\M_Produk.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Peternak.php(573): App\Models\M_Produk->saveDataProduk([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 01:06:34 --> TypeError: Unsupported operand types: string + int
+in APPPATH\Controllers\Peternak.php on line 589.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-21 01:07:28 --> mysqli_sql_exception: Duplicate entry 'PRD2024072' for key 'PRIMARY' in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_Produk.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Peternak.php(573): App\Models\M_Produk->saveDataProduk(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-21 01:07:28 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'PRD2024072' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (:id_produk:, :nama_produk:, :id_toko:, :id_kategori:, :stok:, :deskripsi_produk:, :is_delete_produk:, :created_at:, :updated_at:)', [...], false)
+ 2 APPPATH\Models\M_Produk.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Peternak.php(573): App\Models\M_Produk->saveDataProduk([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 01:07:28 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'PRD2024072' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (\'PRD2024072124073\', \'test\', \'TKO0001\', \'ktg001\', \'100\', \'test\', \'0\', \'2024-07-21 01:07:28\', \'2024-07-21 01:07:28\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (\'PRD2024072124073\', \'test\', \'TKO0001\', \'ktg001\', \'100\', \'test\', \'0\', \'2024-07-21 01:07:28\', \'2024-07-21 01:07:28\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (:id_produk:, :nama_produk:, :id_toko:, :id_kategori:, :stok:, :deskripsi_produk:, :is_delete_produk:, :created_at:, :updated_at:)', [...], false)
+ 4 APPPATH\Models\M_Produk.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\Peternak.php(573): App\Models\M_Produk->saveDataProduk([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 01:07:28 --> [Caused by] mysqli_sql_exception: Duplicate entry 'PRD2024072' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (\'PRD2024072124073\', \'test\', \'TKO0001\', \'ktg001\', \'100\', \'test\', \'0\', \'2024-07-21 01:07:28\', \'2024-07-21 01:07:28\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (\'PRD2024072124073\', \'test\', \'TKO0001\', \'ktg001\', \'100\', \'test\', \'0\', \'2024-07-21 01:07:28\', \'2024-07-21 01:07:28\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (\'PRD2024072124073\', \'test\', \'TKO0001\', \'ktg001\', \'100\', \'test\', \'0\', \'2024-07-21 01:07:28\', \'2024-07-21 01:07:28\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (:id_produk:, :nama_produk:, :id_toko:, :id_kategori:, :stok:, :deskripsi_produk:, :is_delete_produk:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH\Models\M_Produk.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Peternak.php(573): App\Models\M_Produk->saveDataProduk([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-21 01:08:57 --> mysqli_sql_exception: Duplicate entry 'PRD2024072' for key 'PRIMARY' in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_Produk.php(46): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Peternak.php(573): App\Models\M_Produk->saveDataProduk(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-21 01:08:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'PRD2024072' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (:id_produk:, :nama_produk:, :id_toko:, :id_kategori:, :stok:, :deskripsi_produk:, :is_delete_produk:, :created_at:, :updated_at:)', [...], false)
+ 2 APPPATH\Models\M_Produk.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Peternak.php(573): App\Models\M_Produk->saveDataProduk([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 01:08:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'PRD2024072' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (\'PRD202407214073\', \'test\', \'TKO0001\', \'ktg001\', \'100\', \'test\', \'0\', \'2024-07-21 01:08:57\', \'2024-07-21 01:08:57\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (\'PRD202407214073\', \'test\', \'TKO0001\', \'ktg001\', \'100\', \'test\', \'0\', \'2024-07-21 01:08:57\', \'2024-07-21 01:08:57\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (:id_produk:, :nama_produk:, :id_toko:, :id_kategori:, :stok:, :deskripsi_produk:, :is_delete_produk:, :created_at:, :updated_at:)', [...], false)
+ 4 APPPATH\Models\M_Produk.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\Peternak.php(573): App\Models\M_Produk->saveDataProduk([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 01:08:57 --> [Caused by] mysqli_sql_exception: Duplicate entry 'PRD2024072' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (\'PRD202407214073\', \'test\', \'TKO0001\', \'ktg001\', \'100\', \'test\', \'0\', \'2024-07-21 01:08:57\', \'2024-07-21 01:08:57\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (\'PRD202407214073\', \'test\', \'TKO0001\', \'ktg001\', \'100\', \'test\', \'0\', \'2024-07-21 01:08:57\', \'2024-07-21 01:08:57\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (\'PRD202407214073\', \'test\', \'TKO0001\', \'ktg001\', \'100\', \'test\', \'0\', \'2024-07-21 01:08:57\', \'2024-07-21 01:08:57\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_produk` (`id_produk`, `nama_produk`, `id_toko`, `id_kategori`, `stok`, `deskripsi_produk`, `is_delete_produk`, `created_at`, `updated_at`) VALUES (:id_produk:, :nama_produk:, :id_toko:, :id_kategori:, :stok:, :deskripsi_produk:, :is_delete_produk:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH\Models\M_Produk.php(46): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Peternak.php(573): App\Models\M_Produk->saveDataProduk([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 01:14:34 --> ErrorException: Undefined variable $namaFile
+in APPPATH\Controllers\Peternak.php on line 589.
+ 1 APPPATH\Controllers\Peternak.php(589): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaFile', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 589)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 01:24:50 --> ErrorException: Undefined variable $namaFile
+in APPPATH\Controllers\Peternak.php on line 599.
+ 1 APPPATH\Controllers\Peternak.php(599): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaFile', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 599)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 01:27:22 --> ErrorException: Maximum execution time of 60 seconds exceeded
+in APPPATH\Controllers\Peternak.php on line 601.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-07-21 01:30:54 --> ErrorException: Maximum execution time of 60 seconds exceeded
+in APPPATH\Controllers\Peternak.php on line 588.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-07-21 02:00:39 --> CodeIgniter\Database\Exceptions\DatabaseException: You must set the database table to be used with your query.
+in SYSTEMPATH\Database\BaseConnection.php on line 884.
+ 1 APPPATH\Models\M_Produk.php(55): CodeIgniter\Database\BaseConnection->table(null)
+ 2 APPPATH\Controllers\Peternak.php(580): App\Models\M_Produk->saveHargaProduk([...])
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-21 02:01:03 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sob4tx`.`tbl_harga`, CONSTRAINT `tbl_harga_ibfk_1` FOREIGN KEY (`id_produk`) REFERENCES `tbl_produk` (`id_produk`)) in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_Produk.php(56): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Peternak.php(580): App\Models\M_Produk->saveHargaProduk(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-21 02:01:03 --> CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sob4tx`.`tbl_harga`, CONSTRAINT `tbl_harga_ibfk_1` FOREIGN KEY (`id_produk`) REFERENCES `tbl_produk` (`id_produk`))
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_harga` (`id_produk`, `harga`) VALUES (:id_produk:, :harga:)', [...], false)
+ 2 APPPATH\Models\M_Produk.php(56): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Peternak.php(580): App\Models\M_Produk->saveHargaProduk([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:01:03 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Cannot add or update a child row: a foreign key constraint fails (`sob4tx`.`tbl_harga`, CONSTRAINT `tbl_harga_ibfk_1` FOREIGN KEY (`id_produk`) REFERENCES `tbl_produk` (`id_produk`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_harga` (`id_produk`, `harga`) VALUES (\'PRD2024072100002\', \'1.000.000\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_harga` (`id_produk`, `harga`) VALUES (\'PRD2024072100002\', \'1.000.000\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_harga` (`id_produk`, `harga`) VALUES (:id_produk:, :harga:)', [...], false)
+ 4 APPPATH\Models\M_Produk.php(56): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\Peternak.php(580): App\Models\M_Produk->saveHargaProduk([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:01:03 --> [Caused by] mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`sob4tx`.`tbl_harga`, CONSTRAINT `tbl_harga_ibfk_1` FOREIGN KEY (`id_produk`) REFERENCES `tbl_produk` (`id_produk`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tbl_harga` (`id_produk`, `harga`) VALUES (\'PRD2024072100002\', \'1.000.000\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_harga` (`id_produk`, `harga`) VALUES (\'PRD2024072100002\', \'1.000.000\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_harga` (`id_produk`, `harga`) VALUES (\'PRD2024072100002\', \'1.000.000\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_harga` (`id_produk`, `harga`) VALUES (:id_produk:, :harga:)', [...], false)
+ 5 APPPATH\Models\M_Produk.php(56): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Peternak.php(580): App\Models\M_Produk->saveHargaProduk([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->simpan_produk_saya_usaha_peternak()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-21 02:08:32 --> mysqli_sql_exception: Column 'id_produk' in order clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_Produk.php(42): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Peternak.php(459): App\Models\M_Produk->getDataProdukJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-21 02:08:32 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_produk' in order clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = :is_delete_produk:
+ORDER BY `id_produk` ASC', [...], false)
+ 2 APPPATH\Models\M_Produk.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Peternak.php(459): App\Models\M_Produk->getDataProdukJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:08:32 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_produk' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = \'0\'
+ORDER BY `id_produk` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = \'0\'
+ORDER BY `id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = :is_delete_produk:
+ORDER BY `id_produk` ASC', [...], false)
+ 4 APPPATH\Models\M_Produk.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Peternak.php(459): App\Models\M_Produk->getDataProdukJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:08:32 --> [Caused by] mysqli_sql_exception: Column 'id_produk' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = \'0\'
+ORDER BY `id_produk` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = \'0\'
+ORDER BY `id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = \'0\'
+ORDER BY `id_produk` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = :is_delete_produk:
+ORDER BY `id_produk` ASC', [...], false)
+ 5 APPPATH\Models\M_Produk.php(42): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Peternak.php(459): App\Models\M_Produk->getDataProdukJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:14:14 --> ErrorException: Undefined array key "nm_foto"
+in APPPATH\Views\Frontend\master-peternak\content\menu\produk-saya-usaha.php on line 42.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\produk-saya-usaha.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nm_foto"', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\produk-saya-usaha.php', 42)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\produk-saya-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/produk-saya-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(472): view('Frontend/master-peternak/content/menu/produk-saya-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:16:39 --> ErrorException: Undefined array key "nm_foto"
+in APPPATH\Views\Frontend\master-peternak\content\menu\produk-saya-usaha.php on line 42.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\produk-saya-usaha.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nm_foto"', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\produk-saya-usaha.php', 42)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\produk-saya-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/produk-saya-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(472): view('Frontend/master-peternak/content/menu/produk-saya-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:27:16 --> ParseError: syntax error, unexpected token "}"
+in APPPATH\Controllers\Peternak.php on line 463.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Peternak')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Peternak')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Peternak', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:27:24 --> ParseError: syntax error, unexpected token "}"
+in APPPATH\Controllers\Peternak.php on line 463.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Peternak')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Peternak')
+ 4 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\Peternak', true)
+ 5 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-21 02:38:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'OUTER JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`....' at line 4 in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_Produk.php(44): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Peternak.php(459): App\Models\M_Produk->getDataProdukJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-21 02:38:58 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'OUTER JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`....' at line 4
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+OUTER JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = :is_delete_produk:', [...], false)
+ 2 APPPATH\Models\M_Produk.php(44): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Peternak.php(459): App\Models\M_Produk->getDataProdukJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:38:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'OUTER JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`....' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+OUTER JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = \'0\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+OUTER JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = \'0\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+OUTER JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = :is_delete_produk:', [...], false)
+ 4 APPPATH\Models\M_Produk.php(44): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Peternak.php(459): App\Models\M_Produk->getDataProdukJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:38:58 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'OUTER JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`....' at line 4
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+OUTER JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = \'0\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+OUTER JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = \'0\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+OUTER JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = \'0\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+OUTER JOIN `tbl_foto_produk` ON `tbl_foto_produk`.`id_produk` = `tbl_produk`.`id_produk`
+WHERE `is_delete_produk` = :is_delete_produk:', [...], false)
+ 5 APPPATH\Models\M_Produk.php(44): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Peternak.php(459): App\Models\M_Produk->getDataProdukJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:41:26 --> TypeError: Unsupported operand types: string - int
+in APPPATH\Controllers\Peternak.php on line 463.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:41:59 --> TypeError: Unsupported operand types: string - int
+in APPPATH\Controllers\Peternak.php on line 463.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:42:35 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Views\Frontend\master-peternak\content\menu\produk-saya-usaha.php on line 38.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/produk-saya-usaha', [], true)
+ 4 APPPATH\Controllers\Peternak.php(471): view('Frontend/master-peternak/content/menu/produk-saya-usaha', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-21 02:47:47 --> mysqli_sql_exception: Column 'id_produk' in where clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_Produk.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Peternak.php(462): App\Models\M_Produk->getFotoProdukJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-21 02:47:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_produk' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `id_produk` = :id_produk:
+ORDER BY `id_produk` ASC', [...], false)
+ 2 APPPATH\Models\M_Produk.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Peternak.php(462): App\Models\M_Produk->getFotoProdukJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:47:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_produk' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `id_produk` = \'PRD2024072100003\'
+ORDER BY `id_produk` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `id_produk` = \'PRD2024072100003\'
+ORDER BY `id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `id_produk` = :id_produk:
+ORDER BY `id_produk` ASC', [...], false)
+ 4 APPPATH\Models\M_Produk.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Peternak.php(462): App\Models\M_Produk->getFotoProdukJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:47:47 --> [Caused by] mysqli_sql_exception: Column 'id_produk' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `id_produk` = \'PRD2024072100003\'
+ORDER BY `id_produk` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `id_produk` = \'PRD2024072100003\'
+ORDER BY `id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `id_produk` = \'PRD2024072100003\'
+ORDER BY `id_produk` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `id_produk` = :id_produk:
+ORDER BY `id_produk` ASC', [...], false)
+ 5 APPPATH\Models\M_Produk.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Peternak.php(462): App\Models\M_Produk->getFotoProdukJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-21 02:48:21 --> mysqli_sql_exception: Column 'id_produk' in order clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_Produk.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Peternak.php(462): App\Models\M_Produk->getFotoProdukJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-21 02:48:21 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_produk' in order clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = :tbl_foto_produk.id_produk:
+ORDER BY `id_produk` ASC', [...], false)
+ 2 APPPATH\Models\M_Produk.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Peternak.php(462): App\Models\M_Produk->getFotoProdukJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:48:21 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_produk' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = \'PRD2024072100003\'
+ORDER BY `id_produk` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = \'PRD2024072100003\'
+ORDER BY `id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = :tbl_foto_produk.id_produk:
+ORDER BY `id_produk` ASC', [...], false)
+ 4 APPPATH\Models\M_Produk.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Peternak.php(462): App\Models\M_Produk->getFotoProdukJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:48:21 --> [Caused by] mysqli_sql_exception: Column 'id_produk' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = \'PRD2024072100003\'
+ORDER BY `id_produk` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = \'PRD2024072100003\'
+ORDER BY `id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = \'PRD2024072100003\'
+ORDER BY `id_produk` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = :tbl_foto_produk.id_produk:
+ORDER BY `id_produk` ASC', [...], false)
+ 5 APPPATH\Models\M_Produk.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Peternak.php(462): App\Models\M_Produk->getFotoProdukJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:48:56 --> ErrorException: Undefined array key "tbl_produk.id_produk"
+in APPPATH\Controllers\Peternak.php on line 462.
+ 1 APPPATH\Controllers\Peternak.php(462): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tbl_produk.id_produk"', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 462)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-21 02:49:20 --> mysqli_sql_exception: Column 'id_produk' in order clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_Produk.php(95): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Peternak.php(462): App\Models\M_Produk->getFotoProdukJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-21 02:49:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_produk' in order clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = :tbl_foto_produk.id_produk:
+ORDER BY `id_produk` ASC', [...], false)
+ 2 APPPATH\Models\M_Produk.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Peternak.php(462): App\Models\M_Produk->getFotoProdukJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:49:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_produk' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = \'PRD2024072100003\'
+ORDER BY `id_produk` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = \'PRD2024072100003\'
+ORDER BY `id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = :tbl_foto_produk.id_produk:
+ORDER BY `id_produk` ASC', [...], false)
+ 4 APPPATH\Models\M_Produk.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Peternak.php(462): App\Models\M_Produk->getFotoProdukJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:49:20 --> [Caused by] mysqli_sql_exception: Column 'id_produk' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = \'PRD2024072100003\'
+ORDER BY `id_produk` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = \'PRD2024072100003\'
+ORDER BY `id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = \'PRD2024072100003\'
+ORDER BY `id_produk` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_foto_produk`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_foto_produk`.`id_produk`
+WHERE `tbl_foto_produk`.`id_produk` = :tbl_foto_produk.id_produk:
+ORDER BY `id_produk` ASC', [...], false)
+ 5 APPPATH\Models\M_Produk.php(95): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Peternak.php(462): App\Models\M_Produk->getFotoProdukJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 02:49:37 --> ErrorException: Undefined array key "tbl_foto_produk.id_produk"
+in APPPATH\Controllers\Peternak.php on line 462.
+ 1 APPPATH\Controllers\Peternak.php(462): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tbl_foto_produk.id_produk"', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 462)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 03:07:27 --> ErrorException: Undefined array key "nm_foto"
+in APPPATH\Views\Frontend\master-peternak\content\menu\produk-saya-usaha.php on line 42.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\produk-saya-usaha.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nm_foto"', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\produk-saya-usaha.php', 42)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\produk-saya-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/produk-saya-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(474): view('Frontend/master-peternak/content/menu/produk-saya-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 03:08:28 --> ErrorException: Array to string conversion
+in APPPATH\Views\Frontend\master-peternak\content\menu\produk-saya-usaha.php on line 42.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\produk-saya-usaha.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\produk-saya-usaha.php', 42)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\produk-saya-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/produk-saya-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(474): view('Frontend/master-peternak/content/menu/produk-saya-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 03:11:38 --> ErrorException: Array to string conversion
+in APPPATH\Views\Frontend\master-peternak\content\menu\produk-saya-usaha.php on line 42.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\produk-saya-usaha.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\produk-saya-usaha.php', 42)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\produk-saya-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/produk-saya-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(474): view('Frontend/master-peternak/content/menu/produk-saya-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-21 03:19:50 --> ErrorException: Undefined array key "PRD240721020247-1.png"
+in APPPATH\Controllers\Peternak.php on line 465.
+ 1 APPPATH\Controllers\Peternak.php(465): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "PRD240721020247-1.png"', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 465)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->produk_saya_usaha_peternak()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')

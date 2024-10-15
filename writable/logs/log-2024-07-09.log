@@ -1,0 +1,109 @@
+CRITICAL - 2024-07-09 11:32:41 --> ErrorException: Undefined array key "foto_paket"
+in APPPATH\Views\Frontend\master-peternak\content\menu\tentang-toko-usaha.php on line 47.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\tentang-toko-usaha.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "foto_paket"', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\tentang-toko-usaha.php', 47)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\tentang-toko-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/tentang-toko-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(488): view('Frontend/master-peternak/content/menu/tentang-toko-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->toko_saya_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-09 12:00:23 --> ErrorException: mkdir(): No such file or directory
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 185.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mkdir(): No such file or directory', 'C:\\xampp\\htdocs\\sobatx\\system\\HTTP\\Files\\UploadedFile.php', 185)
+ 2 SYSTEMPATH\HTTP\Files\UploadedFile.php(185): mkdir('Assets/img/toko/FTK240709120023.png/', 511, true)
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(139): CodeIgniter\HTTP\Files\UploadedFile->setPath('Assets/img/toko/FTK240709120023.png/')
+ 4 APPPATH\Controllers\Peternak.php(526): CodeIgniter\HTTP\Files\UploadedFile->move('Assets/img/toko/FTK240709120023.png/')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->buat_toko_peternak()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-09 12:04:09 --> ErrorException: mkdir(): No such file or directory
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 185.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mkdir(): No such file or directory', 'C:\\xampp\\htdocs\\sobatx\\system\\HTTP\\Files\\UploadedFile.php', 185)
+ 2 SYSTEMPATH\HTTP\Files\UploadedFile.php(185): mkdir('Assets/img/tokoFTK240709120409.png/', 511, true)
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(139): CodeIgniter\HTTP\Files\UploadedFile->setPath('Assets/img/tokoFTK240709120409.png/')
+ 4 APPPATH\Controllers\Peternak.php(526): CodeIgniter\HTTP\Files\UploadedFile->move('Assets/img/tokoFTK240709120409.png/')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->buat_toko_peternak()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-09 12:06:53 --> ErrorException: imagejpeg(Assets/img/toko/): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Peternak.php on line 37.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'imagejpeg(Assets/img/toko/): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 37)
+ 2 APPPATH\Controllers\Peternak.php(37): imagejpeg(Object(GdImage), 'Assets/img/toko/', 75)
+ 3 APPPATH\Controllers\Peternak.php(526): App\Controllers\Peternak->compress(Object(CodeIgniter\HTTP\Files\UploadedFile), 'Assets/img/toko/', 75)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->buat_toko_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-09 12:08:56 --> ErrorException: mkdir(): No such file or directory
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 185.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mkdir(): No such file or directory', 'C:\\xampp\\htdocs\\sobatx\\system\\HTTP\\Files\\UploadedFile.php', 185)
+ 2 SYSTEMPATH\HTTP\Files\UploadedFile.php(185): mkdir('Assets/img/toko/FTK240709120856.png/', 511, true)
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(139): CodeIgniter\HTTP\Files\UploadedFile->setPath('Assets/img/toko/FTK240709120856.png/')
+ 4 APPPATH\Controllers\Peternak.php(526): CodeIgniter\HTTP\Files\UploadedFile->move('Assets/img/toko/FTK240709120856.png/', 'FTK240709120856.png')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->buat_toko_peternak()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-09 12:13:26 --> ErrorException: imagejpeg(Assets/img/toko/): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Peternak.php on line 37.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'imagejpeg(Assets/img/toko/): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 37)
+ 2 APPPATH\Controllers\Peternak.php(37): imagejpeg(Object(GdImage), 'Assets/img/toko/', 75)
+ 3 APPPATH\Controllers\Peternak.php(525): App\Controllers\Peternak->compress(Object(CodeIgniter\HTTP\Files\UploadedFile), 'Assets/img/toko/', 75)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->buat_toko_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-09 12:17:15 --> ErrorException: imagejpeg(Assets/img/toko/): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Peternak.php on line 37.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'imagejpeg(Assets/img/toko/): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 37)
+ 2 APPPATH\Controllers\Peternak.php(37): imagejpeg(Object(GdImage), 'Assets/img/toko/', 65)
+ 3 APPPATH\Controllers\Peternak.php(525): App\Controllers\Peternak->compress(Object(CodeIgniter\HTTP\Files\UploadedFile), 'Assets/img/toko/', 65)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->buat_toko_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-09 12:21:25 --> ErrorException: mkdir(): No such file or directory
+in SYSTEMPATH\HTTP\Files\UploadedFile.php on line 185.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mkdir(): No such file or directory', 'C:\\xampp\\htdocs\\sobatx\\system\\HTTP\\Files\\UploadedFile.php', 185)
+ 2 SYSTEMPATH\HTTP\Files\UploadedFile.php(185): mkdir('Assets/img/toko/FTK240709122125/', 511, true)
+ 3 SYSTEMPATH\HTTP\Files\UploadedFile.php(139): CodeIgniter\HTTP\Files\UploadedFile->setPath('Assets/img/toko/FTK240709122125/')
+ 4 APPPATH\Controllers\Peternak.php(527): CodeIgniter\HTTP\Files\UploadedFile->move('Assets/img/toko/FTK240709122125/', 'FTK240709122125.png')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->buat_toko_peternak()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-09 12:28:15 --> Error: Call to undefined function App\Controllers\compress()
+in APPPATH\Controllers\Peternak.php on line 526.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->buat_toko_peternak()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-09 12:29:34 --> ErrorException: Undefined array key "ao"
+in APPPATH\Controllers\Peternak.php on line 526.
+ 1 APPPATH\Controllers\Peternak.php(526): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "ao"', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 526)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->buat_toko_peternak()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-09 12:34:36 --> ArgumentCountError: move_uploaded_file() expects exactly 2 arguments, 1 given
+in APPPATH\Controllers\Peternak.php on line 526.
+ 1 APPPATH\Controllers\Peternak.php(526): move_uploaded_file('Assets/img/toko/FTK240709123435.png')
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->buat_toko_peternak()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')

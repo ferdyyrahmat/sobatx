@@ -1,0 +1,388 @@
+ERROR - 2024-10-12 20:25:29 --> mysqli_sql_exception: Unknown column 'update_at' in 'field list' in E:\Project\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\Project\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tbl_tra...', 0)
+#1 E:\Project\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_tra...')
+#2 E:\Project\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_tra...')
+#3 E:\Project\sobatx\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_tra...', Array, false)
+#4 E:\Project\sobatx\app\Models\M_Transaksi.php(55): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 E:\Project\sobatx\app\Controllers\Marketplace.php(659): App\Models\M_Transaksi->updateDataTemp(Array, Array)
+#6 E:\Project\sobatx\system\CodeIgniter.php(941): App\Controllers\Marketplace->update_total_bayar('dc9f28ef9b55b00...')
+#7 E:\Project\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+#8 E:\Project\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Project\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\Project\sobatx\system\Commands\Server\rewrite.php(47): require_once('E:\\Project\\soba...')
+#11 {main}
+CRITICAL - 2024-10-12 20:25:29 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'update_at' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_transaksi_temp` SET `total_bayar` = :total_bayar:, `update_at` = :update_at:
+WHERE sha1(id_transaksi) = :sha1(id_transaksi):', [...], false)
+ 2 APPPATH\Models\M_Transaksi.php(55): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\Marketplace.php(659): App\Models\M_Transaksi->updateDataTemp([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->update_total_bayar('dc9f28ef9b55b0076efd9553afaaee48b99745be')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 20:25:29 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'update_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_transaksi_temp` SET `total_bayar` = \'35848\', `update_at` = \'2024-10-12 20:25:29\'
+WHERE sha1(id_transaksi) = \'dc9f28ef9b55b0076efd9553afaaee48b99745be\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_transaksi_temp` SET `total_bayar` = \'35848\', `update_at` = \'2024-10-12 20:25:29\'
+WHERE sha1(id_transaksi) = \'dc9f28ef9b55b0076efd9553afaaee48b99745be\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_transaksi_temp` SET `total_bayar` = :total_bayar:, `update_at` = :update_at:
+WHERE sha1(id_transaksi) = :sha1(id_transaksi):', [...], false)
+ 4 APPPATH\Models\M_Transaksi.php(55): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\Marketplace.php(659): App\Models\M_Transaksi->updateDataTemp([...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->update_total_bayar('dc9f28ef9b55b0076efd9553afaaee48b99745be')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 20:25:29 --> [Caused by] mysqli_sql_exception: Unknown column 'update_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tbl_transaksi_temp` SET `total_bayar` = \'35848\', `update_at` = \'2024-10-12 20:25:29\'
+WHERE sha1(id_transaksi) = \'dc9f28ef9b55b0076efd9553afaaee48b99745be\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_transaksi_temp` SET `total_bayar` = \'35848\', `update_at` = \'2024-10-12 20:25:29\'
+WHERE sha1(id_transaksi) = \'dc9f28ef9b55b0076efd9553afaaee48b99745be\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_transaksi_temp` SET `total_bayar` = \'35848\', `update_at` = \'2024-10-12 20:25:29\'
+WHERE sha1(id_transaksi) = \'dc9f28ef9b55b0076efd9553afaaee48b99745be\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_transaksi_temp` SET `total_bayar` = :total_bayar:, `update_at` = :update_at:
+WHERE sha1(id_transaksi) = :sha1(id_transaksi):', [...], false)
+ 5 APPPATH\Models\M_Transaksi.php(55): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\Marketplace.php(659): App\Models\M_Transaksi->updateDataTemp([...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->update_total_bayar('dc9f28ef9b55b0076efd9553afaaee48b99745be')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:19:23 --> Error: Class "Str" not found
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php on line 65.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [], true)
+ 4 APPPATH\Controllers\Marketplace.php(656): view('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('858974d6d478bca87e8643d2998a4cc254367520')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:19:55 --> ErrorException: Undefined variable $value
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php on line 65.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php', 65)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(656): view('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('858974d6d478bca87e8643d2998a4cc254367520')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:19:55 --> ErrorException: Undefined variable $value
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php on line 65.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $value', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php', 65)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(656): view('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('858974d6d478bca87e8643d2998a4cc254367520')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+ERROR - 2024-10-12 21:24:18 --> mysqli_sql_exception: Column 'metode' cannot be null in E:\Project\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\Project\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 E:\Project\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 E:\Project\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 E:\Project\sobatx\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 E:\Project\sobatx\app\Models\M_Pesanan.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\Project\sobatx\app\Controllers\Marketplace.php(644): App\Models\M_Pesanan->saveDataPesanan(Array)
+#6 E:\Project\sobatx\system\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('6980d5c35f15456...')
+#7 E:\Project\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+#8 E:\Project\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Project\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\Project\sobatx\system\Commands\Server\rewrite.php(47): require_once('E:\\Project\\soba...')
+#11 {main}
+CRITICAL - 2024-10-12 21:24:18 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'metode' cannot be null
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (:id_pesanan:, :id_produk:, :id_toko:, :id_user:, :id_alamat:, :metode:, :nama_produk:, :jumlah:, :total_bayar:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 APPPATH\Models\M_Pesanan.php(30): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Marketplace.php(644): App\Models\M_Pesanan->saveDataPesanan([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('6980d5c35f154567a3aa7d1c185a7d24a5d8d1c3')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:24:18 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'metode' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (\'6980d5c35f154567a3aa7d1c185a7d24a5d8d1c3\', \'PRD2024072100003\', \'TKO0001\', \'USR2408139901\', \'ALT2409060004\', NULL, \'Contoh Produk \', \'1\', \'752515\', \'1\', \'2024-10-12 21:24:18\', \'2024-10-12 21:24:18\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (\'6980d5c35f154567a3aa7d1c185a7d24a5d8d1c3\', \'PRD2024072100003\', \'TKO0001\', \'USR2408139901\', \'ALT2409060004\', NULL, \'Contoh Produk \', \'1\', \'752515\', \'1\', \'2024-10-12 21:24:18\', \'2024-10-12 21:24:18\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (:id_pesanan:, :id_produk:, :id_toko:, :id_user:, :id_alamat:, :metode:, :nama_produk:, :jumlah:, :total_bayar:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 APPPATH\Models\M_Pesanan.php(30): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\Marketplace.php(644): App\Models\M_Pesanan->saveDataPesanan([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('6980d5c35f154567a3aa7d1c185a7d24a5d8d1c3')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:24:18 --> [Caused by] mysqli_sql_exception: Column 'metode' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (\'6980d5c35f154567a3aa7d1c185a7d24a5d8d1c3\', \'PRD2024072100003\', \'TKO0001\', \'USR2408139901\', \'ALT2409060004\', NULL, \'Contoh Produk \', \'1\', \'752515\', \'1\', \'2024-10-12 21:24:18\', \'2024-10-12 21:24:18\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (\'6980d5c35f154567a3aa7d1c185a7d24a5d8d1c3\', \'PRD2024072100003\', \'TKO0001\', \'USR2408139901\', \'ALT2409060004\', NULL, \'Contoh Produk \', \'1\', \'752515\', \'1\', \'2024-10-12 21:24:18\', \'2024-10-12 21:24:18\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (\'6980d5c35f154567a3aa7d1c185a7d24a5d8d1c3\', \'PRD2024072100003\', \'TKO0001\', \'USR2408139901\', \'ALT2409060004\', NULL, \'Contoh Produk \', \'1\', \'752515\', \'1\', \'2024-10-12 21:24:18\', \'2024-10-12 21:24:18\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (:id_pesanan:, :id_produk:, :id_toko:, :id_user:, :id_alamat:, :metode:, :nama_produk:, :jumlah:, :total_bayar:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH\Models\M_Pesanan.php(30): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Marketplace.php(644): App\Models\M_Pesanan->saveDataPesanan([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('6980d5c35f154567a3aa7d1c185a7d24a5d8d1c3')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:26:25 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Marketplace.php on line 636.
+ 1 APPPATH\Controllers\Marketplace.php(636): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 636)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('6980d5c35f154567a3aa7d1c185a7d24a5d8d1c3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:26:26 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Marketplace.php on line 636.
+ 1 APPPATH\Controllers\Marketplace.php(636): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 636)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('6980d5c35f154567a3aa7d1c185a7d24a5d8d1c3')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:27:12 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Marketplace.php on line 636.
+ 1 APPPATH\Controllers\Marketplace.php(636): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 636)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('06f3f72f294abe547c781529838ee083189dedfc')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:30:48 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Marketplace.php on line 636.
+ 1 APPPATH\Controllers\Marketplace.php(636): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 636)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('06f3f72f294abe547c781529838ee083189dedfc')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:30:49 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Marketplace.php on line 636.
+ 1 APPPATH\Controllers\Marketplace.php(636): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 636)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('06f3f72f294abe547c781529838ee083189dedfc')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:31:37 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Marketplace.php on line 636.
+ 1 APPPATH\Controllers\Marketplace.php(636): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 636)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('813db9829f151f2120874f286a7b07a93b610b87')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:35:22 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\Marketplace.php on line 636.
+ 1 APPPATH\Controllers\Marketplace.php(636): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 636)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+ERROR - 2024-10-12 21:37:24 --> mysqli_sql_exception: Duplicate entry 'ef30b7d8b2948cc22dc9478ad3dc6e54f6272425' for key 'PRIMARY' in E:\Project\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\Project\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tb...', 0)
+#1 E:\Project\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tb...')
+#2 E:\Project\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tb...')
+#3 E:\Project\sobatx\system\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tb...', Array, false)
+#4 E:\Project\sobatx\app\Models\M_Pesanan.php(30): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 E:\Project\sobatx\app\Controllers\Marketplace.php(643): App\Models\M_Pesanan->saveDataPesanan(Array)
+#6 E:\Project\sobatx\system\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc...')
+#7 E:\Project\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+#8 E:\Project\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Project\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\Project\sobatx\system\Commands\Server\rewrite.php(47): require_once('E:\\Project\\soba...')
+#11 {main}
+CRITICAL - 2024-10-12 21:37:24 --> CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'ef30b7d8b2948cc22dc9478ad3dc6e54f6272425' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (:id_pesanan:, :id_produk:, :id_toko:, :id_user:, :id_alamat:, :metode:, :nama_produk:, :jumlah:, :total_bayar:, :status:, :created_at:, :updated_at:)', [...], false)
+ 2 APPPATH\Models\M_Pesanan.php(30): CodeIgniter\Database\BaseBuilder->insert([...])
+ 3 APPPATH\Controllers\Marketplace.php(643): App\Models\M_Pesanan->saveDataPesanan([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:37:24 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Duplicate entry 'ef30b7d8b2948cc22dc9478ad3dc6e54f6272425' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (\'ef30b7d8b2948cc22dc9478ad3dc6e54f6272425\', \'PRD2024072100003\', \'TKO0001\', \'USR2408139901\', \'ALT2409060004\', \'cod\', \'Contoh Produk \', \'1\', \'752515\', \'1\', \'2024-10-12 21:37:24\', \'2024-10-12 21:37:24\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (\'ef30b7d8b2948cc22dc9478ad3dc6e54f6272425\', \'PRD2024072100003\', \'TKO0001\', \'USR2408139901\', \'ALT2409060004\', \'cod\', \'Contoh Produk \', \'1\', \'752515\', \'1\', \'2024-10-12 21:37:24\', \'2024-10-12 21:37:24\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (:id_pesanan:, :id_produk:, :id_toko:, :id_user:, :id_alamat:, :metode:, :nama_produk:, :jumlah:, :total_bayar:, :status:, :created_at:, :updated_at:)', [...], false)
+ 4 APPPATH\Models\M_Pesanan.php(30): CodeIgniter\Database\BaseBuilder->insert([...])
+ 5 APPPATH\Controllers\Marketplace.php(643): App\Models\M_Pesanan->saveDataPesanan([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:37:24 --> [Caused by] mysqli_sql_exception: Duplicate entry 'ef30b7d8b2948cc22dc9478ad3dc6e54f6272425' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (\'ef30b7d8b2948cc22dc9478ad3dc6e54f6272425\', \'PRD2024072100003\', \'TKO0001\', \'USR2408139901\', \'ALT2409060004\', \'cod\', \'Contoh Produk \', \'1\', \'752515\', \'1\', \'2024-10-12 21:37:24\', \'2024-10-12 21:37:24\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (\'ef30b7d8b2948cc22dc9478ad3dc6e54f6272425\', \'PRD2024072100003\', \'TKO0001\', \'USR2408139901\', \'ALT2409060004\', \'cod\', \'Contoh Produk \', \'1\', \'752515\', \'1\', \'2024-10-12 21:37:24\', \'2024-10-12 21:37:24\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (\'ef30b7d8b2948cc22dc9478ad3dc6e54f6272425\', \'PRD2024072100003\', \'TKO0001\', \'USR2408139901\', \'ALT2409060004\', \'cod\', \'Contoh Produk \', \'1\', \'752515\', \'1\', \'2024-10-12 21:37:24\', \'2024-10-12 21:37:24\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2307): CodeIgniter\Database\BaseConnection->query('INSERT INTO `tbl_pesanan` (`id_pesanan`, `id_produk`, `id_toko`, `id_user`, `id_alamat`, `metode`, `nama_produk`, `jumlah`, `total_bayar`, `status`, `created_at`, `updated_at`) VALUES (:id_pesanan:, :id_produk:, :id_toko:, :id_user:, :id_alamat:, :metode:, :nama_produk:, :jumlah:, :total_bayar:, :status:, :created_at:, :updated_at:)', [...], false)
+ 5 APPPATH\Models\M_Pesanan.php(30): CodeIgniter\Database\BaseBuilder->insert([...])
+ 6 APPPATH\Controllers\Marketplace.php(643): App\Models\M_Pesanan->saveDataPesanan([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:47:23 --> Error: Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php on line 65.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [], true)
+ 4 APPPATH\Controllers\Marketplace.php(675): view('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:47:24 --> Error: Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php on line 65.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [], true)
+ 4 APPPATH\Controllers\Marketplace.php(675): view('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:53:44 --> ErrorException: Undefined array key "metode"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php on line 65.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "metode"', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php', 65)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(675): view('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 21:53:45 --> ErrorException: Undefined array key "metode"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php on line 65.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "metode"', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php', 65)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(675): view('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 22:14:56 --> ErrorException: Undefined array key "metode"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php on line 65.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "metode"', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php', 65)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(675): view('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 22:14:57 --> ErrorException: Undefined array key "metode"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php on line 65.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "metode"', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php', 65)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(675): view('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 22:16:14 --> ErrorException: Undefined variable $dataTransaksi
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php on line 69.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataTransaksi', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php', 69)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(675): view('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 22:16:14 --> ErrorException: Undefined variable $dataTransaksi
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php on line 69.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataTransaksi', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php', 69)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(675): view('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 22:16:38 --> ErrorException: Undefined variable $dataTransaksi
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php on line 69.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataTransaksi', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php', 69)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(675): view('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 22:16:39 --> ErrorException: Undefined variable $dataTransaksi
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php on line 69.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataTransaksi', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php', 69)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(675): view('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 22:32:40 --> ErrorException: Undefined array key "nm_foto"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php on line 106.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nm_foto"', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php', 106)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(675): view('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-12 22:32:40 --> ErrorException: Undefined array key "nm_foto"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php on line 106.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-buat-pesanan.php(106): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nm_foto"', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php', 106)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-buat-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(675): view('Frontend/master-pengguna/content/marketplace/detail-buat-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->buat_pesanan('ef30b7d8b2948cc22dc9478ad3dc6e54f6272425')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')

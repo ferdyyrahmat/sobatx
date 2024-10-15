@@ -1,0 +1,64 @@
+CRITICAL - 2024-07-05 15:37:52 --> ErrorException: Trying to access array offset on value of type int
+in APPPATH\Controllers\Peternak.php on line 360.
+ 1 APPPATH\Controllers\Peternak.php(360): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 360)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->beli_paket_peternak('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-05 15:51:05 --> ErrorException: Trying to access array offset on value of type int
+in APPPATH\Controllers\Peternak.php on line 337.
+ 1 APPPATH\Controllers\Peternak.php(337): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 337)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-05 16:46:52 --> ErrorException: Undefined array key "id_paket"
+in APPPATH\Views\Frontend\master-peternak\content\menu\mulai-usaha.php on line 24.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\mulai-usaha.php(24): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_paket"', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\mulai-usaha.php', 24)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\mulai-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/mulai-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(319): view('Frontend/master-peternak/content/menu/mulai-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->mulai_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-05 16:55:08 --> ErrorException: Trying to access array offset on value of type int
+in APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php on line 81.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\detail-mulai-usaha.php', 81)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\detail-mulai-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/detail-mulai-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(343): view('Frontend/master-peternak/content/menu/detail-mulai-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-05 17:02:26 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php on line 81.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\detail-mulai-usaha.php', 81)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\detail-mulai-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/detail-mulai-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(344): view('Frontend/master-peternak/content/menu/detail-mulai-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('2ea2c9a08fc87f197c67e4dfa6f9329490e67f8f')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-05 17:12:45 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php on line 81.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\detail-mulai-usaha.php', 81)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\detail-mulai-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/detail-mulai-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(347): view('Frontend/master-peternak/content/menu/detail-mulai-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')

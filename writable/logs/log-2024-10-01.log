@@ -1,0 +1,12 @@
+CRITICAL - 2024-10-01 21:19:40 --> ErrorException: Undefined variable $dataKota
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\checkout.php on line 72.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\checkout.php(72): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataKota', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\checkout.php', 72)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\checkout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/checkout', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(601): view('Frontend/master-pengguna/content/marketplace/checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->checkout_product_marketplace('b9fb433cc76739c5e18ae68b20f15ac84ff3285a')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')

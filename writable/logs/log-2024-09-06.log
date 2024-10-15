@@ -1,0 +1,91 @@
+CRITICAL - 2024-09-06 12:34:28 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Marketplace.php on line 580.
+ 1 APPPATH\Controllers\Marketplace.php(580): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 580)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->checkout_product_marketplace('daab4e094611023b2ed94fb3bedda220b67e88f9')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-09-06 12:36:43 --> ErrorException: Undefined variable $page
+in APPPATH\Views\Frontend\template\header-checkout.php on line 89.
+ 1 APPPATH\Views\Frontend\template\header-checkout.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\header-checkout.php', 89)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\header-checkout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/header-checkout', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(341): view('Frontend/template/header-checkout', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->checkout_alamat()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-09-06 12:37:47 --> ErrorException: Undefined variable $page
+in APPPATH\Views\Frontend\template\header-checkout.php on line 89.
+ 1 APPPATH\Views\Frontend\template\header-checkout.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\header-checkout.php', 89)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\header-checkout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/header-checkout', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(360): view('Frontend/template/header-checkout')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->checkout_alamat_input()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-09-06 12:38:17 --> ErrorException: Undefined variable $page
+in APPPATH\Views\Frontend\template\header-checkout.php on line 89.
+ 1 APPPATH\Views\Frontend\template\header-checkout.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\header-checkout.php', 89)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\header-checkout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/header-checkout', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(361): view('Frontend/template/header-checkout')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->checkout_alamat_input()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-09-06 12:38:40 --> ErrorException: Undefined variable $page
+in APPPATH\Views\Frontend\template\header-checkout.php on line 89.
+ 1 APPPATH\Views\Frontend\template\header-checkout.php(89): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $page', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\header-checkout.php', 89)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\header-checkout.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/header-checkout', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(361): view('Frontend/template/header-checkout')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->checkout_alamat_input()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-09-06 12:39:53 --> ErrorException: Undefined array key "results"
+in APPPATH\Controllers\RajaOngkir.php on line 137.
+ 1 APPPATH\Controllers\RajaOngkir.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "results"', 'E:\\Project\\sobatx\\app\\Controllers\\RajaOngkir.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RajaOngkir->paket()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RajaOngkir))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-09-06 12:41:39 --> ErrorException: Undefined array key "results"
+in APPPATH\Controllers\RajaOngkir.php on line 137.
+ 1 APPPATH\Controllers\RajaOngkir.php(137): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "results"', 'E:\\Project\\sobatx\\app\\Controllers\\RajaOngkir.php', 137)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RajaOngkir->paket()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RajaOngkir))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-09-06 12:49:33 --> ErrorException: Array to string conversion
+in APPPATH\Controllers\RajaOngkir.php on line 131.
+ 1 APPPATH\Controllers\RajaOngkir.php(131): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'E:\\Project\\sobatx\\app\\Controllers\\RajaOngkir.php', 131)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\RajaOngkir->paket()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RajaOngkir))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-09-06 17:32:21 --> ErrorException: include(E:\Project\sobatx\vendor\composer/../google/apiclient/src/Google/Client.php): Failed to open stream: No such file or directory
+in VENDORPATH\composer\ClassLoader.php on line 582.
+ 1 VENDORPATH\composer\ClassLoader.php(582): CodeIgniter\Debug\Exceptions->errorHandler(2, 'include(E:\\Project\\sobatx\\vendor\\composer/../google/apiclient/src/Google/Client.php): Failed to open stream: No such file or directory', 'E:\\Project\\sobatx\\vendor\\composer\\ClassLoader.php', 582)
+ 2 VENDORPATH\composer\ClassLoader.php(582): include()
+ 3 VENDORPATH\composer\ClassLoader.php(433): Composer\Autoload\{closure}('E:\\Project\\sobatx\\vendor\\composer/../google/apiclient/src/Google/Client.php')
+ 4 APPPATH\Controllers\Peternak.php(23): Composer\Autoload\ClassLoader->loadClass('Google_Client')
+ 5 SYSTEMPATH\CodeIgniter.php(913): App\Controllers\Peternak->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(493): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')

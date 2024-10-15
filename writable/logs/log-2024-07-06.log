@@ -1,0 +1,995 @@
+ERROR - 2024-07-06 14:44:52 --> mysqli_sql_exception: Column 'id_paket' in where clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b...')
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-06 14:44:52 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(id_paket) = :sha1(id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 2 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 14:44:52 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(id_paket) = \'detail\'
+ORDER BY `id_paket` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(id_paket) = \'detail\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(id_paket) = :sha1(id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 4 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 14:44:52 --> [Caused by] mysqli_sql_exception: Column 'id_paket' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(id_paket) = \'detail\'
+ORDER BY `id_paket` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(id_paket) = \'detail\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(id_paket) = \'detail\'
+ORDER BY `id_paket` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(id_paket) = :sha1(id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 5 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-06 14:45:44 --> mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b...')
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-06 14:45:44 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = :tbl_beli_paket.id_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 2 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 14:45:44 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = :tbl_beli_paket.id_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 4 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 14:45:44 --> [Caused by] mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = :tbl_beli_paket.id_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 5 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-06 14:47:02 --> mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b...')
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-06 14:47:02 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = :tbl_beli_paket.id_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 2 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 14:47:02 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = :tbl_beli_paket.id_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 4 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 14:47:02 --> [Caused by] mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = :tbl_beli_paket.id_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 5 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-06 14:50:33 --> mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b...')
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-06 14:50:33 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = :tbl_beli_paket.id_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 2 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 14:50:33 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = :tbl_beli_paket.id_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 4 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 14:50:33 --> [Caused by] mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = :tbl_beli_paket.id_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 5 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-06 14:51:38 --> mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b...')
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-06 14:51:38 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = :tbl_beli_paket.id_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 2 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 14:51:38 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = :tbl_beli_paket.id_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 4 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 14:51:38 --> [Caused by] mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = :tbl_beli_paket.id_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 5 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-06 16:25:07 --> mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b...')
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-06 16:25:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = :tbl_beli_paket.id_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 2 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 16:25:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = :tbl_beli_paket.id_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 4 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 16:25:07 --> [Caused by] mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE `tbl_beli_paket`.`id_paket` = :tbl_beli_paket.id_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 5 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-06 16:26:43 --> mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b...')
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-06 16:26:43 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_beli_paket.id_paket) = :sha1(tbl_beli_paket.id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 2 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 16:26:43 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_beli_paket.id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_beli_paket.id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_beli_paket.id_paket) = :sha1(tbl_beli_paket.id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 4 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 16:26:43 --> [Caused by] mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_beli_paket.id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_beli_paket.id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_beli_paket.id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON sha1(tbl_paket_usaha.id_paket) = tbl_beli_paket.id_paket
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_beli_paket.id_paket) = :sha1(tbl_beli_paket.id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 5 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-06 16:28:11 --> mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b...')
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-06 16:28:11 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = :sha1(tbl_paket_usaha.id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 2 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 16:28:11 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = :sha1(tbl_paket_usaha.id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 4 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 16:28:11 --> [Caused by] mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = :sha1(tbl_paket_usaha.id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 5 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-06 16:29:23 --> mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b...')
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-06 16:29:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = :sha1(tbl_paket_usaha.id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 2 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 16:29:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = :sha1(tbl_paket_usaha.id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 4 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 16:29:23 --> [Caused by] mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = :sha1(tbl_paket_usaha.id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 5 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-06 16:29:46 --> mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b...')
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-06 16:29:46 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = :sha1(tbl_paket_usaha.id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 2 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 16:29:46 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = \'detail\'
+ORDER BY `id_paket` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = \'detail\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = :sha1(tbl_paket_usaha.id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 4 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 16:29:46 --> [Caused by] mysqli_sql_exception: Column 'id_paket' in order clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = \'detail\'
+ORDER BY `id_paket` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = \'detail\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = \'detail\'
+ORDER BY `id_paket` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_beli_paket`
+LEFT JOIN `tbl_paket_usaha` ON `tbl_paket_usaha`.`id_paket` = `tbl_beli_paket`.`id_paket`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_beli_paket`.`id_user`
+WHERE sha1(tbl_paket_usaha.id_paket) = :sha1(tbl_paket_usaha.id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 5 APPPATH\Models\M_PUsaha.php(109): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(523): App\Models\M_PUsaha->getBeliPaketJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 16:30:57 --> ErrorException: foreach() argument must be of type array|object, null given
+in APPPATH\Views\Backend\master-admin\paket\detail-paket.php on line 40.
+ 1 APPPATH\Views\Backend\master-admin\paket\detail-paket.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, null given', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\detail-paket.php', 40)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\detail-paket.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin/paket/detail-paket', [], true)
+ 5 APPPATH\Controllers\Admin.php(531): view('Backend/master-admin/paket/detail-paket', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 17:29:56 --> ErrorException: Undefined variable $dataUser
+in APPPATH\Views\Backend\master-admin\paket\detail-paket.php on line 66.
+ 1 APPPATH\Views\Backend\master-admin\paket\detail-paket.php(66): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataUser', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\detail-paket.php', 66)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\detail-paket.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin/paket/detail-paket', [], true)
+ 5 APPPATH\Controllers\Admin.php(531): view('Backend/master-admin/paket/detail-paket', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 18:14:15 --> ErrorException: Undefined array key "tbl_beli_paket.status"
+in APPPATH\Views\Backend\master-admin\paket\detail-paket.php on line 50.
+ 1 APPPATH\Views\Backend\master-admin\paket\detail-paket.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tbl_beli_paket.status"', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\detail-paket.php', 50)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\detail-paket.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin/paket/detail-paket', [], true)
+ 5 APPPATH\Controllers\Admin.php(533): view('Backend/master-admin/paket/detail-paket', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->detail_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 18:16:16 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Backend\master-admin\paket\detail-paket.php on line 22.
+ 1 APPPATH\Views\Backend\master-admin\paket\detail-paket.php(22): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\detail-paket.php', 22)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\detail-paket.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin/paket/detail-paket', [], true)
+ 5 APPPATH\Controllers\Admin.php(558): view('Backend/master-admin/paket/detail-paket', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->setujui_Paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-06 18:48:53 --> mysqli_sql_exception: Unknown column 'status' in 'field list' in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tbl_bel...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_bel...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_bel...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_bel...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_PUsaha.php(116): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Admin.php(547): App\Models\M_PUsaha->setujuiBeliPaket(Array, Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->setujui_Paket('11a2db981406f4b...')
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-06 18:48:53 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_beli_paket` SET `status` = :status:
+WHERE sha1(id_paket) = :sha1(id_paket):', [...], false)
+ 2 APPPATH\Models\M_PUsaha.php(116): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\Admin.php(547): App\Models\M_PUsaha->setujuiBeliPaket([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->setujui_Paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 18:48:53 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_beli_paket` SET `status` = \'2\'
+WHERE sha1(id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_beli_paket` SET `status` = \'2\'
+WHERE sha1(id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_beli_paket` SET `status` = :status:
+WHERE sha1(id_paket) = :sha1(id_paket):', [...], false)
+ 4 APPPATH\Models\M_PUsaha.php(116): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\Admin.php(547): App\Models\M_PUsaha->setujuiBeliPaket([...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->setujui_Paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-06 18:48:53 --> [Caused by] mysqli_sql_exception: Unknown column 'status' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tbl_beli_paket` SET `status` = \'2\'
+WHERE sha1(id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_beli_paket` SET `status` = \'2\'
+WHERE sha1(id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_beli_paket` SET `status` = \'2\'
+WHERE sha1(id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_beli_paket` SET `status` = :status:
+WHERE sha1(id_paket) = :sha1(id_paket):', [...], false)
+ 5 APPPATH\Models\M_PUsaha.php(116): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\Admin.php(547): App\Models\M_PUsaha->setujuiBeliPaket([...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->setujui_Paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')

@@ -1,0 +1,26 @@
+
+.loader{
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: white;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loader img{
+  width: 100px;
+}
+
+.disppear{
+  animation: vanish 3s forwards;
+}
+@keyframes vanish {
+  100%{
+    opacity: 0;
+    visibility: hidden;
+  }
+}

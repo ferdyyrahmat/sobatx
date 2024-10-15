@@ -1,0 +1,21 @@
+CRITICAL - 2024-03-05 04:18:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Frontend/Login/header.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Frontend/Login/header.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/Login/header', [], true)
+ 3 APPPATH\Controllers\Front.php(8): view('Frontend/Login/header')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Front->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-03-05 08:14:21 --> Error: Call to undefined function bsase_url()
+in APPPATH\Views\Frontend\Login\login.php on line 67.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/Login/login', [], true)
+ 4 APPPATH\Controllers\Front.php(8): view('Frontend/Login/login')
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Front->index()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Front))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')

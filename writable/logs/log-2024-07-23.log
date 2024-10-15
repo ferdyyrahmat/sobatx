@@ -1,0 +1,327 @@
+CRITICAL - 2024-07-23 01:33:29 --> ErrorException: imagejpeg(Assets/img/toko/produk/): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Peternak.php on line 39.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'imagejpeg(Assets/img/toko/produk/): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 39)
+ 2 APPPATH\Controllers\Peternak.php(39): imagejpeg(Object(GdImage), 'Assets/img/toko/produk/', 65)
+ 3 APPPATH\Controllers\Peternak.php(683): App\Controllers\Peternak->compress(Object(CodeIgniter\HTTP\Files\UploadedFile), 'Assets/img/toko/produk/', 65)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->update_produk_saya_usaha_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-23 01:37:39 --> ErrorException: imagejpeg(Assets/img/toko/produk/): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Peternak.php on line 39.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'imagejpeg(Assets/img/toko/produk/): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 39)
+ 2 APPPATH\Controllers\Peternak.php(39): imagejpeg(Object(GdImage), 'Assets/img/toko/produk/', 65)
+ 3 APPPATH\Controllers\Peternak.php(683): App\Controllers\Peternak->compress(Object(CodeIgniter\HTTP\Files\UploadedFile), 'Assets/img/toko/produk/', 65)
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->update_produk_saya_usaha_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-23 01:38:04 --> ValueError: Path cannot be empty
+in APPPATH\Controllers\Peternak.php on line 32.
+ 1 APPPATH\Controllers\Peternak.php(32): getimagesize('')
+ 2 APPPATH\Controllers\Peternak.php(690): App\Controllers\Peternak->compress(Object(CodeIgniter\HTTP\Files\UploadedFile), 'Assets/img/toko/produk/PRD240721020247-2.png', 65)
+ 3 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->update_produk_saya_usaha_peternak()
+ 4 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 5 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-23 10:54:36 --> ErrorException: Undefined array key "nama_kategori"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\featured-product.php on line 59.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\featured-product.php(59): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_kategori"', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\featured-product.php', 59)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\featured-product.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/featured-product', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(41): view('Frontend/master-pengguna/content/marketplace/featured-product', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-23 13:14:09 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`%` = 'Item 2'' at line 5 in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_Produk.php(59): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Marketplace.php(23): App\Models\M_Produk->getDataProdukJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-23 13:14:09 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`%` = 'Item 2'' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = :nama_produk %:', [...], false)
+ 2 APPPATH\Models\M_Produk.php(59): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Marketplace.php(23): App\Models\M_Produk->getDataProdukJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-23 13:14:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`%` = 'Item 2'' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = \'Item 2\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = \'Item 2\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = :nama_produk %:', [...], false)
+ 4 APPPATH\Models\M_Produk.php(59): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Marketplace.php(23): App\Models\M_Produk->getDataProdukJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-23 13:14:09 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`%` = 'Item 2'' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = \'Item 2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = \'Item 2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = \'Item 2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = :nama_produk %:', [...], false)
+ 5 APPPATH\Models\M_Produk.php(59): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Marketplace.php(23): App\Models\M_Produk->getDataProdukJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-23 13:14:55 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`%` = 'Item 2'' at line 5 in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_Produk.php(59): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Marketplace.php(23): App\Models\M_Produk->getDataProdukJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-23 13:14:55 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`%` = 'Item 2'' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = :nama_produk %:', [...], false)
+ 2 APPPATH\Models\M_Produk.php(59): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Marketplace.php(23): App\Models\M_Produk->getDataProdukJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-23 13:14:55 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`%` = 'Item 2'' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = \'Item 2\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = \'Item 2\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = :nama_produk %:', [...], false)
+ 4 APPPATH\Models\M_Produk.php(59): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Marketplace.php(23): App\Models\M_Produk->getDataProdukJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-23 13:14:55 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '`%` = 'Item 2'' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = \'Item 2\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = \'Item 2\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = \'Item 2\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE `nama_produk` `%` = :nama_produk %:', [...], false)
+ 5 APPPATH\Models\M_Produk.php(59): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Marketplace.php(23): App\Models\M_Produk->getDataProdukJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-23 13:15:35 --> TypeError: Unsupported operand types: string % string
+in APPPATH\Controllers\Marketplace.php on line 23.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-23 13:17:08 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 5 in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_Produk.php(59): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Marketplace.php(23): App\Models\M_Produk->getDataProdukJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-23 13:17:08 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE 0 = :0:', [...], false)
+ 2 APPPATH\Models\M_Produk.php(59): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Marketplace.php(23): App\Models\M_Produk->getDataProdukJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-23 13:17:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE 0 = :0:')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE 0 = :0:')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE 0 = :0:', [...], false)
+ 4 APPPATH\Models\M_Produk.php(59): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Marketplace.php(23): App\Models\M_Produk->getDataProdukJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-23 13:17:08 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE 0 = :0:', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE 0 = :0:')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE 0 = :0:')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_produk`.`id_toko`
+LEFT JOIN `tbl_kategori` ON `tbl_kategori`.`id_kategori` = `tbl_produk`.`id_kategori`
+WHERE 0 = :0:', [...], false)
+ 5 APPPATH\Models\M_Produk.php(59): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Marketplace.php(23): App\Models\M_Produk->getDataProdukJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-23 14:13:45 --> ErrorException: Undefined variable $dataPaket
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace.php on line 163.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataPaket', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace.php', 163)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(56): view('Frontend/master-pengguna/content/marketplace', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->search_item()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-23 14:25:11 --> ErrorException: Undefined variable $activity
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace.php on line 212.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace.php(212): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $activity', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace.php', 212)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(39): view('Frontend/master-pengguna/content/marketplace', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-23 18:10:46 --> ErrorException: Undefined variable $jumlahDataProduk
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace.php on line 218.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace.php(218): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $jumlahDataProduk', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace.php', 218)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(41): view('Frontend/master-pengguna/content/marketplace', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->marketplace_user()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')

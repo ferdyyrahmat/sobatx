@@ -1,0 +1,331 @@
+CRITICAL - 2024-06-18 02:41:22 --> ErrorException: require(vendor/autoload.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\RegisterPeternak.php on line 9.
+ 1 APPPATH\Controllers\RegisterPeternak.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(vendor/autoload.php): Failed to open stream: No such file or directory', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\RegisterPeternak.php', 9)
+ 2 APPPATH\Controllers\RegisterPeternak.php(9): require()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(311): include_once('C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\RegisterPeternak.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(290): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\RegisterPeternak.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(266): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\RegisterPeternak')
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\RegisterPeternak')
+ 7 SYSTEMPATH\CodeIgniter.php(899): class_exists('\\App\\Controllers\\RegisterPeternak', true)
+ 8 SYSTEMPATH\CodeIgniter.php(489): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 03:01:58 --> Error: Array callback must have exactly two elements
+in APPPATH\Controllers\Peternak.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->login_checker()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 04:52:56 --> ErrorException: Undefined variable $data
+in APPPATH\Views\Frontend\template\header.php on line 84.
+ 1 APPPATH\Views\Frontend\template\header.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\header.php', 84)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/header', [], true)
+ 5 APPPATH\Controllers\Peternak.php(88): view('Frontend/template/header', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 04:56:08 --> ErrorException: Undefined variable $menu
+in APPPATH\Views\Frontend\template\header.php on line 84.
+ 1 APPPATH\Views\Frontend\template\header.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\header.php', 84)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/header', [], true)
+ 5 APPPATH\Controllers\Peternak.php(123): view('Frontend/template/header')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->mulai_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:37:37 --> ErrorException: Undefined variable $ModelAkun
+in APPPATH\Controllers\Register.php on line 40.
+ 1 APPPATH\Controllers\Register.php(40): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ModelAkun', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Register.php', 40)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->registering_account_peternak()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:46:07 --> ErrorException: Undefined property: App\Controllers\Register::$user
+in APPPATH\Controllers\Register.php on line 100.
+ 1 APPPATH\Controllers\Register.php(100): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Register::$user', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Register.php', 100)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->registering_account_peternak()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:47:21 --> ErrorException: Undefined variable $ModelAkun
+in APPPATH\Controllers\Register.php on line 109.
+ 1 APPPATH\Controllers\Register.php(109): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ModelAkun', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Register.php', 109)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->registering_account_peternak()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:48:46 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\Register.php on line 115.
+ 1 APPPATH\Controllers\Register.php(115): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Register.php', 115)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->registering_account_peternak()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:50:47 --> ErrorException: Undefined property: App\Controllers\Register::$uri
+in APPPATH\Controllers\Register.php on line 162.
+ 1 APPPATH\Controllers\Register.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Register::$uri', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Register.php', 162)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->aktivasi_akun()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:52:10 --> ErrorException: Undefined property: App\Controllers\Register::$uri
+in APPPATH\Controllers\Register.php on line 163.
+ 1 APPPATH\Controllers\Register.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Register::$uri', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Register.php', 163)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->aktivasi_akun()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:53:30 --> Error: Call to undefined method CodeIgniter\HTTP\SiteURI::segment()
+in APPPATH\Controllers\Register.php on line 164.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->aktivasi_akun()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:53:58 --> Error: Call to undefined method CodeIgniter\HTTP\SiteURI::segment()
+in APPPATH\Controllers\Register.php on line 164.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->aktivasi_akun()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:54:40 --> Error: Call to undefined method CodeIgniter\HTTP\SiteURI::segment()
+in APPPATH\Controllers\Register.php on line 164.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->aktivasi_akun()
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:55:13 --> Error: Call to undefined method CodeIgniter\HTTP\SiteURI::segment()
+in APPPATH\Controllers\Register.php on line 164.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->aktivasi_akun('08f58393f9ab3af70e286d6f9ab98881f5df9ea1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:55:22 --> Error: Call to undefined method CodeIgniter\HTTP\SiteURI::segment()
+in APPPATH\Controllers\Register.php on line 164.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->aktivasi_akun('08f58393f9ab3af70e286d6f9ab98881f5df9ea1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:55:35 --> Error: Call to undefined method CodeIgniter\HTTP\SiteURI::segment()
+in APPPATH\Controllers\Register.php on line 164.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->aktivasi_akun('08f58393f9ab3af70e286d6f9ab98881f5df9ea1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:56:09 --> Error: Call to undefined method CodeIgniter\HTTP\SiteURI::segment()
+in APPPATH\Controllers\Register.php on line 164.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->aktivasi_akun('08f58393f9ab3af70e286d6f9ab98881f5df9ea1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:56:15 --> Error: Call to undefined method CodeIgniter\HTTP\SiteURI::segment()
+in APPPATH\Controllers\Register.php on line 164.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->aktivasi_akun('08f58393f9ab3af70e286d6f9ab98881f5df9ea1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:58:08 --> Error: Call to undefined method CodeIgniter\HTTP\SiteURI::segment()
+in APPPATH\Controllers\Register.php on line 164.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->aktivasi_akun('08f58393f9ab3af70e286d6f9ab98881f5df9ea1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:58:14 --> Error: Call to undefined method CodeIgniter\HTTP\SiteURI::segment()
+in APPPATH\Controllers\Register.php on line 164.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->aktivasi_akun('08f58393f9ab3af70e286d6f9ab98881f5df9ea1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 07:58:19 --> Error: Call to undefined method CodeIgniter\HTTP\SiteURI::segment()
+in APPPATH\Controllers\Register.php on line 164.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->aktivasi_akun('08f58393f9ab3af70e286d6f9ab98881f5df9ea1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 08:07:03 --> Error: Call to undefined method CodeIgniter\HTTP\SiteURI::segment()
+in APPPATH\Controllers\Register.php on line 192.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Register->batalkan_akun('08f58393f9ab3af70e286d6f9ab98881f5df9ea1')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-06-18 09:49:40 --> mysqli_sql_exception: Unknown column 'status_akun' in 'where clause' in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_User.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Peternak.php(45): App\Models\M_User->getDataUser(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->login_checker()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-06-18 09:49:40 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_akun' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_user`
+WHERE `email_user` = :email_user:
+AND `status_akun` = :status_akun:
+ORDER BY `id_user` ASC', [...], false)
+ 2 APPPATH\Models\M_User.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Peternak.php(45): App\Models\M_User->getDataUser([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->login_checker()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 09:49:40 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_akun' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_user`
+WHERE `email_user` = \'\'
+AND `status_akun` = \'1\'
+ORDER BY `id_user` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_user`
+WHERE `email_user` = \'\'
+AND `status_akun` = \'1\'
+ORDER BY `id_user` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_user`
+WHERE `email_user` = :email_user:
+AND `status_akun` = :status_akun:
+ORDER BY `id_user` ASC', [...], false)
+ 4 APPPATH\Models\M_User.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Peternak.php(45): App\Models\M_User->getDataUser([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->login_checker()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 09:49:40 --> [Caused by] mysqli_sql_exception: Unknown column 'status_akun' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_user`
+WHERE `email_user` = \'\'
+AND `status_akun` = \'1\'
+ORDER BY `id_user` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_user`
+WHERE `email_user` = \'\'
+AND `status_akun` = \'1\'
+ORDER BY `id_user` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_user`
+WHERE `email_user` = \'\'
+AND `status_akun` = \'1\'
+ORDER BY `id_user` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_user`
+WHERE `email_user` = :email_user:
+AND `status_akun` = :status_akun:
+ORDER BY `id_user` ASC', [...], false)
+ 5 APPPATH\Models\M_User.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Peternak.php(45): App\Models\M_User->getDataUser([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->login_checker()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 10:08:20 --> BadMethodCallException: Call to undefined method App\Models\M_User::getDataUserGoogle
+in SYSTEMPATH\Model.php on line 874.
+ 1 APPPATH\Controllers\Peternak.php(125): CodeIgniter\Model->__call('getDataUserGoogle', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->login_checker_google()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 10:09:00 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\Peternak.php(118): Google_Client->fetchAccessTokenWithAuthCode('4/0ATx3LY6rYkN4Iy_YjSNjCjHS3IS1t-2poXvnNh9lWEtyQtoeuYEaUhLj2kiGhkZYF04EJw')
+15 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->login_checker_google()
+16 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 10:12:25 --> CodeIgniter\Database\Exceptions\DataException: There is no primary key defined when trying to make insert.
+in SYSTEMPATH\Model.php on line 290.
+ 1 SYSTEMPATH\Model.php(290): CodeIgniter\Database\Exceptions\DataException::forEmptyPrimaryKey('insert')
+ 2 SYSTEMPATH\BaseModel.php(802): CodeIgniter\Model->doInsert([...])
+ 3 SYSTEMPATH\Model.php(744): CodeIgniter\BaseModel->insert([...], false)
+ 4 SYSTEMPATH\BaseModel.php(713): CodeIgniter\Model->insert([...], false)
+ 5 APPPATH\Controllers\Peternak.php(171): CodeIgniter\BaseModel->save([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->login_checker_google()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 10:14:37 --> ErrorException: Undefined variable $id
+in APPPATH\Controllers\Peternak.php on line 166.
+ 1 APPPATH\Controllers\Peternak.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 166)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->login_checker_google()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 10:18:02 --> ErrorException: Undefined variable $id
+in APPPATH\Controllers\Peternak.php on line 176.
+ 1 APPPATH\Controllers\Peternak.php(176): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 176)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->login_checker_google()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-18 18:30:06 --> ErrorException: Undefined variable $menu
+in APPPATH\Views\Frontend\template\header.php on line 84.
+ 1 APPPATH\Views\Frontend\template\header.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\header.php', 84)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/header', [], true)
+ 5 APPPATH\Controllers\Peternak.php(224): view('Frontend/template/header')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->pemberitahuan_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')

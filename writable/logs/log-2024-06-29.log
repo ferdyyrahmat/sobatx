@@ -1,0 +1,104 @@
+CRITICAL - 2024-06-29 10:34:40 --> ErrorException: Undefined variable $namaGambar
+in APPPATH\Controllers\Admin.php on line 546.
+ 1 APPPATH\Controllers\Admin.php(546): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $namaGambar', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Admin.php', 546)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->simpan_data_paket()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-29 11:18:36 --> ErrorException: Undefined variable $modelPUsaha
+in APPPATH\Controllers\Admin.php on line 504.
+ 1 APPPATH\Controllers\Admin.php(504): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelPUsaha', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Admin.php', 504)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->master_paket()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-29 11:18:57 --> ErrorException: Undefined variable $dataUser
+in APPPATH\Controllers\Admin.php on line 508.
+ 1 APPPATH\Controllers\Admin.php(508): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $dataUser', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Admin.php', 508)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->master_paket()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-29 11:19:14 --> ErrorException: Undefined array key "id_user"
+in APPPATH\Views\Backend\master-admin\paket\master-paket.php on line 65.
+ 1 APPPATH\Views\Backend\master-admin\paket\master-paket.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id_user"', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\master-paket.php', 65)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\master-paket.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin/paket/master-paket', [], true)
+ 5 APPPATH\Controllers\Admin.php(512): view('Backend/master-admin/paket/master-paket', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->master_paket()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-29 11:22:24 --> TypeError: number_format(): Argument #2 ($decimals) must be of type int, string given
+in APPPATH\Views\Backend\master-admin\paket\master-paket.php on line 65.
+ 1 APPPATH\Views\Backend\master-admin\paket\master-paket.php(65): number_format('350000', ',', '.')
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\master-paket.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin/paket/master-paket', [], true)
+ 5 APPPATH\Controllers\Admin.php(512): view('Backend/master-admin/paket/master-paket', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->master_paket()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-29 11:23:03 --> TypeError: number_format(): Argument #2 ($decimals) must be of type int, string given
+in APPPATH\Views\Backend\master-admin\paket\master-paket.php on line 65.
+ 1 APPPATH\Views\Backend\master-admin\paket\master-paket.php(65): number_format('350000', '-', ',', '.')
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\master-paket.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin/paket/master-paket', [], true)
+ 5 APPPATH\Controllers\Admin.php(512): view('Backend/master-admin/paket/master-paket', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->master_paket()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-29 12:24:59 --> ErrorException: Undefined variable $datapaket
+in APPPATH\Views\Backend\master-admin\paket\edit-paket.php on line 45.
+ 1 APPPATH\Views\Backend\master-admin\paket\edit-paket.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $datapaket', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\edit-paket.php', 45)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\edit-paket.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin/paket/edit-paket', [], true)
+ 5 APPPATH\Controllers\Admin.php(597): view('Backend/master-admin/paket/edit-paket', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->edit_data_paket('pku0001')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-29 12:31:55 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Backend\master-admin\paket\edit-paket.php on line 38.
+ 1 APPPATH\Views\Backend\master-admin\paket\edit-paket.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\edit-paket.php', 38)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\edit-paket.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin/paket/edit-paket', [], true)
+ 5 APPPATH\Controllers\Admin.php(597): view('Backend/master-admin/paket/edit-paket', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->edit_data_paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-29 12:32:54 --> ErrorException: Undefined variable $modelGambar
+in APPPATH\Controllers\Admin.php on line 673.
+ 1 APPPATH\Controllers\Admin.php(673): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $modelGambar', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Admin.php', 673)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->hapus_data_Paket('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-29 14:16:34 --> ErrorException: Undefined variable $tglskrg
+in APPPATH\Views\Backend\master-admin\paket\master-paket.php on line 67.
+ 1 APPPATH\Views\Backend\master-admin\paket\master-paket.php(67): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $tglskrg', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\master-paket.php', 67)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Backend\\master-admin\\paket\\master-paket.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin/paket/master-paket', [], true)
+ 5 APPPATH\Controllers\Admin.php(512): view('Backend/master-admin/paket/master-paket', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->master_paket()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')

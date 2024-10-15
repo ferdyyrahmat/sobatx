@@ -1,0 +1,10 @@
+CRITICAL - 2024-06-14 08:20:32 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Frontend/master-pengguna/content/marketplace/dashboard-product.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Frontend/master-pengguna/content/marketplace/dashboard-product.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/dashboard-product', [], true)
+ 3 APPPATH\Controllers\User.php(18): view('Frontend/master-pengguna/content/marketplace/dashboard-product')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->detail_product_marketplace()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')

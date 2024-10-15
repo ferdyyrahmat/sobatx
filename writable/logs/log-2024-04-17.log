@@ -1,0 +1,10 @@
+CRITICAL - 2024-04-17 06:58:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Frontend/master-peternak/content/pemberitahuan-kami.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Frontend/master-peternak/content/pemberitahuan-kami.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/pemberitahuan-kami', [], true)
+ 3 APPPATH\Controllers\Peternak.php(28): view('Frontend/master-peternak/content/pemberitahuan-kami')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->pemberitahuan_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')

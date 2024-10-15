@@ -1,0 +1,179 @@
+CRITICAL - 2024-06-19 10:00:23 --> ErrorException: Undefined variable $cekUser
+in APPPATH\Controllers\Peternak.php on line 191.
+ 1 APPPATH\Controllers\Peternak.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cekUser', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 191)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->login_checker_google()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-19 10:56:10 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Frontend/master-pengguna/content/menu.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Frontend/master-pengguna/content/menu.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/menu', [], true)
+ 3 APPPATH\Controllers\User.php(219): view('Frontend/master-pengguna/content/menu')
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->dashboard_user()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-19 11:28:51 --> ErrorException: Undefined variable $cekUser
+in APPPATH\Controllers\User.php on line 191.
+ 1 APPPATH\Controllers\User.php(191): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cekUser', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\User.php', 191)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->login_checker_google()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-19 11:29:58 --> ErrorException: Array to string conversion
+in APPPATH\Views\Frontend\template\head-content.php on line 17.
+ 1 APPPATH\Views\Frontend\template\head-content.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\head-content.php', 17)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\head-content.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/head-content', [], true)
+ 5 APPPATH\Controllers\User.php(218): view('Frontend/template/head-content', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->dashboard_user()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-19 11:30:55 --> ErrorException: Array to string conversion
+in APPPATH\Views\Frontend\template\head-content.php on line 17.
+ 1 APPPATH\Views\Frontend\template\head-content.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\head-content.php', 17)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\head-content.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/head-content', [], true)
+ 5 APPPATH\Controllers\User.php(218): view('Frontend/template/head-content', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->dashboard_user()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-19 11:31:43 --> ErrorException: Array to string conversion
+in APPPATH\Views\Frontend\template\head-content.php on line 17.
+ 1 APPPATH\Views\Frontend\template\head-content.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\head-content.php', 17)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\head-content.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/head-content', [], true)
+ 5 APPPATH\Controllers\User.php(218): view('Frontend/template/head-content', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->dashboard_user()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-19 11:36:13 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Views\Frontend\template\head-content.php on line 16.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/head-content', [], true)
+ 4 APPPATH\Controllers\Peternak.php(218): view('Frontend/template/head-content', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-19 11:42:45 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\User.php on line 231.
+ 1 APPPATH\Controllers\User.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\User.php', 231)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->marketplace_user()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-19 11:42:49 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\User.php on line 231.
+ 1 APPPATH\Controllers\User.php(231): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\User.php', 231)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->marketplace_user()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-19 11:44:36 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Views\Frontend\template\head-content.php on line 16.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/head-content', [], true)
+ 4 APPPATH\Controllers\Peternak.php(218): view('Frontend/template/head-content', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-19 11:47:16 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Peternak.php on line 166.
+ 1 APPPATH\Controllers\Peternak.php(166): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 166)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->login_checker_google()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-19 11:48:20 --> GuzzleHttp\Exception\ClientException: Client error: `POST https://oauth2.googleapis.com/token` resulted in a `400 Bad Request` response:
+{
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+
+in VENDORPATH\guzzlehttp\guzzle\src\Exception\RequestException.php on line 113.
+ 1 VENDORPATH\guzzlehttp\guzzle\src\Middleware.php(72): GuzzleHttp\Exception\RequestException::create(Object(GuzzleHttp\Psr7\Request), Object(GuzzleHttp\Psr7\Response), null, [], null)
+ 2 VENDORPATH\guzzlehttp\promises\src\Promise.php(209): GuzzleHttp\Middleware::GuzzleHttp\{closure}(Object(GuzzleHttp\Psr7\Response))
+ 3 VENDORPATH\guzzlehttp\promises\src\Promise.php(158): GuzzleHttp\Promise\Promise::callHandler(1, Object(GuzzleHttp\Psr7\Response), null)
+ 4 VENDORPATH\guzzlehttp\promises\src\TaskQueue.php(52): GuzzleHttp\Promise\Promise::GuzzleHttp\Promise\{closure}()
+ 5 VENDORPATH\guzzlehttp\promises\src\Promise.php(251): GuzzleHttp\Promise\TaskQueue->run(true)
+ 6 VENDORPATH\guzzlehttp\promises\src\Promise.php(227): GuzzleHttp\Promise\Promise->invokeWaitFn()
+ 7 VENDORPATH\guzzlehttp\promises\src\Promise.php(272): GuzzleHttp\Promise\Promise->waitIfPending()
+ 8 VENDORPATH\guzzlehttp\promises\src\Promise.php(229): GuzzleHttp\Promise\Promise->invokeWaitList()
+ 9 VENDORPATH\guzzlehttp\promises\src\Promise.php(69): GuzzleHttp\Promise\Promise->waitIfPending()
+10 VENDORPATH\guzzlehttp\guzzle\src\Client.php(124): GuzzleHttp\Promise\Promise->wait()
+11 VENDORPATH\google\auth\src\HttpHandler\Guzzle6HttpHandler.php(47): GuzzleHttp\Client->send(Object(GuzzleHttp\Psr7\Request), [...])
+12 VENDORPATH\google\auth\src\OAuth2.php(551): Google\Auth\HttpHandler\Guzzle6HttpHandler->__invoke(Object(GuzzleHttp\Psr7\Request))
+13 VENDORPATH\google\apiclient\src\Google\Client.php(215): Google\Auth\OAuth2->fetchAuthToken(Object(Google\Auth\HttpHandler\Guzzle7HttpHandler))
+14 APPPATH\Controllers\Peternak.php(122): Google_Client->fetchAccessTokenWithAuthCode('4/0ATx3LY7USPlc4GJpJVOmmcRNIgnEN4cAwa1lzZZECcS6b_eb9mYNWqakKN9PrPvaFDMZQg')
+15 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->login_checker_google()
+16 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+17 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+18 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+19 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-19 11:48:47 --> TypeError: Cannot access offset of type string on string
+in APPPATH\Views\Frontend\template\head-content.php on line 16.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/head-content', [], true)
+ 4 APPPATH\Controllers\Peternak.php(221): view('Frontend/template/head-content', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-19 11:49:38 --> ErrorException: Undefined variable $profile
+in APPPATH\Views\Frontend\template\head-content.php on line 16.
+ 1 APPPATH\Views\Frontend\template\head-content.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $profile', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\head-content.php', 16)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\head-content.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/head-content', [], true)
+ 5 APPPATH\Controllers\Peternak.php(256): view('Frontend/template/head-content')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->mulai_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-19 13:38:11 --> ErrorException: Undefined variable $menu
+in APPPATH\Views\Frontend\template\header.php on line 84.
+ 1 APPPATH\Views\Frontend\template\header.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $menu', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\header.php', 84)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\template\\header.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/header', [], true)
+ 5 APPPATH\Controllers\User.php(264): view('Frontend/template/header')
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->profil_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-06-19 14:24:27 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Frontend/master-pengguna/content/edit-profil.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Frontend/master-pengguna/content/edit-profil.php')
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/edit-profil', [], true)
+ 3 APPPATH\Controllers\User.php(266): view('Frontend/master-pengguna/content/edit-profil', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\User->profil_pengguna()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\User))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')

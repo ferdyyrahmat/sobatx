@@ -1,0 +1,43 @@
+ERROR - 2024-10-11 06:53:51 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in E:\Project\sobatx\system\Database\MySQLi\Connection.php:184
+Stack trace:
+#0 E:\Project\sobatx\system\Database\MySQLi\Connection.php(184): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'sob4tx', 3306, '', 0)
+#1 E:\Project\sobatx\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\Project\sobatx\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\Project\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Project\sobatx\app\Models\M_User.php(23): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\Project\sobatx\app\Controllers\Peternak.php(251): App\Models\M_User->getDataUser(Array)
+#6 E:\Project\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+#7 E:\Project\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 E:\Project\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Project\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\Project\sobatx\system\Commands\Server\rewrite.php(47): require_once('E:\\Project\\soba...')
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in E:\Project\sobatx\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 E:\Project\sobatx\system\Database\BaseConnection.php(392): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\Project\sobatx\system\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\Project\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 E:\Project\sobatx\app\Models\M_User.php(23): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\Project\sobatx\app\Controllers\Peternak.php(251): App\Models\M_User->getDataUser(Array)
+#5 E:\Project\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+#6 E:\Project\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#7 E:\Project\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 E:\Project\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 E:\Project\sobatx\system\Commands\Server\rewrite.php(47): require_once('E:\\Project\\soba...')
+#10 {main}
+CRITICAL - 2024-10-11 06:53:51 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 428.
+ 1 SYSTEMPATH\Database\BaseConnection.php(575): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_user`
+WHERE `id_user` = :id_user:
+ORDER BY `id_user` ASC', [...], false)
+ 3 APPPATH\Models\M_User.php(23): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Controllers\Peternak.php(251): App\Models\M_User->getDataUser([...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')

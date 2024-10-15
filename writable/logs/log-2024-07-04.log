@@ -1,0 +1,266 @@
+ERROR - 2024-07-04 11:07:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND `is_delete_paket` = :is_delete_paket:
+ORDER BY `id_paket` ASC' at line 3 in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_PUsaha.php(22): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Peternak.php(329): App\Models\M_PUsaha->getDataPaket(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak()
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-04 11:07:49 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND `is_delete_paket` = :is_delete_paket:
+ORDER BY `id_paket` ASC' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_paket_usaha`
+WHERE 0 = :0:
+AND `is_delete_paket` = :is_delete_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 2 APPPATH\Models\M_PUsaha.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Peternak.php(329): App\Models\M_PUsaha->getDataPaket([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-04 11:07:49 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND `is_delete_paket` = :is_delete_paket:
+ORDER BY `id_paket` ASC' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_paket_usaha`
+WHERE 0 = :0:
+AND `is_delete_paket` = :is_delete_paket:
+ORDER BY `id_paket` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_paket_usaha`
+WHERE 0 = :0:
+AND `is_delete_paket` = :is_delete_paket:
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_paket_usaha`
+WHERE 0 = :0:
+AND `is_delete_paket` = :is_delete_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 4 APPPATH\Models\M_PUsaha.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Peternak.php(329): App\Models\M_PUsaha->getDataPaket([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-04 11:07:49 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+AND `is_delete_paket` = :is_delete_paket:
+ORDER BY `id_paket` ASC' at line 3
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_paket_usaha`
+WHERE 0 = :0:
+AND `is_delete_paket` = :is_delete_paket:
+ORDER BY `id_paket` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_paket_usaha`
+WHERE 0 = :0:
+AND `is_delete_paket` = :is_delete_paket:
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_paket_usaha`
+WHERE 0 = :0:
+AND `is_delete_paket` = :is_delete_paket:
+ORDER BY `id_paket` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_paket_usaha`
+WHERE 0 = :0:
+AND `is_delete_paket` = :is_delete_paket:
+ORDER BY `id_paket` ASC', [...], false)
+ 5 APPPATH\Models\M_PUsaha.php(22): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Peternak.php(329): App\Models\M_PUsaha->getDataPaket([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-04 11:16:25 --> ErrorException: Undefined variable $uri
+in APPPATH\Controllers\Peternak.php on line 324.
+ 1 APPPATH\Controllers\Peternak.php(324): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $uri', 'C:\\xampp\\htdocs\\sobatx\\app\\Controllers\\Peternak.php', 324)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-04 11:25:44 --> Error: Call to a member function getNumRows() on array
+in APPPATH\Controllers\Peternak.php on line 334.
+ 1 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 2 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 3 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+ERROR - 2024-07-04 11:26:47 --> mysqli_sql_exception: Column 'id_paket' in where clause is ambiguous in C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sobatx\app\Models\M_PUsaha.php(39): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sobatx\app\Controllers\Peternak.php(333): App\Models\M_PUsaha->getDataPaketJoin(Array)
+#6 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('11a2db981406f4b...')
+#7 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+#8 C:\xampp\htdocs\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\sobatx\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2024-07-04 11:26:47 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_paket_usaha`
+LEFT JOIN `tbl_beli_paket` ON `tbl_beli_paket`.`id_paket` = `tbl_paket_usaha`.`id_paket`
+WHERE sha1(id_paket) = :sha1(id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 2 APPPATH\Models\M_PUsaha.php(39): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Peternak.php(333): App\Models\M_PUsaha->getDataPaketJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-04 11:26:47 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_paket' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_paket_usaha`
+LEFT JOIN `tbl_beli_paket` ON `tbl_beli_paket`.`id_paket` = `tbl_paket_usaha`.`id_paket`
+WHERE sha1(id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_paket_usaha`
+LEFT JOIN `tbl_beli_paket` ON `tbl_beli_paket`.`id_paket` = `tbl_paket_usaha`.`id_paket`
+WHERE sha1(id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_paket_usaha`
+LEFT JOIN `tbl_beli_paket` ON `tbl_beli_paket`.`id_paket` = `tbl_paket_usaha`.`id_paket`
+WHERE sha1(id_paket) = :sha1(id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 4 APPPATH\Models\M_PUsaha.php(39): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Peternak.php(333): App\Models\M_PUsaha->getDataPaketJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-04 11:26:47 --> [Caused by] mysqli_sql_exception: Column 'id_paket' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_paket_usaha`
+LEFT JOIN `tbl_beli_paket` ON `tbl_beli_paket`.`id_paket` = `tbl_paket_usaha`.`id_paket`
+WHERE sha1(id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_paket_usaha`
+LEFT JOIN `tbl_beli_paket` ON `tbl_beli_paket`.`id_paket` = `tbl_paket_usaha`.`id_paket`
+WHERE sha1(id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_paket_usaha`
+LEFT JOIN `tbl_beli_paket` ON `tbl_beli_paket`.`id_paket` = `tbl_paket_usaha`.`id_paket`
+WHERE sha1(id_paket) = \'11a2db981406f4b0b93793c838d0f724e2a3547e\'
+ORDER BY `id_paket` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_paket_usaha`
+LEFT JOIN `tbl_beli_paket` ON `tbl_beli_paket`.`id_paket` = `tbl_paket_usaha`.`id_paket`
+WHERE sha1(id_paket) = :sha1(id_paket):
+ORDER BY `id_paket` ASC', [...], false)
+ 5 APPPATH\Models\M_PUsaha.php(39): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Peternak.php(333): App\Models\M_PUsaha->getDataPaketJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-04 11:34:23 --> ErrorException: Undefined variable $data
+in APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php on line 69.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\detail-mulai-usaha.php', 69)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\detail-mulai-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/detail-mulai-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(341): view('Frontend/master-peternak/content/menu/detail-mulai-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-04 11:37:37 --> ErrorException: Undefined variable $data
+in APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php on line 70.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\detail-mulai-usaha.php', 70)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\detail-mulai-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/detail-mulai-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(341): view('Frontend/master-peternak/content/menu/detail-mulai-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-04 11:40:36 --> ErrorException: Undefined variable $data
+in APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php on line 71.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php(71): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\detail-mulai-usaha.php', 71)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\detail-mulai-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/detail-mulai-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(341): view('Frontend/master-peternak/content/menu/detail-mulai-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-04 11:50:55 --> Error: Call to undefined function DateTime()
+in APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php on line 60.
+ 1 SYSTEMPATH\View\View.php(228): include()
+ 2 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/detail-mulai-usaha', [], true)
+ 4 APPPATH\Controllers\Peternak.php(341): view('Frontend/master-peternak/content/menu/detail-mulai-usaha', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('2ea2c9a08fc87f197c67e4dfa6f9329490e67f8f')
+ 6 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-04 11:51:44 --> ArgumentCountError: date() expects at least 1 argument, 0 given
+in APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php on line 60.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php(60): date()
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\detail-mulai-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/detail-mulai-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(341): view('Frontend/master-peternak/content/menu/detail-mulai-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('2ea2c9a08fc87f197c67e4dfa6f9329490e67f8f')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-04 11:54:58 --> ParseError: syntax error, unexpected token ";"
+in APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php on line 66.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/detail-mulai-usaha', [], true)
+ 3 APPPATH\Controllers\Peternak.php(341): view('Frontend/master-peternak/content/menu/detail-mulai-usaha', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('2ea2c9a08fc87f197c67e4dfa6f9329490e67f8f')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
+CRITICAL - 2024-07-04 12:02:54 --> TypeError: date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php on line 60.
+ 1 APPPATH\Views\Frontend\master-peternak\content\menu\detail-mulai-usaha.php(60): date('Y-M-d H:i:s', '2024-07-07 18:00:00')
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\sobatx\\app\\Views\\Frontend\\master-peternak\\content\\menu\\detail-mulai-usaha.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-peternak/content/menu/detail-mulai-usaha', [], true)
+ 5 APPPATH\Controllers\Peternak.php(341): view('Frontend/master-peternak/content/menu/detail-mulai-usaha', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->detail_usaha_peternak('11a2db981406f4b0b93793c838d0f724e2a3547e')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\sobatx\\public\\index.php')
