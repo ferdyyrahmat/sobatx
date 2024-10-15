@@ -66,7 +66,19 @@
                                        </div>
                                        <div class="col-md-6 col-sm-6 col-xs-6" style="text-align: right;">
                                           <span style="font-size:11px;">
-                                             {status pesanan}
+                                             <?php 
+                                             if($data["status"] == '1')
+                                             {
+                                                echo 'diproses';
+                                             }elseif($data["status"] == '2')
+                                             {
+                                                echo 'dikirim';
+                                             }
+                                             elseif($data['status'] == '3')
+                                             {
+                                                echo 'selesai';
+                                             }
+                                             ?>
                                           </span>
                                        </div>
                                     </div>

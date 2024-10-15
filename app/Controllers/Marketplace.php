@@ -755,4 +755,31 @@ class Marketplace extends BaseController
       echo view('Frontend/template/navigation', $data);
       echo view('Frontend/template/footer', $data);
    }
+   public function kelola_pesanan()
+   {
+      $modelUser = new M_User;
+      $modelPesanan = new M_Pesanan;
+
+      $uri = service('uri');
+
+      $dataPeternak = $modelUser->getDataPeternak(['tbl_user.id_user' => session('id')])->getRowArray();
+
+      $dataPesanan = $modelPesanan->getDataPesananJoin(['tbl_pesanan.id_toko' => $dataPeternak['id_toko']])->getResultArray();
+      $data['dataPesanan'] = $dataPesanan;
+
+      $dataPengguna = $modelUser->getDataUser(['id_user' => session('id')])->getRowArray();
+      $data['profile'] = $dataPengguna;
+      $jumlahNotif = $modelUser->getNotif(['id_user' => session('id')])->getNumRows();
+      $data['jumlahNotif'] = $jumlahNotif;
+      $dataNotif = $modelUser->getNotif(['id_user' => session('id')])->getResultArray();
+      $data['notif'] = $dataNotif;
+
+      $data['menu'] = 'dashboard';
+      $data['page'] = 'Checkout';
+
+      echo view('Frontend/template/header', $data);
+      echo view('Frontend/master-pengguna/content/marketplace/kelola-pesanan', $data);
+      echo view('Frontend/template/navigation', $data);
+      echo view('Frontend/template/footer', $data);
+   }
 }

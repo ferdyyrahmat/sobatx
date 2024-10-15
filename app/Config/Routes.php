@@ -82,6 +82,7 @@ $routes->post('/marketplace/update-total-bayar/(:alphanum)', 'Marketplace::updat
 $routes->get('/marketplace/checkout/proses/(:alphanum)', 'Marketplace::checkout_product_marketplace/$1');
 $routes->get('/marketplace/buat-pesanan/(:alphanum)', 'Marketplace::buat_pesanan/$1');
 $routes->get('/marketplace/detail-pesanan/(:alphanum)', 'Marketplace::detail_pesanan/$1');
+$routes->get('/marketplace/kelola-pesanan', 'Marketplace::kelola_pesanan');
 
 //BeliPaket
 $routes->get('/beli-paket/(:alphanum)', 'Peternak::beli_paket_peternak/$1');
