@@ -7,15 +7,15 @@
          <div class="row">
             <div class="col-md-10 col-xs-9">
                <h4 style="margin: 10px 0; color:#fff;">Halo, <?= session()->get('nama') ?></h4>
-
-               <span style="margin: 10px 0 20px 0;" class="head-content-loc"><i class="fa-solid fa-location-dot"></i>
-                  Selamat datang di SobatX!</span>
+               <span style="margin: 10px 0 20px 0;" class="head-content-loc">
+                  <i class="fa-solid fa-location-dot"></i>
+                  Selamat datang di SobatX!
+               </span>
             </div>
             <div class="col-md-2 col-xs-3" style="text-align: -webkit-right; padding: 0;">
                <div class="dropdown">
-                  <?php 
-                     $checkFoto = file_exists('Assets/img/profile/'.$profile['foto_user']);
-                     if($checkFoto){
+                  <?php
+                     if(file_exists('Assets/img/profile/'.$profile['foto_user'])){
                         if($profile['foto_user'] == '' or $profile['foto_user'] == '-') {
                            $user_profile = base_url().'Assets/img/user.png';
                         }else{
