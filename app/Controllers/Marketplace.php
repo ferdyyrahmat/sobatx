@@ -658,7 +658,7 @@ class Marketplace extends BaseController
          $modelPesanan->updateDataPesanan($dataPesananUpdate, $whereUpdate);
       }
 
-      $dataPesanan = $modelPesanan->getDataPesananJoin(['id_pesanan' => $idTransaksi])->getRowArray();
+      $dataPesanan = $modelPesanan->getDataPesananJoinAll(['id_pesanan' => $idTransaksi])->getRowArray();
       $data['dataPesanan'] = $dataPesanan;
       $dataPengguna = $modelUser->getDataUser(['id_user' => session('id')])->getRowArray();
       $data['profile'] = $dataPengguna;
@@ -835,6 +835,29 @@ class Marketplace extends BaseController
       ?>
       <script>
           document.location = "<?= base_url('/marketplace/kelola-pesanan')?>";
+      </script>
+      <?php
+   }
+   public function terima_pesanan()
+   {
+      $uri = service('uri');
+      $idUpdate = $uri->getSegment(3);
+
+      $modelPesanan = new M_Pesanan;
+      $nama_kurir = $this->request->getPost('nama_kurir');
+      $no_hp_kurir = $this->request->getPost('no_hp_kurir');
+
+      $dataUpdate = [
+         'status_pesanan' => '3',
+         'updated_at' => date("Y-m-d H:i:s")
+      ];
+      $whereUpdate = ['id_pesanan' => $idUpdate];
+      $modelPesanan->updateDataPesanan($dataUpdate, $whereUpdate);
+
+      session()->setFlashdata('success', 'Pesanan Telah Selesai!');
+      ?>
+      <script>
+          document.location = "<?= base_url('/marketplace/detail-pesanan/'.$idUpdate)?>";
       </script>
       <?php
    }

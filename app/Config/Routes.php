@@ -85,6 +85,7 @@ $routes->get('/marketplace/detail-pesanan/(:alphanum)', 'Marketplace::detail_pes
 $routes->get('/marketplace/kelola-pesanan', 'Marketplace::kelola_pesanan');
 $routes->get('/marketplace/detail-pesanan-toko/(:alphanum)', 'Marketplace::detail_pesanan_toko/$1');
 $routes->post('/marketplace/kirim-pesanan/(:alphanum)', 'Marketplace::kirim_pesanan/$1');
+$routes->get('/marketplace/terima-pesanan/(:alphanum)', 'Marketplace::terima_pesanan/$1');
 
 //BeliPaket
 $routes->get('/beli-paket/(:alphanum)', 'Peternak::beli_paket_peternak/$1');

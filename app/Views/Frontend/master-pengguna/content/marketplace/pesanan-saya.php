@@ -67,14 +67,14 @@
                                        <div class="col-md-6 col-sm-6 col-xs-6" style="text-align: right;">
                                           <span style="font-size:11px;">
                                              <?php 
-                                             if($data["status"] == '1')
+                                             if($data["status_pesanan"] == '1')
                                              {
                                                 echo 'diproses';
-                                             }elseif($data["status"] == '2')
+                                             }elseif($data["status_pesanan"] == '2')
                                              {
                                                 echo 'dikirim';
                                              }
-                                             elseif($data['status'] == '3')
+                                             elseif($data['status_pesanan'] == '3')
                                              {
                                                 echo 'selesai';
                                              }
@@ -127,7 +127,7 @@
                                     </div>
                                  </a>
                                  <?php 
-                                 if($data['status'] == '2'){
+                                 if($data['status_pesanan'] == '2'){
                                  ?>
                                  <div class="col-md-12" style="text-align: right; align-item: end;">
                                     <div class="btn btn-success btn-sm" style="margin: 10px 0">pesanan diterima</div>

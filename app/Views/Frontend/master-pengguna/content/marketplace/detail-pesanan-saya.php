@@ -53,8 +53,18 @@
                <div class="col-md-5">
                   <div class="product-details" style="margin-top: 5px;">
                      <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="padding-top: 20px;">
                            <center>
+                              <?php
+                              if($dataPesanan['status_pesanan'] == '3') { ?>
+                              <h3 style="position: relative; z-index: 1;">Order is Completed</h3>
+                              <img class="img-responsive" src="<?= base_url() ?>Assets/img/gif/order-completed.gif"
+                                 style="margin: -30px 0px 20px 10px;">
+                              <small>
+                                 <span>Horray! Pesananmu sudah sampai</span>
+                                 <br>
+                              </small>
+                              <?php }else{ ?>
                               <h3 style="position: relative; z-index: 1;">Order Successfully</h3>
                               <img class="img-responsive" src="<?= base_url() ?>Assets/img/gif/order-success.gif"
                                  style="margin: -60px 0px -50px -0px;">
@@ -63,6 +73,7 @@
                                  <br>
                                  <span>mohon menunggu</span>
                               </small>
+                              <?php } ?>
                            </center>
                         </div>
                         <div class="col-md-12 col-sm-12 col-xs-12" style="padding-top: 10px;">
@@ -72,9 +83,12 @@
                                     <a href="/marketplace/pesanan-saya/<?= sha1($profile['id_user']) ?>">
                                        <button type="button" class="btn btn-default btn-sm">Kembali</button>
                                     </a>
-                                    <a href="/marketplace/pesanan-saya/<?= sha1($profile['id_user']) ?>">
+                                    <?php
+                                    if($dataPesanan['status_pesanan'] == '2'){ ?>
+                                    <a href="/marketplace/terima-pesanan/<?= $dataPesanan['id_pesanan'] ?>">
                                        <button type="button" class="btn btn-success btn-sm">Pesanan Diterima</button>
                                     </a>
+                                    <?php }?>
                                  </center>
                               </div>
                            </div>

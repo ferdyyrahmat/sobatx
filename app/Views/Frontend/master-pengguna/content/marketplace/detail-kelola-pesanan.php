@@ -81,7 +81,8 @@
                                     </div>
                                     <div class="col-6 col-md-6 col-sm-6 col-xs-6" style="padding-top: 10px;">
                                        <i class="fa-solid fa-person-walking-luggage"></i>
-                                       <span style="font-size: 12px;"><?= strtoupper($dataPesanan['nama_kurir'])?></span>
+                                       <span
+                                          style="font-size: 12px;"><?= strtoupper($dataPesanan['nama_kurir'])?></span>
                                     </div>
                                     <div class="col-6 col-md-6 col-sm-6 col-xs-6"
                                        style="padding-top: 10px; text-align: right;">
@@ -201,26 +202,41 @@
                               </div>
                            </div>
                         </div>
+                        <?php
+                        if($dataPesanan['status_pesanan'] == '1'){ ?>
                         <div class="col-md-12 col-sm-12 col-xs-12" style="padding-top: 10px;">
                            <div class="row">
-                              <div class="col-md-12 col-sm-12 col-xs-12">
-                                 <div class="row">
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                       <a href="/marketplace/pesanan-saya/<?= sha1($profile['id_user']) ?>">
-                                          <button type="button" class="btn btn-default"
-                                             style="width:100%">Kembali</button>
-                                       </a>
-                                    </div>
-                                    <div class="col-md-6 col-sm-6 col-xs-6">
-                                       <!-- <a href="/marketplace/pesanan-saya/<?= sha1($profile['id_user']) ?>"> -->
-                                       <button type="button" class="btn btn-warning" data-toggle="modal"
-                                          data-target="#modalPesanan" style="width:100%">Kirim Barang</button>
-                                       <!-- </a> -->
-                                    </div>
-                                 </div>
+                              <div class="col-md-6 col-sm-6 col-xs-6">
+                                 <a href="/marketplace/pesanan-saya/<?= sha1($profile['id_user']) ?>">
+                                    <button type="button" class="btn btn-default" style="width:100%">Kembali</button>
+                                 </a>
+                              </div>
+                              <div class="col-md-6 col-sm-6 col-xs-6">
+                                 <!-- <a href="/marketplace/pesanan-saya/<?= sha1($profile['id_user']) ?>"> -->
+                                 <button type="button" class="btn btn-warning" data-toggle="modal"
+                                    data-target="#modalPesanan" style="width:100%">Kirim Barang</button>
+                                 <!-- </a> -->
                               </div>
                            </div>
                         </div>
+                        <?php 
+                        }elseif($dataPesanan['status_pesanan'] == '2'){ ?>
+                        <div class="col-md-12 col-sm-12 col-xs-12" style="padding-top: 10px;">
+                           <div class="row">
+                              <div class="col-md-6 col-sm-6 col-xs-6">
+                                 <a href="/marketplace/pesanan-saya/<?= sha1($profile['id_user']) ?>">
+                                    <button type="button" class="btn btn-default" style="width:100%">Kembali</button>
+                                 </a>
+                              </div>
+                              <div class="col-md-6 col-sm-6 col-xs-6">
+                                 <!-- <a href="/marketplace/pesanan-saya/<?= sha1($profile['id_user']) ?>"> -->
+                                 <div class="btn btn-info"
+                                    style="width:100%"><i>Sedang dikirim</i></div>
+                                 <!-- </a> -->
+                              </div>
+                           </div>
+                        </div>
+                        <?php } ?>
                      </div>
                   </div>
                </div>

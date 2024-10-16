@@ -68,13 +68,13 @@
                                           <div class="col-md-6 col-sm-6 col-xs-6" style="text-align: right;">
                                              <span style="font-size:11px;">
                                                 <?php 
-                                                if($data['status'] == '1'){ ?>
+                                                if($data['status_pesanan'] == '1'){ ?>
                                                 <span class="badge badge-warning">Perlu Dikirim</span>
                                                 <?php
-                                                } elseif($data['status'] == '2'){ ?>
+                                                } elseif($data['status_pesanan'] == '2'){ ?>
                                                 <span class="badge badge-warning">Sedang Dikirim</span>
                                                 <?php
-                                                } elseif($data['status'] == '3'){ ?>
+                                                } elseif($data['status_pesanan'] == '3'){ ?>
                                                 <span class="badge badge-warning">Selesai</span>
                                                 <?php } ?>
                                              </span>
