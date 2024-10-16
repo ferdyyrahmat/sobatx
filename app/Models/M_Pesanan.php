@@ -30,6 +30,25 @@ class M_Pesanan extends Model
             $builder = $this->db->table($this->tableTemp);
             $builder->select('*');
             $builder->join('tbl_produk', 'tbl_produk.id_produk = tbl_pesanan.id_produk', 'LEFT');
+            $builder->join('tbl_toko', 'tbl_toko.id_toko = tbl_pesanan.id_toko', 'LEFT');
+            $builder->orderBy('tbl_pesanan.id_produk', 'ASC');
+            return $query = $builder->get();
+        } else {
+            $builder = $this->db->table($this->tableTemp);
+            $builder->select('*');
+            $builder->where($where);
+            $builder->join('tbl_produk', 'tbl_produk.id_produk = tbl_pesanan.id_produk', 'LEFT');
+            $builder->join('tbl_toko', 'tbl_toko.id_toko = tbl_pesanan.id_toko', 'LEFT');
+            $builder->orderBy('tbl_pesanan.id_produk', 'ASC');
+            return $query = $builder->get();
+        }
+    }
+    public function getDataPesananJoinAll($where = false)
+    {
+        if ($where === false) {
+            $builder = $this->db->table($this->tableTemp);
+            $builder->select('*');
+            $builder->join('tbl_produk', 'tbl_produk.id_produk = tbl_pesanan.id_produk', 'LEFT');
             $builder->join('tbl_user', 'tbl_user.id_user = tbl_pesanan.id_user', 'LEFT');
             $builder->join('tbl_alamat', 'tbl_alamat.id_alamat = tbl_pesanan.id_alamat', 'LEFT');
             $builder->join('tbl_toko', 'tbl_toko.id_toko = tbl_pesanan.id_toko', 'LEFT');

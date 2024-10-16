@@ -13,7 +13,6 @@ use App\Models\M_Rekening;
 
 class Marketplace extends BaseController
 {
-   //API-key RajaOngkir
    private $apiKey = '5afbf385ee4ad96cfe0ab9f708445472';
    protected $favorite;
    public function __construct()
@@ -637,7 +636,7 @@ class Marketplace extends BaseController
             'nama_produk' => $dataTransaksi['nama_produk'],
             'jumlah' => $dataTransaksi['jumlah'],
             'total_bayar' => $dataTransaksi['total_bayar'],
-            'status' => '1',
+            'status_pesanan' => '1',
             'created_at' => date("Y-m-d H:i:s"),
             'updated_at' => date("Y-m-d H:i:s")
          ];
@@ -652,7 +651,7 @@ class Marketplace extends BaseController
             'nama_produk' => $dataTransaksi['nama_produk'],
             'jumlah' => $dataTransaksi['jumlah'],
             'total_bayar' => $dataTransaksi['total_bayar'],
-            'status' => '1',
+            'status_pesanan' => '1',
             'updated_at' => date("Y-m-d H:i:s")
          ];
          $whereUpdate = ['id_pesanan' => $idTransaksi];
@@ -737,7 +736,7 @@ class Marketplace extends BaseController
       $uri = service('uri');
       $idPesanan = $uri->getSegment(3);
 
-      $dataPesanan = $modelPesanan->getDataPesananJoin(['tbl_pesanan.id_pesanan' => $idPesanan])->getRowArray();
+      $dataPesanan = $modelPesanan->getDataPesananJoinAll(['tbl_pesanan.id_pesanan' => $idPesanan])->getRowArray();
       $data['dataPesanan'] = $dataPesanan;
 
       $dataPengguna = $modelUser->getDataUser(['id_user' => session('id')])->getRowArray();
@@ -767,6 +766,8 @@ class Marketplace extends BaseController
       $dataPesanan = $modelPesanan->getDataPesananJoin(['tbl_pesanan.id_toko' => $dataPeternak['id_toko']])->getResultArray();
       $data['dataPesanan'] = $dataPesanan;
 
+      // print_r($data[2]['status']);
+
       $dataPengguna = $modelUser->getDataUser(['id_user' => session('id')])->getRowArray();
       $data['profile'] = $dataPengguna;
       $jumlahNotif = $modelUser->getNotif(['id_user' => session('id')])->getNumRows();
@@ -781,5 +782,60 @@ class Marketplace extends BaseController
       echo view('Frontend/master-pengguna/content/marketplace/kelola-pesanan', $data);
       echo view('Frontend/template/navigation', $data);
       echo view('Frontend/template/footer', $data);
+   }
+   public function detail_pesanan_toko()
+   {
+      $modelUser = new M_User;
+      $modelTransaksi = new M_Transaksi;
+      $modelAlamat = new M_Alamat;
+      $modelRekening = new M_Rekening;
+      $modelPesanan = new M_Pesanan;
+
+      $uri = service('uri');
+      $idPesanan = $uri->getSegment(3);
+
+      $dataPesanan = $modelPesanan->getDataPesananJoinAll(['tbl_pesanan.id_pesanan' => $idPesanan])->getRowArray();
+      $data['dataPesanan'] = $dataPesanan;
+
+      $dataPengguna = $modelUser->getDataUser(['id_user' => session('id')])->getRowArray();
+      $data['profile'] = $dataPengguna;
+      $jumlahNotif = $modelUser->getNotif(['id_user' => session('id')])->getNumRows();
+      $data['jumlahNotif'] = $jumlahNotif;
+      $dataNotif = $modelUser->getNotif(['id_user' => session('id')])->getResultArray();
+      $data['notif'] = $dataNotif;
+
+      $data['menu'] = 'dashboard';
+      $data['page'] = 'Checkout';
+
+      echo view('Frontend/template/header', $data);
+      echo view('Frontend/master-pengguna/content/marketplace/detail-kelola-pesanan', $data);
+      echo view('Frontend/template/navigation', $data);
+      echo view('Frontend/template/footer', $data);
+   }
+
+   public function kirim_pesanan()
+   {
+      $uri = service('uri');
+      $idUpdate = $uri->getSegment(3);
+
+      $modelPesanan = new M_Pesanan;
+      $nama_kurir = $this->request->getPost('nama_kurir');
+      $no_hp_kurir = $this->request->getPost('no_hp_kurir');
+
+      $dataUpdate = [
+         'status_pesanan' => '2',
+         'nama_kurir' => $nama_kurir,
+         'no_hp_kurir' => $no_hp_kurir,
+         'updated_at' => date("Y-m-d H:i:s")
+      ];
+      $whereUpdate = ['id_pesanan' => $idUpdate];
+      $modelPesanan->updateDataPesanan($dataUpdate, $whereUpdate);
+
+      session()->setFlashdata('success', 'Pesanan Berhasil diKonfirmasi!, Segera Kirim!');
+      ?>
+      <script>
+          document.location = "<?= base_url('/marketplace/kelola-pesanan')?>";
+      </script>
+      <?php
    }
 }

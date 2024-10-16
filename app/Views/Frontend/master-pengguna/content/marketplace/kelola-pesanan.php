@@ -53,7 +53,8 @@
                <div class="col-md-5">
                   <div class="product-details" style="margin-top: 5px;">
                      <div class="row">
-                        <?php foreach ($dataPesanan as $data) { ?>
+                        <?php foreach($dataPesanan as $data){ ?>
+                        <a href="/marketplace/detail-pesanan-toko/<?= $data['id_pesanan']?>">
                            <div class="col-md-12 col-sm-12 col-xs-12" style="padding-bottom: 10px;">
                               <div class="" style="text-align: left;">
                                  <div class="row" style="padding: 0 5px; border: 1px solid grey; border-radius: 10px;">
@@ -66,57 +67,65 @@
                                           </div>
                                           <div class="col-md-6 col-sm-6 col-xs-6" style="text-align: right;">
                                              <span style="font-size:11px;">
-                                                {status pesanan}
+                                                <?php 
+                                                if($data['status'] == '1'){ ?>
+                                                <span class="badge badge-warning">Perlu Dikirim</span>
+                                                <?php
+                                                } elseif($data['status'] == '2'){ ?>
+                                                <span class="badge badge-warning">Sedang Dikirim</span>
+                                                <?php
+                                                } elseif($data['status'] == '3'){ ?>
+                                                <span class="badge badge-warning">Selesai</span>
+                                                <?php } ?>
                                              </span>
                                           </div>
                                        </div>
                                     </div>
                                     <hr style="border: 1px solid #adadad; margin:0;">
-                                    <a href="/marketplace/detail-pesanan/"
-                                       style="padding-bottom:10px;">
-                                       <div class="col-md-12 col-sm-12 col-xs-12">
-                                          <div class="row">
-                                             <div class="col-md-4 col-xs-2" style="padding: 5px 0 5px 10px;">
-                                                <img src="<?= base_url() ?>Assets/img/toko/produk/"
-                                                   alt="" class="img-responsive"
-                                                   style="width: -webkit-fill-available; border: 1px solid grey; border-radius: 10px;">
-                                             </div>
-                                             <div class="col-md-8 col-xs-10">
-                                                <div class="row">
-                                                   <div class="col-md-12 col-sm-12 col-xs-12" style="padding-top: 5px;">
-                                                      <span>
-                                                         <b> </b>
-                                                      </span>
-                                                   </div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12">
+                                       <div class="row">
+                                          <div class="col-md-4 col-xs-2" style="padding: 5px 0 5px 10px;">
+                                             <img src="<?= base_url() ?>Assets/img/toko/produk/<?= $data['nm_foto']?>"
+                                                alt="" class="img-responsive"
+                                                style="width: -webkit-fill-available; border: 1px solid grey; border-radius: 10px;">
+                                          </div>
+                                          <div class="col-md-8 col-xs-10">
+                                             <div class="row">
+                                                <div class="col-md-12 col-sm-12 col-xs-12" style="padding-top: 5px;">
+                                                   <span>
+                                                      <b><?= $data['nama_produk'] ?> </b>
+                                                   </span>
                                                 </div>
                                              </div>
                                           </div>
                                        </div>
-                                       <hr>
-                                       <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 0;">
-                                          <div class="row">
-                                             <div class="col-md-6 col-sm-6 col-xs-6">
-                                                <div style="margin: 0 15px; text-align: left;">
-                                                   <small>
-                                                      Total  item
-                                                   </small>
-                                                </div>
+                                    </div>
+                                    <hr>
+                                    <div class="col-md-12 col-sm-12 col-xs-12" style="padding: 10px 0;">
+                                       <div class="row">
+                                          <div class="col-md-6 col-sm-6 col-xs-6">
+                                             <div style="margin: 0 15px; text-align: left;">
+                                                <small>
+                                                   Total <?= $data['jumlah'] ?> item
+                                                </small>
                                              </div>
-                                             <div class="col-md-6 col-sm-6 col-xs-6">
-                                                <div style="margin: 0 15px; text-align: right;">
-                                                   <small>
-                                                      <b style="color: grey;">
-                                                         Harga:
-                                                      </b>
-                                                   </small>
-                                                </div>
+                                          </div>
+                                          <div class="col-md-6 col-sm-6 col-xs-6">
+                                             <div style="margin: 0 15px; text-align: right;">
+                                                <small>
+                                                   <b style="color: grey;">
+                                                      Harga:
+                                                      Rp<?= number_format($data['total_bayar'], 0, ",", ".") ?>
+                                                   </b>
+                                                </small>
                                              </div>
                                           </div>
                                        </div>
-                                    </a>
+                                    </div>
                                  </div>
                               </div>
                            </div>
+                        </a>
                         <?php } ?>
                      </div>
                   </div>

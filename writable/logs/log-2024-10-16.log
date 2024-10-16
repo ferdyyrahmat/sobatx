@@ -452,3 +452,574 @@ in APPPATH\Views\Frontend\template\head-content.php on line 17.
  8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
 10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 19:15:29 --> ErrorException: Undefined variable $checkFoto
+in APPPATH\Views\Frontend\template\head-content.php on line 25.
+ 1 APPPATH\Views\Frontend\template\head-content.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $checkFoto', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\head-content.php', 25)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\head-content.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/head-content', [], true)
+ 5 APPPATH\Controllers\Peternak.php(368): view('Frontend/template/head-content', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 19:23:06 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Frontend\template\head-content.php on line 18.
+ 1 APPPATH\Views\Frontend\template\head-content.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\head-content.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\head-content.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/head-content', [], true)
+ 5 APPPATH\Controllers\Peternak.php(368): view('Frontend/template/head-content', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 19:23:07 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Frontend\template\head-content.php on line 18.
+ 1 APPPATH\Views\Frontend\template\head-content.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\head-content.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\head-content.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/head-content', [], true)
+ 5 APPPATH\Controllers\Peternak.php(368): view('Frontend/template/head-content', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 19:23:08 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Frontend\template\head-content.php on line 18.
+ 1 APPPATH\Views\Frontend\template\head-content.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\head-content.php', 18)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\head-content.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/head-content', [], true)
+ 5 APPPATH\Controllers\Peternak.php(368): view('Frontend/template/head-content', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 19:24:12 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Frontend\template\navigation.php on line 2.
+ 1 APPPATH\Views\Frontend\template\navigation.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\navigation.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\navigation.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/navigation', [], true)
+ 5 APPPATH\Controllers\Peternak.php(371): view('Frontend/template/navigation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 19:24:13 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Frontend\template\navigation.php on line 2.
+ 1 APPPATH\Views\Frontend\template\navigation.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\navigation.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\navigation.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/navigation', [], true)
+ 5 APPPATH\Controllers\Peternak.php(371): view('Frontend/template/navigation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 19:54:15 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Frontend\template\navigation.php on line 2.
+ 1 APPPATH\Views\Frontend\template\navigation.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\navigation.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\navigation.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/navigation', [], true)
+ 5 APPPATH\Controllers\Peternak.php(371): view('Frontend/template/navigation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 19:54:16 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Frontend\template\navigation.php on line 2.
+ 1 APPPATH\Views\Frontend\template\navigation.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\navigation.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\navigation.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/navigation', [], true)
+ 5 APPPATH\Controllers\Peternak.php(371): view('Frontend/template/navigation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 19:56:22 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Frontend\template\navigation.php on line 2.
+ 1 APPPATH\Views\Frontend\template\navigation.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\navigation.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\navigation.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/navigation', [], true)
+ 5 APPPATH\Controllers\Peternak.php(371): view('Frontend/template/navigation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 19:56:26 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Frontend\template\navigation.php on line 2.
+ 1 APPPATH\Views\Frontend\template\navigation.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\navigation.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\navigation.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/navigation', [], true)
+ 5 APPPATH\Controllers\Peternak.php(371): view('Frontend/template/navigation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 19:56:28 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Views\Frontend\template\navigation.php on line 2.
+ 1 APPPATH\Views\Frontend\template\navigation.php(2): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\navigation.php', 2)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\template\\navigation.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/template/navigation', [], true)
+ 5 APPPATH\Controllers\Peternak.php(371): view('Frontend/template/navigation', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->dashboard_peternak()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:23:37 --> ErrorException: Undefined array key "status"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php on line 70.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php', 70)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(780): view('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:27:40 --> ErrorException: Undefined array key "status"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php on line 70.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php', 70)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(780): view('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:45:01 --> ErrorException: Undefined array key "status"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php on line 70.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php', 70)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(780): view('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+ERROR - 2024-10-16 20:46:30 --> mysqli_sql_exception: Column 'id_toko' in where clause is ambiguous in E:\Project\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\Project\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Project\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Project\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Project\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Project\sobatx\app\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\Project\sobatx\app\Controllers\Marketplace.php(766): App\Models\M_Pesanan->getDataPesananJoin(Array)
+#6 E:\Project\sobatx\system\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+#7 E:\Project\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+#8 E:\Project\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Project\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\Project\sobatx\system\Commands\Server\rewrite.php(47): require_once('E:\\Project\\soba...')
+#11 {main}
+CRITICAL - 2024-10-16 20:46:30 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_toko' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = :id_toko:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 2 APPPATH\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Marketplace.php(766): App\Models\M_Pesanan->getDataPesananJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:46:30 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_toko' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = \'TKO0001\'
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = \'TKO0001\'
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = :id_toko:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 4 APPPATH\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Marketplace.php(766): App\Models\M_Pesanan->getDataPesananJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:46:30 --> [Caused by] mysqli_sql_exception: Column 'id_toko' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = \'TKO0001\'
+ORDER BY `tbl_pesanan`.`id_produk` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = \'TKO0001\'
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = \'TKO0001\'
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = :id_toko:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 5 APPPATH\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Marketplace.php(766): App\Models\M_Pesanan->getDataPesananJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+ERROR - 2024-10-16 20:47:50 --> mysqli_sql_exception: Column 'id_toko' in where clause is ambiguous in E:\Project\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\Project\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Project\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Project\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Project\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Project\sobatx\app\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\Project\sobatx\app\Controllers\Marketplace.php(766): App\Models\M_Pesanan->getDataPesananJoin(Array)
+#6 E:\Project\sobatx\system\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+#7 E:\Project\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+#8 E:\Project\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Project\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\Project\sobatx\system\Commands\Server\rewrite.php(47): require_once('E:\\Project\\soba...')
+#11 {main}
+CRITICAL - 2024-10-16 20:47:50 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_toko' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = :id_toko:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 2 APPPATH\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Marketplace.php(766): App\Models\M_Pesanan->getDataPesananJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:47:50 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_toko' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = \'TKO0001\'
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = \'TKO0001\'
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = :id_toko:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 4 APPPATH\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Marketplace.php(766): App\Models\M_Pesanan->getDataPesananJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:47:50 --> [Caused by] mysqli_sql_exception: Column 'id_toko' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = \'TKO0001\'
+ORDER BY `tbl_pesanan`.`id_produk` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = \'TKO0001\'
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = \'TKO0001\'
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = :id_toko:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 5 APPPATH\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Marketplace.php(766): App\Models\M_Pesanan->getDataPesananJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+ERROR - 2024-10-16 20:48:01 --> mysqli_sql_exception: Column 'id_toko' in where clause is ambiguous in E:\Project\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 E:\Project\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\Project\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\Project\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\Project\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\Project\sobatx\app\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\Project\sobatx\app\Controllers\Marketplace.php(766): App\Models\M_Pesanan->getDataPesananJoin(Array)
+#6 E:\Project\sobatx\system\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+#7 E:\Project\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+#8 E:\Project\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 E:\Project\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 E:\Project\sobatx\system\Commands\Server\rewrite.php(47): require_once('E:\\Project\\soba...')
+#11 {main}
+CRITICAL - 2024-10-16 20:48:01 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_toko' in where clause is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = :id_toko:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 2 APPPATH\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Marketplace.php(766): App\Models\M_Pesanan->getDataPesananJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:48:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'id_toko' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = \'TKO0001\'
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = \'TKO0001\'
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = :id_toko:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 4 APPPATH\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Marketplace.php(766): App\Models\M_Pesanan->getDataPesananJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:48:01 --> [Caused by] mysqli_sql_exception: Column 'id_toko' in where clause is ambiguous
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = \'TKO0001\'
+ORDER BY `tbl_pesanan`.`id_produk` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = \'TKO0001\'
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = \'TKO0001\'
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE `id_toko` = :id_toko:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 5 APPPATH\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Marketplace.php(766): App\Models\M_Pesanan->getDataPesananJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:53:51 --> ErrorException: Undefined array key "status"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php on line 70.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php', 70)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(782): view('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:54:27 --> ErrorException: Undefined array key "tbl_pesanan.status"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php on line 70.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tbl_pesanan.status"', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php', 70)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(782): view('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:55:01 --> ErrorException: Undefined array key "nama_toko"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php on line 64.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php(64): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_toko"', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php', 64)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(782): view('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:56:40 --> ErrorException: Undefined array key "tbl_pesanan.status"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php on line 70.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tbl_pesanan.status"', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php', 70)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(782): view('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:58:46 --> ErrorException: Undefined array key "status"
+in APPPATH\Controllers\Marketplace.php on line 769.
+ 1 APPPATH\Controllers\Marketplace.php(769): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status"', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 769)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:59:05 --> ErrorException: Undefined array key "tbl_pesanan.status"
+in APPPATH\Controllers\Marketplace.php on line 769.
+ 1 APPPATH\Controllers\Marketplace.php(769): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tbl_pesanan.status"', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 769)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:59:20 --> ErrorException: Undefined array key 1
+in APPPATH\Controllers\Marketplace.php on line 769.
+ 1 APPPATH\Controllers\Marketplace.php(769): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 769)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:59:38 --> ErrorException: Undefined array key 0
+in APPPATH\Controllers\Marketplace.php on line 769.
+ 1 APPPATH\Controllers\Marketplace.php(769): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 769)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 20:59:44 --> ErrorException: Undefined array key 0
+in APPPATH\Controllers\Marketplace.php on line 769.
+ 1 APPPATH\Controllers\Marketplace.php(769): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 0', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 769)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 21:05:33 --> ErrorException: Undefined array key "status_pesanan"
+in APPPATH\Controllers\Marketplace.php on line 769.
+ 1 APPPATH\Controllers\Marketplace.php(769): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status_pesanan"', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 769)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 21:06:55 --> ErrorException: Undefined array key 2
+in APPPATH\Controllers\Marketplace.php on line 769.
+ 1 APPPATH\Controllers\Marketplace.php(769): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 2', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 769)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 21:08:06 --> ErrorException: Undefined array key "status_pesanan"
+in APPPATH\Controllers\Marketplace.php on line 769.
+ 1 APPPATH\Controllers\Marketplace.php(769): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "status_pesanan"', 'E:\\Project\\sobatx\\app\\Controllers\\Marketplace.php', 769)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 21:10:08 --> ErrorException: Undefined array key "tbl_pesanan.status"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php on line 70.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\kelola-pesanan.php(70): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "tbl_pesanan.status"', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php', 70)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\kelola-pesanan.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(782): view('Frontend/master-pengguna/content/marketplace/kelola-pesanan', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->kelola_pesanan()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-16 21:41:12 --> ErrorException: Undefined array key "total_harga"
+in APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-pesanan-saya.php on line 147.
+ 1 APPPATH\Views\Frontend\master-pengguna\content\marketplace\detail-pesanan-saya.php(147): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "total_harga"', 'E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-pesanan-saya.php', 147)
+ 2 SYSTEMPATH\View\View.php(228): include('E:\\Project\\sobatx\\app\\Views\\Frontend\\master-pengguna\\content\\marketplace\\detail-pesanan-saya.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Frontend/master-pengguna/content/marketplace/detail-pesanan-saya', [], true)
+ 5 APPPATH\Controllers\Marketplace.php(753): view('Frontend/master-pengguna/content/marketplace/detail-pesanan-saya', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Marketplace->detail_pesanan('e1a5956a30d97f1f70bb3337906d4c8dfeab84e2')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Marketplace))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
