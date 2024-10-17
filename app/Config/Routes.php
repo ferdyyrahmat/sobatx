@@ -145,7 +145,7 @@ $routes->get('/admin/verifying-paket/(:alphanum)/(:alphanum)', 'Admin::setujui_p
     $routes->post('/admin/simpan-produk', 'Admin::simpan_produk_peternak');
     $routes->get('/admin/detail-produk-peternak/(:alphanum)', 'Admin::detail_produk_peternak/$1');
     $routes->get('/admin/edit-produk-peternak/(:alphanum)', 'Admin::edit_produk_peternak/$1');
-    $routes->post('/admin/update-produk', 'Admin::update_produk_peternak');
+    $routes->post('/admin/update-produk-peternak', 'Admin::update_produk_peternak');
     $routes->get('/admin/hapus-produk/(:alphanum)', 'Admin::hapus_produk_peternak/$1');
         //Peternak Admin Toko
     $routes->get('/admin/toko-saya-peternak', 'Admin::toko_usaha_peternak');

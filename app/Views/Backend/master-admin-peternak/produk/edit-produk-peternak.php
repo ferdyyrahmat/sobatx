@@ -14,7 +14,7 @@
             <div class="card">
                <div class="col-md-12"></div>
                <div class="col-md-12 product-details">
-                  <form action="<?= base_url()?>admin/update-produk" method="post" enctype="multipart/form-data">
+                  <form action="<?= base_url()?>admin/update-produk-peternak" method="post" enctype="multipart/form-data">
                      <div class="card-body">
                         <div class="row">
                            <div class="col-md-12 col-sm-12 col-xs-12">
@@ -93,8 +93,8 @@
                               </div>
                            </div>
                         </div>
-                        <input type="hidden" name="id_produk">
-                        <input type="hidden" name="id_toko">
+                        <!-- <input type="hidden" name="id_produk">
+                        <input type="hidden" name="id_toko"> -->
                         <div class="row">
                            <div class="col-md-5">
                               <div class="form-group">
