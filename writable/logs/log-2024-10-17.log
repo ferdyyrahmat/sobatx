@@ -187,3 +187,620 @@ ORDER BY `id_user` ASC', [...], false)
  7 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
  9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('E:\\Project\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 10:15:06 --> ErrorException: Undefined array key "nama_user"
+in APPPATH\Views\Backend\master-admin-peternak\pesanan\pesanan-masuk.php on line 68.
+ 1 APPPATH\Views\Backend\master-admin-peternak\pesanan\pesanan-masuk.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_user"', 'D:\\New folder\\sobatx\\app\\Views\\Backend\\master-admin-peternak\\pesanan\\pesanan-masuk.php', 68)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\New folder\\sobatx\\app\\Views\\Backend\\master-admin-peternak\\pesanan\\pesanan-masuk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin-peternak/pesanan/pesanan-masuk', [], true)
+ 5 APPPATH\Controllers\Peternak.php(1789): view('Backend/master-admin-peternak/pesanan/pesanan-masuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Peternak->pesanan_masuk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Peternak))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 10:39:17 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\Admin.php on line 810.
+ 1 APPPATH\Controllers\Admin.php(810): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'D:\\New folder\\sobatx\\app\\Controllers\\Admin.php', 810)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->login_peternak_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 10:40:10 --> ErrorException: Undefined variable $data
+in APPPATH\Controllers\Admin.php on line 810.
+ 1 APPPATH\Controllers\Admin.php(810): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'D:\\New folder\\sobatx\\app\\Controllers\\Admin.php', 810)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->login_peternak_admin()
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:08:09 --> ErrorException: Undefined array key "nama_user"
+in APPPATH\Views\Backend\master-admin-peternak\pesanan\pesanan-masuk.php on line 68.
+ 1 APPPATH\Views\Backend\master-admin-peternak\pesanan\pesanan-masuk.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_user"', 'D:\\New folder\\sobatx\\app\\Views\\Backend\\master-admin-peternak\\pesanan\\pesanan-masuk.php', 68)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\New folder\\sobatx\\app\\Views\\Backend\\master-admin-peternak\\pesanan\\pesanan-masuk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin-peternak/pesanan/pesanan-masuk', [], true)
+ 5 APPPATH\Controllers\Admin.php(1437): view('Backend/master-admin-peternak/pesanan/pesanan-masuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:08:20 --> ErrorException: Undefined array key "nama_user"
+in APPPATH\Views\Backend\master-admin-peternak\pesanan\pesanan-masuk.php on line 68.
+ 1 APPPATH\Views\Backend\master-admin-peternak\pesanan\pesanan-masuk.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_user"', 'D:\\New folder\\sobatx\\app\\Views\\Backend\\master-admin-peternak\\pesanan\\pesanan-masuk.php', 68)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\New folder\\sobatx\\app\\Views\\Backend\\master-admin-peternak\\pesanan\\pesanan-masuk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin-peternak/pesanan/pesanan-masuk', [], true)
+ 5 APPPATH\Controllers\Admin.php(1437): view('Backend/master-admin-peternak/pesanan/pesanan-masuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:08:22 --> ErrorException: Undefined array key "nama_user"
+in APPPATH\Views\Backend\master-admin-peternak\pesanan\pesanan-masuk.php on line 68.
+ 1 APPPATH\Views\Backend\master-admin-peternak\pesanan\pesanan-masuk.php(68): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nama_user"', 'D:\\New folder\\sobatx\\app\\Views\\Backend\\master-admin-peternak\\pesanan\\pesanan-masuk.php', 68)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\New folder\\sobatx\\app\\Views\\Backend\\master-admin-peternak\\pesanan\\pesanan-masuk.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin-peternak/pesanan/pesanan-masuk', [], true)
+ 5 APPPATH\Controllers\Admin.php(1437): view('Backend/master-admin-peternak/pesanan/pesanan-masuk', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+ERROR - 2024-10-17 11:09:58 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 5 in D:\New folder\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\New folder\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\New folder\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\New folder\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\New folder\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\New folder\sobatx\app\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\New folder\sobatx\app\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoin(Array)
+#6 D:\New folder\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+#7 D:\New folder\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\New folder\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\New folder\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\New folder\sobatx\system\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\s...')
+#11 {main}
+CRITICAL - 2024-10-17 11:09:58 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 5
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 2 APPPATH\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoin([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:09:58 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 4 APPPATH\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoin([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:09:58 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 5
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 5 APPPATH\Models\M_Pesanan.php(43): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoin([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+ERROR - 2024-10-17 11:11:56 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 8 in D:\New folder\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\New folder\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\New folder\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\New folder\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\New folder\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\New folder\sobatx\app\Models\M_Pesanan.php(68): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\New folder\sobatx\app\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoinAll(Array)
+#6 D:\New folder\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+#7 D:\New folder\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\New folder\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\New folder\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\New folder\sobatx\system\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\s...')
+#11 {main}
+CRITICAL - 2024-10-17 11:11:56 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 8
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 2 APPPATH\Models\M_Pesanan.php(68): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoinAll([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:11:56 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 4 APPPATH\Models\M_Pesanan.php(68): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoinAll([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:11:56 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 5 APPPATH\Models\M_Pesanan.php(68): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoinAll([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+ERROR - 2024-10-17 11:17:37 --> mysqli_sql_exception: Unknown column 'status_pesanan' in 'field list' in D:\New folder\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\New folder\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tbl_tra...', 0)
+#1 D:\New folder\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_tra...')
+#2 D:\New folder\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_tra...')
+#3 D:\New folder\sobatx\system\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_tra...', Array, false)
+#4 D:\New folder\sobatx\app\Models\M_Transaksi.php(55): CodeIgniter\Database\BaseBuilder->update(Array)
+#5 D:\New folder\sobatx\app\Controllers\Admin.php(1457): App\Models\M_Transaksi->updateDataTemp(Array, Array)
+#6 D:\New folder\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->update_pesanan('TRA2410170026')
+#7 D:\New folder\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\New folder\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\New folder\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\New folder\sobatx\system\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\s...')
+#11 {main}
+CRITICAL - 2024-10-17 11:17:37 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_pesanan' in 'field list'
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_transaksi_temp` SET `status_pesanan` = :status_pesanan:, `updated_at` = :updated_at:
+WHERE `id_transaksi` = :id_transaksi:', [...], false)
+ 2 APPPATH\Models\M_Transaksi.php(55): CodeIgniter\Database\BaseBuilder->update([...])
+ 3 APPPATH\Controllers\Admin.php(1457): App\Models\M_Transaksi->updateDataTemp([...], [...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->update_pesanan('TRA2410170026')
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:17:37 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column 'status_pesanan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_transaksi_temp` SET `status_pesanan` = \'2\', `updated_at` = \'2024-10-17 11:17:37\'
+WHERE `id_transaksi` = \'TRA2410170026\'')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_transaksi_temp` SET `status_pesanan` = \'2\', `updated_at` = \'2024-10-17 11:17:37\'
+WHERE `id_transaksi` = \'TRA2410170026\'')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_transaksi_temp` SET `status_pesanan` = :status_pesanan:, `updated_at` = :updated_at:
+WHERE `id_transaksi` = :id_transaksi:', [...], false)
+ 4 APPPATH\Models\M_Transaksi.php(55): CodeIgniter\Database\BaseBuilder->update([...])
+ 5 APPPATH\Controllers\Admin.php(1457): App\Models\M_Transaksi->updateDataTemp([...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->update_pesanan('TRA2410170026')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:17:37 --> [Caused by] mysqli_sql_exception: Unknown column 'status_pesanan' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('UPDATE `tbl_transaksi_temp` SET `status_pesanan` = \'2\', `updated_at` = \'2024-10-17 11:17:37\'
+WHERE `id_transaksi` = \'TRA2410170026\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE `tbl_transaksi_temp` SET `status_pesanan` = \'2\', `updated_at` = \'2024-10-17 11:17:37\'
+WHERE `id_transaksi` = \'TRA2410170026\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE `tbl_transaksi_temp` SET `status_pesanan` = \'2\', `updated_at` = \'2024-10-17 11:17:37\'
+WHERE `id_transaksi` = \'TRA2410170026\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2474): CodeIgniter\Database\BaseConnection->query('UPDATE `tbl_transaksi_temp` SET `status_pesanan` = :status_pesanan:, `updated_at` = :updated_at:
+WHERE `id_transaksi` = :id_transaksi:', [...], false)
+ 5 APPPATH\Models\M_Transaksi.php(55): CodeIgniter\Database\BaseBuilder->update([...])
+ 6 APPPATH\Controllers\Admin.php(1457): App\Models\M_Transaksi->updateDataTemp([...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->update_pesanan('TRA2410170026')
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:19:46 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1451.
+ 1 APPPATH\Controllers\Admin.php(1451): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\New folder\\sobatx\\app\\Controllers\\Admin.php', 1451)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->update_pesanan('TRA2410170026')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:20:23 --> ErrorException: Trying to access array offset on value of type null
+in APPPATH\Controllers\Admin.php on line 1451.
+ 1 APPPATH\Controllers\Admin.php(1451): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'D:\\New folder\\sobatx\\app\\Controllers\\Admin.php', 1451)
+ 2 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->update_pesanan('TRA2410170026')
+ 3 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+ERROR - 2024-10-17 11:22:01 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 8 in D:\New folder\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\New folder\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\New folder\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\New folder\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\New folder\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\New folder\sobatx\app\Models\M_Pesanan.php(68): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\New folder\sobatx\app\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoinAll(Array)
+#6 D:\New folder\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+#7 D:\New folder\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\New folder\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\New folder\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\New folder\sobatx\system\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\s...')
+#11 {main}
+CRITICAL - 2024-10-17 11:22:01 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 8
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 2 APPPATH\Models\M_Pesanan.php(68): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoinAll([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:22:01 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 4 APPPATH\Models\M_Pesanan.php(68): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoinAll([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:22:01 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 5 APPPATH\Models\M_Pesanan.php(68): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoinAll([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+ERROR - 2024-10-17 11:22:06 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 8 in D:\New folder\sobatx\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 D:\New folder\sobatx\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *\nFROM `...', 0)
+#1 D:\New folder\sobatx\system\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 D:\New folder\sobatx\system\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 D:\New folder\sobatx\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\New folder\sobatx\app\Models\M_Pesanan.php(68): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\New folder\sobatx\app\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoinAll(Array)
+#6 D:\New folder\sobatx\system\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+#7 D:\New folder\sobatx\system\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#8 D:\New folder\sobatx\system\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\New folder\sobatx\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#10 D:\New folder\sobatx\system\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\s...')
+#11 {main}
+CRITICAL - 2024-10-17 11:22:06 --> CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 8
+in SYSTEMPATH\Database\BaseConnection.php on line 647.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 2 APPPATH\Models\M_Pesanan.php(68): CodeIgniter\Database\BaseBuilder->get()
+ 3 APPPATH\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoinAll([...])
+ 4 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:22:06 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 311.
+ 1 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 2 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 4 APPPATH\Models\M_Pesanan.php(68): CodeIgniter\Database\BaseBuilder->get()
+ 5 APPPATH\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoinAll([...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:22:06 --> [Caused by] mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ':0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC' at line 8
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 306.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(306): mysqli->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(693): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 3 SYSTEMPATH\Database\BaseConnection.php(607): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_pesanan`
+LEFT JOIN `tbl_produk` ON `tbl_produk`.`id_produk` = `tbl_pesanan`.`id_produk`
+LEFT JOIN `tbl_user` ON `tbl_user`.`id_user` = `tbl_pesanan`.`id_user`
+LEFT JOIN `tbl_alamat` ON `tbl_alamat`.`id_alamat` = `tbl_pesanan`.`id_alamat`
+LEFT JOIN `tbl_toko` ON `tbl_toko`.`id_toko` = `tbl_pesanan`.`id_toko`
+LEFT JOIN `tbl_transaksi_temp` ON sha1(tbl_transaksi_temp.id_transaksi) = tbl_pesanan.id_pesanan
+WHERE 0 = :0:
+ORDER BY `tbl_pesanan`.`id_produk` ASC', [...], false)
+ 5 APPPATH\Models\M_Pesanan.php(68): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Admin.php(1425): App\Models\M_Pesanan->getDataPesananJoinAll([...])
+ 7 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->pesanan_masuk()
+ 8 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 11:50:28 --> ErrorException: Undefined array key "alamat_user"
+in APPPATH\Views\Backend\master-admin\pengguna\detail-pengguna.php on line 102.
+ 1 APPPATH\Views\Backend\master-admin\pengguna\detail-pengguna.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "alamat_user"', 'D:\\New folder\\sobatx\\app\\Views\\Backend\\master-admin\\pengguna\\detail-pengguna.php', 102)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\New folder\\sobatx\\app\\Views\\Backend\\master-admin\\pengguna\\detail-pengguna.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin/pengguna/detail-pengguna', [], true)
+ 5 APPPATH\Controllers\Admin.php(430): view('Backend/master-admin/pengguna/detail-pengguna', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->view_pengguna('USR2410177555')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 12:02:08 --> ErrorException: Undefined array key "alamat_user"
+in APPPATH\Views\Backend\master-admin\pengguna\detail-pengguna.php on line 102.
+ 1 APPPATH\Views\Backend\master-admin\pengguna\detail-pengguna.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "alamat_user"', 'D:\\New folder\\sobatx\\app\\Views\\Backend\\master-admin\\pengguna\\detail-pengguna.php', 102)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\New folder\\sobatx\\app\\Views\\Backend\\master-admin\\pengguna\\detail-pengguna.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin/pengguna/detail-pengguna', [], true)
+ 5 APPPATH\Controllers\Admin.php(430): view('Backend/master-admin/pengguna/detail-pengguna', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->view_pengguna('USR2410177555')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')
+CRITICAL - 2024-10-17 12:02:59 --> ErrorException: Undefined array key "alamat_lengkap"
+in APPPATH\Views\Backend\master-admin\pengguna\detail-pengguna.php on line 102.
+ 1 APPPATH\Views\Backend\master-admin\pengguna\detail-pengguna.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "alamat_lengkap"', 'D:\\New folder\\sobatx\\app\\Views\\Backend\\master-admin\\pengguna\\detail-pengguna.php', 102)
+ 2 SYSTEMPATH\View\View.php(228): include('D:\\New folder\\sobatx\\app\\Views\\Backend\\master-admin\\pengguna\\detail-pengguna.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('Backend/master-admin/pengguna/detail-pengguna', [], true)
+ 5 APPPATH\Controllers\Admin.php(430): view('Backend/master-admin/pengguna/detail-pengguna', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(941): App\Controllers\Admin->view_pengguna('USR2410177555')
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('D:\\New folder\\sobatx\\public\\index.php')

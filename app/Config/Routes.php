@@ -134,28 +134,28 @@ $routes->get('/admin/verifying-paket/(:alphanum)/(:alphanum)', 'Admin::setujui_p
 
 //Peternak Admin
     //Peternak Admin Login
-    $routes->get('/admin/login-peternak', 'Peternak::login');
-    $routes->post('/admin/cek-login-admin', 'Peternak::login_checker_admin');
-    $routes->get('/admin/logout-peternak', 'Peternak::logout_admin');
-    $routes->get('/admin/dashboard-peternak', 'Peternak::dashboard_admin_peternak');
+    $routes->get('/admin/login-peternak', 'Admin::login_peternak_admin');
+    $routes->post('/admin/cek-login-admin', 'Admin::login_checker_admin');
+    $routes->get('/admin/logout-peternak', 'Admin::logout_admin');
+    $routes->get('/admin/dashboard-peternak', 'Admin::dashboard_admin_peternak');
         //Peternak Admin Produk
-    $routes->get('/admin/produk-saya-peternak', 'Peternak::produk_saya_peternak');
-    $routes->get('/admin/tambah-produk-peternak', 'Peternak::tambah_produk_peternak');
-    $routes->post('/admin/simpan-produk', 'Peternak::simpan_produk_peternak');
-    $routes->get('/admin/detail-produk-peternak/(:alphanum)', 'Peternak::detail_produk_peternak/$1');
-    $routes->get('/admin/edit-produk-peternak/(:alphanum)', 'Peternak::edit_produk_peternak/$1');
-    $routes->post('/admin/update-produk', 'Peternak::update_produk_peternak');
-    $routes->get('/admin/hapus-produk/(:alphanum)', 'Peternak::hapus_produk_peternak/$1');
+    $routes->get('/admin/produk-saya-peternak', 'Admin::produk_saya_peternak');
+    $routes->get('/admin/tambah-produk-peternak', 'Admin::tambah_produk_peternak');
+    $routes->post('/admin/simpan-produk', 'Admin::simpan_produk_peternak');
+    $routes->get('/admin/detail-produk-peternak/(:alphanum)', 'Admin::detail_produk_peternak/$1');
+    $routes->get('/admin/edit-produk-peternak/(:alphanum)', 'Admin::edit_produk_peternak/$1');
+    $routes->post('/admin/update-produk', 'Admin::update_produk_peternak');
+    $routes->get('/admin/hapus-produk/(:alphanum)', 'Admin::hapus_produk_peternak/$1');
         //Peternak Admin Toko
-    $routes->get('/admin/toko-saya-peternak', 'Peternak::toko_usaha_peternak');
-    $routes->post('/admin/simpan-toko-peternak', 'Peternak::buat_toko');
-    $routes->get('/admin/aktivasi-toko-peternak/(:alphanum)', 'Peternak::aktivasi_toko_admin/$1');
-    $routes->get('/admin/tambah-rekening-peternak', 'Peternak::tambah_rekening_admin');
-    $routes->post('/admin/simpan-rekening-peternak', 'Peternak::simpan_rekening_admin');
-    $routes->get('/admin/hapus-rekening-peternak/(:alphanum)', 'Peternak::hapus_rekening_admin/$1');
+    $routes->get('/admin/toko-saya-peternak', 'Admin::toko_usaha_peternak');
+    $routes->post('/admin/simpan-toko-peternak', 'Admin::buat_toko');
+    $routes->get('/admin/aktivasi-toko-peternak/(:alphanum)', 'Admin::aktivasi_toko_admin/$1');
+    $routes->get('/admin/tambah-rekening-peternak', 'Admin::tambah_rekening_admin');
+    $routes->post('/admin/simpan-rekening-peternak', 'Admin::simpan_rekening_admin');
+    $routes->get('/admin/hapus-rekening-peternak/(:alphanum)', 'Admin::hapus_rekening_admin/$1');
         //Peternak Admin Pesanan
-    $routes->get('/admin/pesanan-masuk-peternak', 'Peternak::pesanan_masuk');
-    $routes->post('/admin/update-pesanan-peternak/(:alphanum)', 'Peternak::update_pesanan/$1');
+    $routes->get('/admin/pesanan-masuk-peternak', 'Admin::pesanan_masuk');
+    $routes->post('/admin/update-pesanan-peternak/(:alphanum)', 'Admin::update_pesanan/$1');
     // Akhir Peternak Admin
 
 //404-page

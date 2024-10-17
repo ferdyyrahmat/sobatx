@@ -83,7 +83,7 @@
                                             </td>
                                             <td>
                                                 <form
-                                                    action="<?= base_url('/admin/update-pesanan-peternak').'/'.$data['id_transaksi']?>"
+                                                    action="<?= base_url('/admin/update-pesanan-peternak').'/'.$data['id_pesanan']?>"
                                                     method="post" enctype="multipart/form-data">
                                                     <button class="btn btn-info" type="submit">Kirim</button>
                                                 </form>
@@ -176,7 +176,7 @@
                                         //variable dari GetResultArray
                                         foreach($dataPesanan as $data){
                                         ?>
-                                        <?php if($data['status_pesanan'] == '1'){?>
+                                        <?php if($data['status_pesanan'] == '3'){?>
                                         <tr>
                                             <td data-sortable="true"><?php echo $no=$no+1;?></td>
                                             <td data-sortable="true"><?php echo $data['nama_user']; ?></td>

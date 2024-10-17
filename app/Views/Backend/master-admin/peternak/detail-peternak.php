@@ -40,8 +40,7 @@
                                        $user_profile = $detail_peternak['foto_user'];
                                     }
                                 ?>
-                                <img src="<?php echo $user_profile; ?>"
-                                    class="rounded-circle" width="150px">
+                                <img src="<?php echo $user_profile; ?>" class="rounded-circle" width="150px">
                                 <br />
                                 <span class="text-black-50">
                                     <?php if($detail_peternak['status'] == '0'){
@@ -127,7 +126,7 @@
                                         <label class="col-form-label" for="nama-toko">:</label>
                                     </div>
                                     <div class="col-lg-8 col-md-9">
-                                        <?php if($dataToko['status_toko'] = null){
+                                        <?php if(!isset($dataToko['status_toko'])){
                                           echo '<span class="badge bg-black">Toko Tidak Tersedia/Belum diBuat</span>';
                                         }
                                         elseif($dataToko['status_toko'] == '0'){
@@ -147,15 +146,14 @@
                                         <label class="col-form-label" for="nama-toko">:</label>
                                     </div>
                                     <div class="col-lg-8 col-md-9">
+                                        <?php if(!isset($dataToko['nama_toko'])){?>
+                                            <span class="badge bg-black">Toko Tidak Tersedia/Belum diBuat</span>
+                                        <?php } else { ?>    
                                         <input type="text" id="nama-toko" class="form-control" name="nama_toko"
                                             placeholder="nama toko" 
-                                            value="
-                                            <?php if($dataToko['nama_toko']= null){
-                                                echo '<span class="badge bg-black">Toko Tidak Tersedia/Belum diBuat</span>';
-                                            }else{
-                                                 echo $dataToko['nama_toko'];
-                                            } ?>" 
+                                            value="<?php echo $dataToko['nama_toko'];?>" 
                                             disabled>
+                                            <?php } ?>
                                     </div>
                                 </div>
                                 <div class="form-group row align-items-center">
@@ -166,13 +164,14 @@
                                         <label class="col-form-label" for="alamat-toko">:</label>
                                     </div>
                                     <div class="col-lg-8 col-md-9">
+                                        <?php if(!isset($dataToko['nama_toko'])){?>
+                                            <span class="badge bg-black">Toko Tidak Tersedia/Belum diBuat</span>
+                                        <?php } else { ?>  
                                         <textarea class="form-control" id="alamat-toko"
                                             name="alamat_toko" rows="3"
-                                            disabled><?php if($dataToko['alamat_toko']= null){
-                                                echo '<span class="badge bg-black">Toko Tidak Tersedia/Belum diBuat</span>';
-                                            }else{
-                                                 echo $dataToko['alamat_toko'];
-                                            } ?></textarea>
+                                            disabled><?php echo $dataToko['alamat_toko'];?>
+                                        </textarea>
+                                        <?php } ?>
                                     </div>
                                 </div>
                             </div>

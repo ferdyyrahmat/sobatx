@@ -99,7 +99,7 @@
                                         <div class="col-lg-9 col-md-8">
                                             <textarea class="form-control" id="exampleFormControlTextarea1"
                                                 name="alamat_user" rows="3"
-                                                disabled><?php echo $detail_pengguna['alamat_user'];?></textarea>
+                                                disabled></textarea>
                                         </div>
                                     </div>
                                 </div>

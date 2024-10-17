@@ -27,8 +27,8 @@
                     <div class="row">
                         <div class="col-md-4">
                             <div class="d-flex flex-column align-items-center text-center">
-                                <img src="<?php echo base_url(); ?>assets/img/profile/<?php echo $dataToko['foto_toko']; ?>"
-                                    class="rounded-circle" width="150px">
+                                <img src="<?php echo base_url(); ?>assets/img/toko/<?php echo $dataToko['foto_toko']; ?>"
+                                    class="" width="150px">
                                 <br />
                                 <span class="text-black-50">
                                     <?php if($dataToko['status_toko'] == '0'){
