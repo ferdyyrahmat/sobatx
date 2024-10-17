@@ -97,7 +97,7 @@
    <?php if (session()->getFlashdata('success')) : ?>
    <script type="text/javascript">
       $(document).ready(function () {
-         Toast.fire({
+         Swal.fire({
             icon: 'success',
             title: 'Success!',
             text: '<?php echo $_SESSION['success']; ?>'
@@ -109,7 +109,7 @@
    <?php if (session()->getFlashdata('error')) : ?>
    <script type="text/javascript">
       $(document).ready(function () {
-         Toast.fire({
+         Swal.fire({
             icon: 'error',
             title: 'Error!',
             text: '<?php echo $_SESSION['error']; ?>'
@@ -121,7 +121,7 @@
    <?php if (session()->getFlashdata('warning')) : ?>
    <script type="text/javascript">
       $(document).ready(function () {
-         Toast.fire({
+         Swal.fire({
             icon: 'warning',
             title: 'Warning!',
             text: '<?php echo $_SESSION['warning']; ?>'
@@ -132,7 +132,7 @@
    <?php if (session()->getFlashdata('info')) : ?>
    <script type="text/javascript">
       $(document).ready(function () {
-         Toast.fire({
+         Swal.fire({
             icon: 'info',
             title: 'Info!',
             text: '<?php echo $_SESSION['info']; ?>'

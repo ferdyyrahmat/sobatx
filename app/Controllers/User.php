@@ -100,7 +100,7 @@ class User extends BaseController
                ];
                $simpan = $modelUser->updateDataUser($dataUpdate, $where);
 
-               if($cekUser['alamat_user'] == '-' or $cekUser['no_hp']=='-'){
+               if($cekUser['no_hp']=='-'){
                   session()->setFlashdata('info', "Lengkapi Alamat dan No. Telpon Anda!");
                }
 

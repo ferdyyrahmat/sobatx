@@ -55,6 +55,7 @@ class Admin extends BaseController
                      $dataSession =[
                          'ses_id' => $dataAdmin['id_admin'],                
                          'ses_admin' => $dataAdmin['nama_admin'],
+                         'ses_username' => $dataAdmin['username'], 
                          'enid' => sha1($dataAdmin['id_admin'])
                      ];
                      session()->set($dataSession);
@@ -63,24 +64,32 @@ class Admin extends BaseController
                 }
             }
         }
-
     }
+
+    public function logout()
+    {
+         session()->remove('ses_id');
+         session()->remove('ses_admin');
+         session()->remove('ses_username');
+         session()->remove('enid');
+       //   session()->destroy();
+         session()->setFlashdata('info', 'Keluar dari Sistem!!');
+         ?>
+    <script>
+     document.location = "<?= base_url('admin');?>";
+    </script>
+    <?php 
+    }
+
    public function dashboard_admin()
    {
-       $data['akses'] = 'admin';
+      $data['akses'] = 'admin';
       echo view('Backend/master-admin/template/head');
       echo view('Backend/master-admin/template/sidebar');
       echo view('Backend/master-admin/dashboard');
       echo view('Backend/master-admin/template/footer');
    }
-   public function dashboard_peternak()
-   {
-        $data['akses'] = 'peternak';
-      echo view('Backend/master-admin/template/head');
-      echo view('Backend/master-admin/template/sidebar', $data);
-      echo view('Backend/master-admin/dashboard');
-      echo view('Backend/master-admin/template/footer');
-   }
+
 //start master_peternak
     public function master_peternak()
     {
@@ -733,8 +742,12 @@ class Admin extends BaseController
         </script>
         <?php
     }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////// Admin Peternak //////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
@@ -768,6 +781,7 @@ class Admin extends BaseController
        else{
           $sql = $modelUser->getDataUser(['email_user' => $email]);
           $cekUser = $sql->getRowArray();
+          $aksesLevel = $cekUser['akses_level'];
           if(!$cekUser){
               session()->setFlashdata('error', "Email Tidak Terdaftar! Silahkan Registrasi atau Login dengan Google Pada Aplikasi Kami!");
               ?>
@@ -787,19 +801,28 @@ class Admin extends BaseController
                 <?php
              }
              else{
-                $data = [
-                   'id' => $cekUser['id_user'],
-                   'email' => $cekUser['email_user'],
-                   'nama' => $cekUser['nama_user'],
-                   'profile' => $cekUser['foto_user'],
-                   'enid' => sha1($cekUser['id_user'])
-                ];
-                session()->set($data);
-                ?>
-                <script type="text/javascript">
-                    document.location="<?php echo base_url('/admin/dashboard-peternak');?>";
-                </script>
-                <?php
+                  if ($aksesLevel == "1") {
+                      $data = [
+                         'id' => $cekUser['id_user'],
+                         'email' => $cekUser['email_user'],
+                         'nama' => $cekUser['nama_user'],
+                         'profile' => $cekUser['foto_user'],
+                         'enid' => sha1($cekUser['id_user'])
+                      ];
+                      session()->set($data);
+                      ?>
+                      <script type="text/javascript">
+                          document.location="<?php echo base_url('/admin/dashboard-peternak');?>";
+                      </script>
+                      <?php
+                  } else {  
+                    session()->setFlashdata('error', "Maaf Akses Di Tolak !!");
+                    ?>
+                    <script type="text/javascript">
+                        history.go(-1);
+                    </script>
+                    <?php
+                }
              }
           }
        }
@@ -1446,18 +1469,87 @@ class Admin extends BaseController
        $uri = service('uri');
        $idView = $uri->getSegment(3);
 
+       $nama_kurir =  $this->request->getPost('nama_kurir');
+       $no_hp_kurir =  $this->request->getPost('no_hp_kurir');
+
        $dataPesanan= $modelPesanan->getDataPesanan(['id_pesanan' => $idView])->getRowArray();
 
        $idUpdate = $dataPesanan['id_pesanan'];
 
        $dataUpdate = [
+          'nama_kurir' => $nama_kurir,
+          'no_hp_kurir' => $no_hp_kurir,
           'status_pesanan' => '2',
           'updated_at' => date('Y-m-d H:i:s')
        ];
        $whereUpdate = ['id_pesanan' => $idUpdate];
        $modelPesanan->updateDataPesanan($dataUpdate, $whereUpdate);
        session()->setFlashdata('success','Data Berhasil Dikonfirmasi ');
-       return redirect()->to(base_url('/admin/pesanan-masuk-peternak'));
+       return redirect()->to(base_url('/admin/pesanan-berlangsung'));
 
+    }
+
+    public function pesanan_berlangsung()
+    {
+       $modelUser = new M_User;
+       $modelToko = new M_Toko;
+       $modelProduk = new M_Produk;
+       $modelTransaksi = new M_Transaksi;
+       $modelPesanan = new M_Pesanan;
+
+       $dataToko = $modelToko->getDataToko(['tbl_toko.id_user' => session('id')])->getRowArray();
+       $cekToko = $modelToko->getDataToko(['tbl_toko.id_user' => session('id')])->getNumRows();
+    if($cekToko != 0){
+       $toko = [
+          'id_toko' => $dataToko['id_toko'],
+       ];
+       session()->set($toko);
+    }
+       $dataPesanan = $modelPesanan->getDataPesananJoinAll(['tbl_pesanan.id_toko' => session('id_toko')])->getResultArray();
+       $data['dataPesanan'] = $dataPesanan;
+
+       $dataPeternak = $modelUser->getDataUser(['id_user' => session('id')])->getRowArray();
+       $jumlahNotif = $modelUser->getNotif(['id_user' => session('id')])->getNumRows();
+       $data['jumlahNotif'] = $jumlahNotif;
+
+       $data['menu'] = 'dashboard';
+       $data['profile'] = $dataPeternak;
+
+       echo view('Backend/master-admin-peternak/template/head', $data);
+       echo view('Backend/master-admin-peternak/template/sidebar', $data);
+       echo view('Backend/master-admin-peternak/pesanan/pesanan-berlangsung', $data);
+       echo view('Backend/master-admin-peternak/template/footer', $data);
+    }
+
+    public function riwayat_pesanan()
+    {
+       $modelUser = new M_User;
+       $modelToko = new M_Toko;
+       $modelProduk = new M_Produk;
+       $modelTransaksi = new M_Transaksi;
+       $modelPesanan = new M_Pesanan;
+
+       $dataToko = $modelToko->getDataToko(['tbl_toko.id_user' => session('id')])->getRowArray();
+       $cekToko = $modelToko->getDataToko(['tbl_toko.id_user' => session('id')])->getNumRows();
+    if($cekToko != 0){
+       $toko = [
+          'id_toko' => $dataToko['id_toko'],
+       ];
+       session()->set($toko);
+    }
+       $dataPesanan = $modelPesanan->getDataPesananJoinAll(['tbl_pesanan.id_toko' => session('id_toko')])->getResultArray();
+       $data['dataPesanan'] = $dataPesanan;
+
+       $dataPeternak = $modelUser->getDataUser(['id_user' => session('id')])->getRowArray();
+       $jumlahNotif = $modelUser->getNotif(['id_user' => session('id')])->getNumRows();
+       $data['jumlahNotif'] = $jumlahNotif;
+
+       $data['menu'] = 'dashboard';
+       $data['profile'] = $dataPeternak;
+
+       echo view('Backend/master-admin-peternak/template/head', $data);
+       echo view('Backend/master-admin-peternak/template/sidebar', $data);
+       echo view('Backend/master-admin-peternak/pesanan/riwayat-pesanan', $data);
+       echo view('Backend/master-admin-peternak/template/footer', $data);
     }
 }

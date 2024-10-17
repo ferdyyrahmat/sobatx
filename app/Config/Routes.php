@@ -105,6 +105,7 @@ $routes->get('/user/checkout/alamat', 'Marketplace::checkout_alamat');
 //ADMIN
 $routes->get('/admin/', 'Admin::index');
 $routes->post('/admin/checking', 'Admin::login_checker');
+$routes->get('/admin/logout-admin', 'Admin::logout');
 $routes->get('/admin/dashboard', 'Admin::dashboard_admin');
 //ADMIN PETERNAK
 $routes->get('/admin/master-peternak', 'Admin::master_peternak');
@@ -156,6 +157,8 @@ $routes->get('/admin/verifying-paket/(:alphanum)/(:alphanum)', 'Admin::setujui_p
         //Peternak Admin Pesanan
     $routes->get('/admin/pesanan-masuk-peternak', 'Admin::pesanan_masuk');
     $routes->post('/admin/update-pesanan-peternak/(:alphanum)', 'Admin::update_pesanan/$1');
+    $routes->get('/admin/pesanan-berlangsung', 'Admin::pesanan_berlangsung');
+    $routes->get('/admin/riwayat-pesanan', 'Admin::riwayat_pesanan');
     // Akhir Peternak Admin
 
 //404-page

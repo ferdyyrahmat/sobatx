@@ -217,7 +217,6 @@ class Register extends BaseController
             'id_google' => '-',
             'nama_user' => $nama,
             'email_user' => $email,
-            'alamat_user' => '-',
             'no_hp' => $no_hp,
             'password' => password_hash($password, PASSWORD_DEFAULT),
             'foto_user' => '-',

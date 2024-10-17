@@ -1,3 +1,15 @@
+<?php
+if(session()->get('ses_id')=="" or session()->get('ses_admin')==""){
+	session()->setFlashdata('error','Session Habis, Silakan Login!')
+	?>
+<script>
+	document.location = "<?= base_url('admin');?>";
+</script>
+<?php
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
