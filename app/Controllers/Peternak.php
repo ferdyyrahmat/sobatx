@@ -1082,4 +1082,6 @@ class Peternak extends BaseController
       session()->setFlashdata('success','Rekening Berhasil diHapus!');
       return redirect()->to(base_url('/peternak/toko-s'));
    }
+
+   
 }
