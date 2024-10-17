@@ -1383,7 +1383,7 @@ class Admin extends BaseController
           $dataUpdate = [
              'nama_produk' => $nama_produk,
              'id_kategori' => $id_kategori,
-             'nm_foto' => $foto_produk1_old . $foto_produk2_old . $foto_produk3_old,
+             'nm_foto' => $foto_produk1_old,
              'stok' => $stok,
              'berat' => $berat,
              'deskripsi_produk' => $deskripsi_produk,
