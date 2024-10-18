@@ -90,13 +90,13 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="/admin/pesanan-berlangsung" id="mng-toko" class='sidebar-link'>
+                            <a href="/admin/pesanan-berlangsung-peternak" id="mng-toko" class='sidebar-link'>
                                 <i class="bi bi-arrow-repeat"></i>
                                 <span>Pesanan Berlangsung</span>
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="/admin/riwayat-pesanan" id="mng-toko" class='sidebar-link'>
+                            <a href="/admin/riwayat-pesanan-peternak" id="mng-toko" class='sidebar-link'>
                                 <i class="bi bi-check-square-fill"></i>
                                 <span>Riwayat Pesanan</span>
                             </a>

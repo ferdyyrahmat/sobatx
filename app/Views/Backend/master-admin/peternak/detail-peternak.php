@@ -147,13 +147,12 @@
                                     </div>
                                     <div class="col-lg-8 col-md-9">
                                         <?php if(!isset($dataToko['nama_toko'])){?>
-                                            <span class="badge bg-black">Toko Tidak Tersedia/Belum diBuat</span>
-                                        <?php } else { ?>    
+                                        <span class="badge bg-black">Toko Tidak Tersedia/Belum diBuat</span>
+                                        <?php } else { ?>
                                         <input type="text" id="nama-toko" class="form-control" name="nama_toko"
-                                            placeholder="nama toko" 
-                                            value="<?php echo $dataToko['nama_toko'];?>" 
+                                            placeholder="nama toko" value="<?php echo $dataToko['nama_toko'];?>"
                                             disabled>
-                                            <?php } ?>
+                                        <?php } ?>
                                     </div>
                                 </div>
                                 <div class="form-group row align-items-center">
@@ -165,10 +164,9 @@
                                     </div>
                                     <div class="col-lg-8 col-md-9">
                                         <?php if(!isset($dataToko['nama_toko'])){?>
-                                            <span class="badge bg-black">Toko Tidak Tersedia/Belum diBuat</span>
-                                        <?php } else { ?>  
-                                        <textarea class="form-control" id="alamat-toko"
-                                            name="alamat_toko" rows="3"
+                                        <span class="badge bg-black">Toko Tidak Tersedia/Belum diBuat</span>
+                                        <?php } else { ?>
+                                        <textarea class="form-control" id="alamat-toko" name="alamat_toko" rows="3"
                                             disabled><?php echo $dataToko['alamat_toko'];?>
                                         </textarea>
                                         <?php } ?>

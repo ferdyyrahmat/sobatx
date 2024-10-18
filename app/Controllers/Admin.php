@@ -83,11 +83,21 @@ class Admin extends BaseController
 
    public function dashboard_admin()
    {
-      $data['akses'] = 'admin';
-      echo view('Backend/master-admin/template/head');
-      echo view('Backend/master-admin/template/sidebar');
-      echo view('Backend/master-admin/dashboard');
-      echo view('Backend/master-admin/template/footer');
+      $uri = service('uri');
+      $page = $uri->getSegment(2);
+
+      $modelToko = new M_Toko;
+      // Mengambil data keseluruhan kategori dari table kategori di database
+      $dataToko = $modelToko->getToko(['status_toko' => '1'])->getNumRows();
+      $data['dataToko'] = $dataToko;
+
+      $data['page'] = $page;
+      $data['web_title'] = "SobatX";
+
+      echo view('Backend/master-admin/template/head', $data);
+      echo view('Backend/master-admin/template/sidebar', $data);
+      echo view('Backend/master-admin/dashboard', $data);
+      echo view('Backend/master-admin/template/footer', $data);
    }
 
 //start master_peternak
@@ -741,6 +751,51 @@ class Admin extends BaseController
             document.location = "<?= base_url('/admin/master-paket'); ?>";
         </script>
         <?php
+    }
+
+    public function master_produk()
+    {
+        $uri = service('uri');
+        $page = $uri->getSegment(2);
+
+        $modelProduk = new M_Produk;
+
+        $dataProduk = $modelProduk->getResultArray();
+        $data['dataProduk'] = $dataProduk;
+
+        echo view('Backend/master-admin/template/head', $data);
+        echo view('Backend/master-admin/template/sidebar', $data);
+        echo view('Backend/master-admin/produk/master-produk', $data);
+        echo view('Backend/master-admin/template/footer', $data);
+
+
+    }
+
+    public function master_pesanan_berlangsung()
+    {
+        $uri = service('uri');
+        $page = $uri->getSegment(2);
+
+        $modelUser = new M_User;
+        $modelToko = new M_Toko;
+        $modelProduk = new M_Produk;
+        $modelTransaksi = new M_Transaksi;
+        $modelPesanan = new M_Pesanan;
+ 
+        $dataPesanan = $modelPesanan->getDataPesananJoinAll(['status_pesanan' => '2'])->getResultArray();
+        $data['dataPesanan'] = $dataPesanan;
+ 
+        $dataPeternak = $modelUser->getDataUser(['id_user' => session('id')])->getRowArray();
+        $jumlahNotif = $modelUser->getNotif(['id_user' => session('id')])->getNumRows();
+        $data['jumlahNotif'] = $jumlahNotif;
+ 
+        $data['menu'] = 'dashboard';
+        $data['profile'] = $dataPeternak;
+ 
+        echo view('Backend/master-admin/template/head', $data);
+        echo view('Backend/master-admin/template/sidebar', $data);
+        echo view('Backend/master-admin/pesanan/master-pesanan-berlangsung', $data);
+        echo view('Backend/master-admin/template/footer', $data);
     }
 
 
@@ -1429,7 +1484,7 @@ class Admin extends BaseController
        return redirect()->to(base_url('/admin/produk-saya-peternak'));
     }
 
-    public function pesanan_masuk()
+    public function pesanan_masuk_peternak()
     {
        $modelUser = new M_User;
        $modelToko = new M_Toko;
@@ -1489,7 +1544,7 @@ class Admin extends BaseController
 
     }
 
-    public function pesanan_berlangsung()
+    public function pesanan_berlangsung_peternak()
     {
        $modelUser = new M_User;
        $modelToko = new M_Toko;
@@ -1521,7 +1576,7 @@ class Admin extends BaseController
        echo view('Backend/master-admin-peternak/template/footer', $data);
     }
 
-    public function riwayat_pesanan()
+    public function riwayat_pesanan_peternak()
     {
        $modelUser = new M_User;
        $modelToko = new M_Toko;

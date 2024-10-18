@@ -25,12 +25,20 @@
                      <div class="row">
                         <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                            <div class="stats-icon purple mb-2">
-                              <i class="iconly-boldShow"></i>
+                              <i class="iconly-bi bi-shop"></i>
                            </div>
                         </div>
                         <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                           <h6 class="text-muted font-semibold">Profile Views</h6>
-                           <h6 class="font-extrabold mb-0">112.000</h6>
+                           <h6 class="text-muted font-semibold">Toko Aktif</h6>
+                           <?php 
+                              $konek = mysqli_connect("localhost",'root',"","sob4tx");
+                              $sql = "select * from tbl_toko where status_toko = '1'";
+                              $hasil = mysqli_query($konek,$sql);
+                              $jumlah = mysqli_num_rows($hasil);
+                              { 
+                           ?>
+                           <h6 class="font-extrabold mb-0"><?php echo $jumlah;?></h6>
+                           <?php }?>
                         </div>
                      </div>
                   </div>
@@ -46,24 +54,32 @@
                            </div>
                         </div>
                         <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                           <h6 class="text-muted font-semibold">Followers</h6>
-                           <h6 class="font-extrabold mb-0">183.000</h6>
+                           <h6 class="text-muted font-semibold">Peternak Aktif</h6>
+                           <?php 
+                              $konek = mysqli_connect("localhost",'root',"","sob4tx");
+                              $sql = "select * from tbl_user where status = '1' AND akses_level = '1'";
+                              $hasil = mysqli_query($konek,$sql);
+                              $jumlah = mysqli_num_rows($hasil);
+                              { 
+                           ?>
+                           <h6 class="font-extrabold mb-0"><?php echo $jumlah ?></h6>
+                           <?php }?>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-            <div class="col-6 col-lg-3 col-md-6">
+            <div class="col-12 col-lg-3 col-md-6">
                <div class="card">
                   <div class="card-body px-4 py-4-5">
                      <div class="row">
                         <div class="col-md-4 col-lg-12 col-xl-12 col-xxl-5 d-flex justify-content-start ">
                            <div class="stats-icon green mb-2">
-                              <i class="iconly-boldAdd-User"></i>
+                              <i class="iconly-bi bi-box"></i>
                            </div>
                         </div>
                         <div class="col-md-8 col-lg-12 col-xl-12 col-xxl-7">
-                           <h6 class="text-muted font-semibold">Following</h6>
+                           <h6 class="text-muted font-semibold">Produk Tersedia</h6>
                            <h6 class="font-extrabold mb-0">80.000</h6>
                         </div>
                      </div>

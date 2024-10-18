@@ -132,6 +132,10 @@ $routes->get('/admin/edit-paket/(:alphanum)', 'Admin::edit_data_paket/$1');
 $routes->post('/admin/update-paket', 'Admin::update_data_paket');
 $routes->get('/admin/hapus-paket/(:alphanum)', 'Admin::hapus_data_paket/$1');
 $routes->get('/admin/verifying-paket/(:alphanum)/(:alphanum)', 'Admin::setujui_paket/$1/$2');
+//Admin Produk
+$routes->get('/admin/master-produk', 'Admin::master_produk');
+//Admin Pesanan
+$routes->get('/admin/master-pesanan-berlangsung', 'Admin::master_pesanan_berlangsung');
 
 //Peternak Admin
     //Peternak Admin Login
@@ -155,10 +159,10 @@ $routes->get('/admin/verifying-paket/(:alphanum)/(:alphanum)', 'Admin::setujui_p
     $routes->post('/admin/simpan-rekening-peternak', 'Admin::simpan_rekening_admin');
     $routes->get('/admin/hapus-rekening-peternak/(:alphanum)', 'Admin::hapus_rekening_admin/$1');
         //Peternak Admin Pesanan
-    $routes->get('/admin/pesanan-masuk-peternak', 'Admin::pesanan_masuk');
+    $routes->get('/admin/pesanan-masuk-peternak', 'Admin::pesanan_masuk_peternak');
     $routes->post('/admin/update-pesanan-peternak/(:alphanum)', 'Admin::update_pesanan/$1');
-    $routes->get('/admin/pesanan-berlangsung', 'Admin::pesanan_berlangsung');
-    $routes->get('/admin/riwayat-pesanan', 'Admin::riwayat_pesanan');
+    $routes->get('/admin/pesanan-berlangsung-peternak', 'Admin::pesanan_berlangsung_peternak');
+    $routes->get('/admin/riwayat-pesanan-peternak', 'Admin::riwayat_pesanan_peternak');
     // Akhir Peternak Admin
 
 //404-page

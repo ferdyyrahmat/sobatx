@@ -92,12 +92,12 @@
                                 <span>Paket Usaha</span>
                             </a>
                         </li>
-                        <li class="sidebar-item">
+                        <!-- <li class="sidebar-item">
                             <a href="#" id="mng-toko" class='sidebar-link'>
                                 <i class="bi bi-person-workspace"></i>
                                 <span>Pelatihan</span>
                             </a>
-                        </li>
+                        </li> -->
 
                         <li class="sidebar-title">Marketplace</li>
 
@@ -108,7 +108,7 @@
                             </a>
                         </li>
                         <li class="sidebar-item">
-                            <a href="#" id="mng-toko" class='sidebar-link'>
+                            <a href="/admin/master-pesanan-berlangsung" id="mng-toko" class='sidebar-link'>
                                 <i class="bi bi-truck"></i>
                                 <span>Pesanan Berlangsung</span>
                             </a>
