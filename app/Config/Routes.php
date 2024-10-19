@@ -141,6 +141,7 @@ $routes->get('/admin/master-pesanan-berlangsung', 'Admin::master_pesanan_berlang
     //Peternak Admin Login
     $routes->get('/admin/login-peternak', 'Admin::login_peternak_admin');
     $routes->post('/admin/cek-login-admin', 'Admin::login_checker_admin');
+    $routes->get('/admin/peternak/login-auth-google', 'Admin::login_checker_google');
     $routes->get('/admin/logout-peternak', 'Admin::logout_admin');
     $routes->get('/admin/dashboard-peternak', 'Admin::dashboard_admin_peternak');
         //Peternak Admin Produk
