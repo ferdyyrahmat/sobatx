@@ -84,86 +84,6 @@ class Admin extends BaseController
         }
     }
 
-    public function login_checker_google()
-    {
-        $modelUser = new M_User;
-
-        if ($this->request->getVar('code') == null) {
-            session()->setFlashdata('info', "Silahkan Login!");
-            return redirect()->to(base_url('/admin/login-peternak'));
-        }
-        $token = $this->googleClient->fetchAccessTokenWithAuthCode($this->request->getVar('code'));
-        if (!isset($token['error'])) {
-            $this->googleClient->setAccessToken($token['access_token']);
-            $googleService = new Google_Service_Oauth2($this->googleClient);
-            $data = $googleService->userinfo->get();
-
-            $emailUser = $data['email'];
-            $sqlcek = $modelUser->getDataUser(['email_user' => $emailUser]);
-            $ada = $sqlcek->getRowArray();
-
-            if (!$ada) {
-                $hasil = $modelUser->autoNumber(['substr(id_user,4,4)' => date("ymd")])->getRowArray();
-                if (!$hasil) {
-                    $id = "USR" . date("ymd") . "0001";
-                } else {
-                    $kode = $hasil['id_user'];
-
-                    $noUrut = (int) substr($kode, 8, 4);
-                    $noUrut++;
-                    $id = "USR" . date("ymd") . sprintf("%04s", $noUrut);
-                }
-                $dataPeternak = [
-                    'id_user' => $id,
-                    'id_google' => $data['id'],
-                    'nama_user' => $data['name'],
-                    'email_user' => $data['email'],
-                    'no_hp' => '-',
-                    'password' => '-',
-                    'foto_user' => $data['picture'],
-                    'akses_level' => '1',
-                    'status' => '1',
-                    'is_delete_user' => '0'
-                ];
-                $this->user->save($dataPeternak);
-
-                $dataSes = [
-                    'id' => $id,
-                    'email' => $data['email'],
-                    'nama' => $data['name'],
-                    'profile' => $data['picture']
-                ];
-
-                $sqlcek = $modelUser->getDataUser(['email_user' => $emailUser]);
-                $ada = $sqlcek->getRowArray();
-
-                session()->set($dataSes);
-                return redirect()->to(base_url('/admin/dashboard-peternak'));
-            } else {
-
-                $dataPeternak = [
-                    'id_user' => $ada['id_user'],
-                    'id_google' => $data['id'],
-                    'nama_user' => $data['name'],
-                    'email_user' => $data['email']
-                ];
-                $this->user->save($dataPeternak);
-
-                $dataSes = [
-                    'id' => $ada['id_user'],
-                    'profile' => $data['picture'],
-                    'email' => $data['email'],
-                    'nama' => $data['name'],
-                ];
-
-                session()->set($dataSes);
-                return redirect()->to(base_url('/admin/dashboard-peternak'));
-            }
-
-        } else {
-            return redirect()->to(base_url('/admin/login-peternak'));
-        }
-    }
     public function logout()
     {
          session()->remove('ses_id');
@@ -980,10 +900,90 @@ class Admin extends BaseController
           }
        }
     }
+    public function login_checker_google()
+    {
+        $modelUser = new M_User;
+
+        if ($this->request->getVar('code') == null) {
+            session()->setFlashdata('info', "Silahkan Login!");
+            return redirect()->to(base_url('/admin/login-peternak'));
+        }
+        $token = $this->googleClient->fetchAccessTokenWithAuthCode($this->request->getVar('code'));
+        if (!isset($token['error'])) {
+            $this->googleClient->setAccessToken($token['access_token']);
+            $googleService = new Google_Service_Oauth2($this->googleClient);
+            $data = $googleService->userinfo->get();
+
+            $emailUser = $data['email'];
+            $sqlcek = $modelUser->getDataUser(['email_user' => $emailUser]);
+            $ada = $sqlcek->getRowArray();
+
+            if (!$ada) {
+                $hasil = $modelUser->autoNumber(['substr(id_user,4,4)' => date("ymd")])->getRowArray();
+                if (!$hasil) {
+                    $id = "USR" . date("ymd") . "0001";
+                } else {
+                    $kode = $hasil['id_user'];
+
+                    $noUrut = (int) substr($kode, 8, 4);
+                    $noUrut++;
+                    $id = "USR" . date("ymd") . sprintf("%04s", $noUrut);
+                }
+                $dataPeternak = [
+                    'id_user' => $id,
+                    'id_google' => $data['id'],
+                    'nama_user' => $data['name'],
+                    'email_user' => $data['email'],
+                    'no_hp' => '-',
+                    'password' => '-',
+                    'foto_user' => $data['picture'],
+                    'akses_level' => '1',
+                    'status' => '1',
+                    'is_delete_user' => '0'
+                ];
+                $this->user->save($dataPeternak);
+
+                $dataSes = [
+                    'id' => $id,
+                    'email' => $data['email'],
+                    'nama' => $data['name'],
+                    'profile' => $data['picture']
+                ];
+
+                $sqlcek = $modelUser->getDataUser(['email_user' => $emailUser]);
+                $ada = $sqlcek->getRowArray();
+
+                session()->set($dataSes);
+                return redirect()->to(base_url('/admin/dashboard-peternak'));
+            } else {
+
+                $dataPeternak = [
+                    'id_user' => $ada['id_user'],
+                    'id_google' => $data['id'],
+                    'nama_user' => $data['name'],
+                    'email_user' => $data['email']
+                ];
+                $this->user->save($dataPeternak);
+
+                $dataSes = [
+                    'id' => $ada['id_user'],
+                    'profile' => $data['picture'],
+                    'email' => $data['email'],
+                    'nama' => $data['name'],
+                ];
+
+                session()->set($dataSes);
+                return redirect()->to(base_url('/admin/dashboard-peternak'));
+            }
+
+        } else {
+            return redirect()->to(base_url('/admin/login-peternak'));
+        }
+    }
     public function login_peternak_admin()
     {
-    //    $data['link1'] = $this->googleClient->createAuthUrl();
-       echo view('Backend/master-admin-peternak/auth/login');
+       $data['link'] = $this->googleClient->createAuthUrl();
+       echo view('Backend/master-admin-peternak/auth/login',$data);
     }
     public function logout_admin()
     {
