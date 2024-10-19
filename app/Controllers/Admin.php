@@ -38,7 +38,8 @@ class Admin extends BaseController
     }
     public function index()
     {
-      echo view('Backend/auth/login');
+        $data['link'] = $this->googleClient->createAuthUrl();
+        echo view('Backend/auth/login', $data);
     }
    public function login_checker()
     {
