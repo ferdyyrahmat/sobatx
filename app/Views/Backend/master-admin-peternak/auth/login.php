@@ -54,7 +54,7 @@
                      </label>
                   </div>
                   <button class="btn btn-primary btn-block btn-lg shadow-lg mt-5">Log in</button>
-                  <!-- <a href="" class="btn btn-danger btn-block btn-lg shadow-lg mt-5"><i class="bi bi-google"></i> Google</a> -->
+                  <a href="<?= $link ?>" class="btn btn-danger btn-block btn-lg shadow-lg mt-5"><i class="bi bi-google"></i> Google</a>
                </form>
             </div>
          </div>
