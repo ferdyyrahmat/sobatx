@@ -1,5 +1,9 @@
 <?php 
 namespace App\Controllers;
+use App\Models\M_Alamat;
+use App\Models\M_Pesanan;
+use App\Models\M_Rekening;
+use App\Models\M_Transaksi;
 use Google_Client;
 use Google_Service_Oauth2;
 use App\Models\UserModel;
@@ -384,7 +388,6 @@ class User extends BaseController
       echo view('Frontend/template/navigation', $data);
       echo view('Frontend/template/footer');
    }
-
    public function checkout_alamat()
    {
       $modelUser = new M_User;
@@ -402,5 +405,35 @@ class User extends BaseController
       echo view('Frontend/master-pengguna/content/marketplace/alamat');
       echo view('Frontend/template/navigation', $data);
       echo view('Frontend/template/footer');
+   }
+
+   public function status_pesanan()
+   {
+      $modelUser = new M_User();
+      $modelTransaksi = new M_Transaksi();
+      $modelAlamat = new M_Alamat();
+      $modelRekening = new M_Rekening();
+      $modelPesanan = new M_Pesanan();
+
+      $uri = service('uri');
+      $idUser = $uri->getSegment(3);
+
+      $dataPesanan = $modelPesanan->getDataPesananJoin(['sha1(tbl_pesanan.id_user)' => $idUser, 'status_pesanan' => '1' AND '2'])->getResultArray();
+      $data['dataPesanan'] = $dataPesanan;
+
+      $dataPengguna = $modelUser->getDataUser(['id_user' => session('id')])->getRowArray();
+      $data['profile'] = $dataPengguna;
+      $jumlahNotif = $modelUser->getNotif(['id_user' => session('id')])->getNumRows();
+      $data['jumlahNotif'] = $jumlahNotif;
+      $dataNotif = $modelUser->getNotif(['id_user' => session('id')])->getResultArray();
+      $data['notif'] = $dataNotif;
+
+      $data['menu'] = 'dashboard';
+      $data['page'] = 'Checkout';
+
+      echo view('Frontend/template/header', $data);
+      echo view('Frontend/master-pengguna/content/marketplace/pesanan-saya', $data);
+      echo view('Frontend/template/navigation', $data);
+      echo view('Frontend/template/footer', $data);
    }
 }

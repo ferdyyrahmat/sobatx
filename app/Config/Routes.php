@@ -67,10 +67,15 @@ $routes->get('/user/pemberitahuan', 'User::pemberitahuan_pengguna');
 $routes->get('/user/profil', 'User::profil_pengguna');
 $routes->get('/user/edit/(:alphanum)', 'User::edit_profil_pengguna');
 
+//Marketlace
 $routes->get('/user/marketplace', 'Marketplace::marketplace_user');
 $routes->get('/user/marketplace/product-1', 'Marketplace::detail_product_marketplace');
 $routes->get('/user/checkout', 'Marketplace::checkout_product_marketplace');
 $routes->get('/user/checkout/alamat', 'Marketplace::checkout_alamat');
+
+//Status Pesanan
+$routes->get('/user/status-pesanan', 'User::status_pesanan');
+
 
 //MarketPlace
 $routes->get('/peternak/marketplace', 'Marketplace::marketplace_user');

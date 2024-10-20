@@ -226,7 +226,7 @@
                            <div>
                               <span style="font-size: 18px; width: 100%;"><?= $dataProduk['nama_toko']?></span><br/>
                               <span class="review-link">( <?= session('kota_asal_toko')?> )</span>
-                              <div style="width: 100%;">
+                              <!-- <div style="width: 100%;">
                                  <div class="product-rating">
                                     <i class="fa fa-star"></i>
                                     <i class="fa fa-star"></i>
@@ -236,7 +236,7 @@
                                  </div>
                                  <br />
                                  <a class="review-link" href="#">10 Review(s)</a>
-                              </div>
+                              </div> -->
                            </div>
                         </div>
                         <div class="col-md-3 col-sm-3 col-xs-3"
@@ -341,8 +341,9 @@
                            <div class="product-body">
                               <p class="product-category"><?= $data['nama_kategori']?></p>
                               <h3 class="product-name"><a href="#"><?= $data['nama_produk']?></a></h3>
-                              <h4 class="product-price"><small>Rp </small><?= $data['harga']?> <del
-                                    class="product-old-price">$990.00</del></h4>
+                              <h4 class="product-price"><small>Rp </small><?= $data['harga']?> 
+                                 <!-- <del class="product-old-price">$990.00</del> -->
+                              </h4>
                            </div>
                         </a>
                      </div>

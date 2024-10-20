@@ -178,7 +178,7 @@
                </div>
             </div>
          </div>
-         <div class="col-xs-6 col-sm-3 col-md-3">
+         <!-- <div class="col-xs-6 col-sm-3 col-md-3">
             <h5 style="padding-left: 10px;">
                Kategori
             </h5>
@@ -186,7 +186,7 @@
          <div class="col-xs-6 col-sm-3 col-md-3" style="text-align: right;">
             <a href="#" style="padding-right: 10px;">
             </a>
-         </div>
+         </div> -->
          <!-- <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="menu-nav" style="padding:0 10px;">
                <?php
@@ -228,8 +228,9 @@
                         <div class="product-body">
                            <p class="product-category"><?= $data['nama_kategori']?></p>
                            <h3 class="product-name"><a href="#"><?= $data['nama_produk']?></a></h3>
-                           <h4 class="product-price"><small>Rp </small><?= $data['harga']?> <del
-                                 class="product-old-price">$990.00</del></h4>
+                           <h4 class="product-price"><small>Rp </small><?= $data['harga']?> 
+                              <!-- <del class="product-old-price">$990.00</del> -->
+                           </h4>
                         </div>
                      </a>
                   </div>

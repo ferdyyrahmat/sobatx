@@ -8,10 +8,22 @@
             <div class="panel panel-default">
                <div class="panel-body"
                   style="background-color: #FD873F; border: 2px solid #167B60; color: #fff; border-radius: 10px;">
-                  <i class="fa-solid fa-user"></i>&ensp; <?= $profile['nama_user'] ?> <br>
-                  <i class="fa-solid fa-location-dot"></i>&ensp; <?= $profile['alamat_user'] ?> <br>
-                  <i class="fa-solid fa-briefcase"></i>&ensp;Peternak Pemula <br>
-                  <i class="fa-solid fa-phone"></i>&ensp; <?= $profile['no_hp'] ?> <br>
+                  <table border="0">
+                     <tbody>
+                        <tr>
+                           <td style="width: 30px;"><i class="fa-solid fa-user"></i></td>
+                           <td><?= $profile['nama_user'] ?></td>
+                        </tr>
+                        <tr>
+                           <td style="width: 30px;"><i class="fa-solid fa-briefcase"></i></td>
+                           <td>Pengguna</td>
+                        </tr>
+                        <tr>
+                           <td style="width: 30px;"><i class="fa-solid fa-phone"></i></td>
+                           <td><?= $profile['no_hp'] ?></td>
+                        </tr>
+                     </tbody>
+                  </table>
                   <div class="row">
                      <div class="col-md-12">
                         <a href="<?= base_url()?>user/edit/<?= sha1($profile['id_user'])?>" class="btn btn-default btn-sm"
