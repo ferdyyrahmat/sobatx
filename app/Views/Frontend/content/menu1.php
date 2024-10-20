@@ -19,7 +19,7 @@
             <span class="menu-nav__text">Tentang Kami</span>
          </div>
          <div class="menu-nav__container">
-            <a href="#" class="menu-nav__link">
+            <a href="/peternak/marketplace" class="menu-nav__link">
                <i class="fa-solid fa-cart-shopping menu-nav__icon"></i>
             </a>
             <span class="menu-nav__text">Belanja Yuk</span>
