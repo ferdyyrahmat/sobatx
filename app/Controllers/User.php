@@ -419,7 +419,7 @@ class User extends BaseController
       $uri = service('uri');
       $idUser = $uri->getSegment(3);
 
-      $dataPesanan = $modelPesanan->getDataPesananJoin(['sha1(tbl_pesanan.id_user)' => $idUser, 'status_pesanan' => '1' OR '2'])->getResultArray();
+      $dataPesanan = $modelPesanan->getDataPesananJoin(['sha1(tbl_pesanan.id_user)' => $idUser, 'status_pesanan !=' => '3'])->getResultArray();
       $data['dataPesanan'] = $dataPesanan;
 
       $dataPengguna = $modelUser->getDataUser(['id_user' => session('id')])->getRowArray();
