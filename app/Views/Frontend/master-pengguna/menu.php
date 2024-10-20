@@ -17,7 +17,7 @@
             <span class="menu-nav__text">Status Pesanan</span>
          </div>
          <div class="menu-nav__container">
-            <a href="#" class="menu-nav__link">
+            <a href="/user/riwayat-pesanan/<?= sha1($user['id_user']) ?>" class="menu-nav__link">
                <i class="fa-solid fa-clock-rotate-left menu-nav__icon"></i>
             </a>
             <span class="menu-nav__text">Riwayat Pesanan</span>
