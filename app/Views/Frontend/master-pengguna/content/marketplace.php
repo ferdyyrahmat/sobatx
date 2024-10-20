@@ -153,6 +153,9 @@
    <div class="container">
       <!-- Content here! -->
       <div class="row">
+            <?php 
+            if($profile['akses_level'] != 2){
+            ?>
          <div class="col-xs-12 col-sm-6 col-md-6" style="padding-bottom: 20px;">
             <div id="myCarousel" class="carousel slide" data-ride="carousel"
                style="text-align: center; text-align: -webkit-center;">
@@ -178,6 +181,7 @@
                </div>
             </div>
          </div>
+         <?php } ?>
          <!-- <div class="col-xs-6 col-sm-3 col-md-3">
             <h5 style="padding-left: 10px;">
                Kategori
