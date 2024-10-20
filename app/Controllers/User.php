@@ -233,6 +233,7 @@ class User extends BaseController
       $modelUser = new M_User;
 
       $dataPengguna = $modelUser->getDataUser(['id_user' => session('id')])->getRowArray();
+      $data['user'] = $dataPengguna;
       $jumlahNotif = $modelUser->getNotif(['id_user' => session('id')])->getNumRows();
       $data['jumlahNotif'] = $jumlahNotif;
       $dataNotif = $modelUser->getNotif(['id_user' => session('id')])->getResultArray();

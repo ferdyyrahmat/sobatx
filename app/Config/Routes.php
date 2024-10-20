@@ -74,7 +74,7 @@ $routes->get('/user/checkout', 'Marketplace::checkout_product_marketplace');
 $routes->get('/user/checkout/alamat', 'Marketplace::checkout_alamat');
 
 //Status Pesanan
-$routes->get('/user/status-pesanan', 'User::status_pesanan');
+$routes->get('/user/status-pesanan/(:alphanum)', 'User::status_pesanan/$1');
 
 
 //MarketPlace

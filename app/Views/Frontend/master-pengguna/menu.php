@@ -11,7 +11,7 @@
             <span class="menu-nav__text">Belanja Yuk</span>
          </div>
          <div class="menu-nav__container">
-            <a href="#" class="menu-nav__link">
+            <a href="/user/status-pesanan/<?= $user['id_user']?>" class="menu-nav__link">
                <i class="fa-solid fa-timeline menu-nav__icon"></i>
             </a>
             <span class="menu-nav__text">Status Pembelian</span>
