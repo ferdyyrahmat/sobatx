@@ -7,15 +7,14 @@ use CodeIgniter\Router\RouteCollection;
  */
 // $routes->get('/', 'Home::index');
 
+
+//Landing App
 //Login
 $routes->get('/', 'Front::index');
 $routes->get('/landing', 'Front::landing');
 $routes->get('/user-login', 'Front::user_select');
-
-
 //Register
 $routes->get('/register/', 'Front::register_page');
-
 $routes->get('/register/peternak', 'Register::register_peternak');
 $routes->post('/registering-account-peternak', 'Register::registering_account_peternak');
 $routes->get('/register/user', 'Register::register_user');
@@ -24,18 +23,14 @@ $routes->post('/registering-account-user', 'Register::registering_account_user')
 $routes->get('/aktivasi-akun/(:alphanum)', 'Register::aktivasi_akun/$1');
 $routes->get('/batalkan-akun/(:alphanum)', 'Register::batalkan_akun/$1');
 
+//PETERNAK
 //Login
 $routes->get('/peternak/', 'Peternak::login_peternak_page');
 $routes->post('/peternak/login-auth', 'Peternak::login_checker');
 $routes->get('/peternak/login-auth-google', 'Peternak::login_checker_google');
 $routes->get('/peternak/logout', 'Peternak::logout');
 
-$routes->get('/user/', 'User::login_user_page');
-$routes->post('/user/login-auth', 'User::login_checker');
-$routes->get('/user/login-auth-google', 'User::login_checker_google');
-$routes->get('/user/logout', 'User::logout');
-
-//Peternak
+//Dashboard
 $routes->get('/peternak/dashboard', 'Peternak::dashboard_peternak');
 $routes->get('/peternak/tentang-kami', 'Peternak::tentang_kami_peternak');
 $routes->get('/peternak/pemberitahuan', 'Peternak::pemberitahuan_peternak');
@@ -57,6 +52,25 @@ $routes->post('/peternak/simpan-rekening', 'Peternak::simpan_rekening');
 $routes->get('/peternak/hapus-rekening/(:alphanum)', 'Peternak::hapus_rekening/$1');
 $routes->post('/peternak/simpan-toko', 'Peternak::buat_toko_peternak');
 $routes->get('/peternak/aktivasi-toko/(:alphanum)', 'Peternak::aktivasi_toko/$1');
+
+//PENGGUNA
+//Login
+$routes->get('/user/', 'User::login_user_page');
+$routes->post('/user/login-auth', 'User::login_checker');
+$routes->get('/user/login-auth-google', 'User::login_checker_google');
+$routes->get('/user/logout', 'User::logout');
+
+//Dashboard
+$routes->get('/user/dashboard', 'User::dashboard_user');
+$routes->get('/user/tentang-kami', 'User::tentang_kami_pengguna');
+$routes->get('/user/pemberitahuan', 'User::pemberitahuan_pengguna');
+$routes->get('/user/profil', 'User::profil_pengguna');
+$routes->get('/user/edit/(:alphanum)', 'User::edit_profil_pengguna');
+
+$routes->get('/user/marketplace', 'Marketplace::marketplace_user');
+$routes->get('/user/marketplace/product-1', 'Marketplace::detail_product_marketplace');
+$routes->get('/user/checkout', 'Marketplace::checkout_product_marketplace');
+$routes->get('/user/checkout/alamat', 'Marketplace::checkout_alamat');
 
 //MarketPlace
 $routes->get('/peternak/marketplace', 'Marketplace::marketplace_user');
@@ -89,18 +103,6 @@ $routes->get('/marketplace/terima-pesanan/(:alphanum)', 'Marketplace::terima_pes
 
 //BeliPaket
 $routes->get('/beli-paket/(:alphanum)', 'Peternak::beli_paket_peternak/$1');
-
-//PENGGUNA
-$routes->get('/user/dashboard', 'User::dashboard_user');
-$routes->get('/user/tentang-kami', 'User::tentang_kami_pengguna');
-$routes->get('/user/pemberitahuan', 'User::pemberitahuan_pengguna');
-$routes->get('/user/profil', 'User::profil_pengguna');
-$routes->get('/user/edit/(:alphanum)', 'User::edit_profil_pengguna');
-
-$routes->get('/user/marketplace', 'Marketplace::marketplace_user');
-$routes->get('/user/marketplace/product-1', 'Marketplace::detail_product_marketplace');
-$routes->get('/user/checkout', 'Marketplace::checkout_product_marketplace');
-$routes->get('/user/checkout/alamat', 'Marketplace::checkout_alamat');
 
 //ADMIN
 $routes->get('/admin/', 'Admin::index');
@@ -141,7 +143,7 @@ $routes->get('/admin/master-pesanan-berlangsung', 'Admin::master_pesanan_berlang
     //Peternak Admin Login
     $routes->get('/admin/login-peternak', 'Admin::login_peternak_admin');
     $routes->post('/admin/cek-login-admin', 'Admin::login_checker_admin');
-    $routes->get('/admin/peternak/login-auth-google', 'Admin::login_checker_google');
+    $routes->get('qe', 'Admin::login_checker_google');
     $routes->get('/admin/logout-peternak', 'Admin::logout_admin');
     $routes->get('/admin/dashboard-peternak', 'Admin::dashboard_admin_peternak');
         //Peternak Admin Produk
