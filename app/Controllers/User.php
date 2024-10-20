@@ -245,7 +245,7 @@ class User extends BaseController
       echo view('Frontend/template/header', $data);
       echo view('Frontend/template/head-content', $data);
       echo view('Frontend/master-pengguna/menu', $data);
-      echo view('Frontend/master-pengguna/content/top-selling', $data);
+      // echo view('Frontend/master-pengguna/content/top-selling', $data);
       echo view('Frontend/master-pengguna/content/featured-product', $data);
       echo view('Frontend/template/navigation', $data);
       echo view('Frontend/template/footer', $data);
@@ -419,7 +419,7 @@ class User extends BaseController
       $uri = service('uri');
       $idUser = $uri->getSegment(3);
 
-      $dataPesanan = $modelPesanan->getDataPesananJoin(['sha1(tbl_pesanan.id_user)' => $idUser, 'status_pesanan' => '1' AND '2'])->getResultArray();
+      $dataPesanan = $modelPesanan->getDataPesananJoin(['sha1(tbl_pesanan.id_user)' => $idUser, 'status_pesanan' => '1' OR '2'])->getResultArray();
       $data['dataPesanan'] = $dataPesanan;
 
       $dataPengguna = $modelUser->getDataUser(['id_user' => session('id')])->getRowArray();

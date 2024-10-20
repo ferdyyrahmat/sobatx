@@ -15,6 +15,10 @@
                            <td><?= $profile['nama_user'] ?></td>
                         </tr>
                         <tr>
+                           <td style="width: 30px;"><i class="fa-solid fa-envelope"></i></td>
+                           <td><?= $profile['email_user'] ?></td>
+                        </tr>
+                        <tr>
                            <td style="width: 30px;"><i class="fa-solid fa-briefcase"></i></td>
                            <td>Pengguna</td>
                         </tr>
