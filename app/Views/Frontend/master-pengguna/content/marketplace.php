@@ -187,7 +187,7 @@
             <a href="#" style="padding-right: 10px;">
             </a>
          </div>
-         <div class="col-xs-12 col-sm-6 col-md-6">
+         <!-- <div class="col-xs-12 col-sm-6 col-md-6">
             <div class="menu-nav" style="padding:0 10px;">
                <?php
                foreach($dataKategori as $data){?>
@@ -201,7 +201,7 @@
                </div>
                <?php } ?>
             </div>
-         </div>
+         </div> -->
          <div class="col-xs-12 col-sm-12 col-md-12">
             <h5 style="padding-left: 10px;">
                Featured Product
